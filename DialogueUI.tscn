@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://cymk6iug7g4hq"]
+
+[ext_resource type="Theme" uid="uid://bb2rg8wsyak4e" path="res://panel.tres" id="1_o37m6"]
+[ext_resource type="Texture2D" uid="uid://cmhjxuk06vqs2" path="res://Assets/cursor.png" id="1_wldyk"]
+[ext_resource type="FontFile" uid="uid://bs28djtvlxatt" path="res://Assets/MADE Gentle PERSONAL USE.otf" id="2_5uq5d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_01qsl"]
+font = ExtResource("2_5uq5d")
+font_size = 32
+
+[node name="DialogueUI" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_o37m6")
+
+[node name="DialogueBox" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.722
+anchor_right = 0.978
+anchor_bottom = 0.939
+offset_left = -0.320007
+offset_top = 0.399963
+offset_right = 0.159912
+offset_bottom = -0.200073
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Generic test text field for [wave]regular[/wave] stuff."
+
+[node name="SpeakerBox2" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.206
+anchor_top = 0.641
+anchor_right = 0.456
+anchor_bottom = 0.741
+offset_left = 0.319977
+offset_top = 0.199951
+offset_right = 0.319946
+offset_bottom = 0.199951
+theme = ExtResource("1_o37m6")
+
+[node name="Polygon2D" type="Polygon2D" parent="SpeakerBox2"]
+color = Color(0.733333, 0.8, 1, 1)
+polygon = PackedVector2Array(0, 0, 320, 0, 320, 80, 0, 80)
+
+[node name="Label" type="Label" parent="SpeakerBox2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 15.0
+offset_right = -31.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your Son"
+label_settings = SubResource("LabelSettings_01qsl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cursor" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.943
+anchor_top = 0.884
+anchor_right = 0.974
+anchor_bottom = 0.934
+offset_left = -0.0400391
+offset_top = -0.200073
+offset_right = 0.279907
+offset_bottom = -0.200012
+
+[node name="TextureRect" type="TextureRect" parent="Cursor"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9
+anchor_bottom = 0.975
+offset_left = -4.0
+offset_top = -1.0
+texture = ExtResource("1_wldyk")

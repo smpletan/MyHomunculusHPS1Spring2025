@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq3wy1v6hucsf"]
+
+[ext_resource type="Texture2D" uid="uid://l06ivyoqmdi7" path="res://Assets/screenmockup.png" id="1_fcc87"]
+[ext_resource type="PackedScene" uid="uid://cymk6iug7g4hq" path="res://DialogueUI.tscn" id="2_q2td4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UI + Background" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="UI + Background"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fcc87")
+stretch_mode = 5
+
+[node name="VisArea" type="PanelContainer" parent="."]
+offset_left = 238.0
+offset_top = 94.0
+offset_right = 1262.0
+offset_bottom = 670.0
+
+[node name="Dialogue System" type="CanvasLayer" parent="."]
+
+[node name="DialogueUI" parent="Dialogue System" instance=ExtResource("2_q2td4")]
