@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwxfexte3xbc0"]
+
+[ext_resource type="Texture2D" uid="uid://hw7pm0js4hcu" path="res://Assets/uirough.png" id="1_b3bc3"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+texture_filter = 1
+texture = ExtResource("1_b3bc3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 400)

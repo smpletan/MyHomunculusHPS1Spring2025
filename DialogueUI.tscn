@@ -6,7 +6,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_01qsl"]
 font = ExtResource("2_5uq5d")
-font_size = 32
+font_size = 12
 
 [node name="DialogueUI" type="Control"]
 texture_filter = 1
@@ -48,6 +48,7 @@ offset_bottom = 0.199951
 theme = ExtResource("1_o37m6")
 
 [node name="Polygon2D" type="Polygon2D" parent="SpeakerBox2"]
+scale = Vector2(0.471375, 0.480001)
 color = Color(0.733333, 0.8, 1, 1)
 polygon = PackedVector2Array(0, 0, 320, 0, 320, 80, 0, 80)
 
