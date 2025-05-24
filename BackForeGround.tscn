@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=40 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://f3ln8uexn1hx" path="res://Assets/Shaders/DitherShader.gdshader" id="2_ob6x7"]
@@ -36,8 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://c3no240rt8exm" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_031.png" id="34_x6t1d"]
 [ext_resource type="Texture2D" uid="uid://c8y3036tii3xn" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_032.png" id="35_kqmkr"]
 [ext_resource type="Texture2D" uid="uid://2i8hura1mqa4" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_033.png" id="36_4lntk"]
-[ext_resource type="Shader" uid="uid://ikbfkybglbtg" path="res://Assets/Shaders/ColorPallette.gdshader" id="37_fd1wu"]
-[ext_resource type="Texture2D" uid="uid://qoevmxh7gnrs" path="res://Assets/srb2-1x.png" id="38_o5eaj"]
 [ext_resource type="Texture2D" uid="uid://cc2x8w7ak1x2g" path="res://Assets/FadeForeGroundThing.png" id="39_o8b58"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i1qdv"]
@@ -156,15 +154,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_x8tkj"]
-shader = ExtResource("37_fd1wu")
-shader_parameter/shader_enabled = true
-shader_parameter/palette = ExtResource("38_o5eaj")
-shader_parameter/dithering = true
-shader_parameter/dithering_size = 1
-shader_parameter/resolution_scale = 1
-shader_parameter/quantization_level = 16
-
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
@@ -186,10 +175,6 @@ sprite_frames = SubResource("SpriteFrames_gl5ge")
 animation = &"ForeGroundSprite"
 autoplay = "ForeGroundSprite"
 frame_progress = 0.261525
-
-[node name="Node2D" type="Node2D" parent="Control"]
-material = SubResource("ShaderMaterial_x8tkj")
-position = Vector2(369, 294)
 
 [node name="FadeForeGroundThing" type="Sprite2D" parent="Control"]
 position = Vector2(320, 200)
