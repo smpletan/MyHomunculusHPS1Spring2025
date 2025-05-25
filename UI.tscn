@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwxfexte3xbc0"]
 
-[ext_resource type="Texture2D" uid="uid://ejoh0hoijm1m" path="res://Assets/homunculusborderfinalnotransparency.png" id="1_3b2b5"]
+[ext_resource type="Texture2D" uid="uid://cj14s7nnxn06n" path="res://Assets/homunculusborderfinal.png" id="1_3b2b5"]
 [ext_resource type="Shader" uid="uid://cglxohxd2b0l7" path="res://scrollpattern.gdshader" id="2_3b2b5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g6l6n"]
@@ -21,13 +21,6 @@ offset_bottom = -360.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
-texture_filter = 1
-texture = ExtResource("1_3b2b5")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 640, 400)
-
 [node name="Pattern" type="TextureRect" parent="Control"]
 texture_filter = 1
 texture_repeat = 2
@@ -35,3 +28,10 @@ material = SubResource("ShaderMaterial_g6l6n")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+texture_filter = 1
+texture = ExtResource("1_3b2b5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 400)

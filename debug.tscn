@@ -7,12 +7,9 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource("1_rdi1l")]
-layer = 0
-
 [node name="Pattern" parent="." instance=ExtResource("2_txpwr")]
-visible = false
 visibility_layer = 2
+z_index = 1
 anchors_preset = -1
 anchor_right = 2.415
 anchor_bottom = 1.0
@@ -21,11 +18,15 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="OuterUI" parent="." instance=ExtResource("1_lvjdj")]
+layer = 1
+
+[node name="Background" parent="." instance=ExtResource("1_rdi1l")]
+layer = 0
 
 [node name="VisArea" type="PanelContainer" parent="."]
 
 [node name="Dialogue System" type="CanvasLayer" parent="."]
+layer = 2
 visible = false
 
 [node name="DialogueUI" parent="Dialogue System" instance=ExtResource("2_q2td4")]
-visible = false

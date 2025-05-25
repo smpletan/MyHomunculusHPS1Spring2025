@@ -1,7 +1,8 @@
-[gd_scene load_steps=42 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=43 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://2eco5eiw0xf8" path="res://cutshader.gdshader" id="1_t27p2"]
+[ext_resource type="Texture2D" uid="uid://c6dylmhgnhjwx" path="res://Assets/shadermaskbg.png" id="2_jiaa2"]
 [ext_resource type="Shader" uid="uid://f3ln8uexn1hx" path="res://Assets/Shaders/DitherShader.gdshader" id="2_ob6x7"]
 [ext_resource type="Texture2D" uid="uid://bbagm1holthuq" path="res://Assets/Gradientthing.png" id="3_uuawh"]
 [ext_resource type="Texture2D" uid="uid://bho6qqa0k2wf" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_001.png" id="4_jiaa2"]
@@ -39,8 +40,9 @@
 [ext_resource type="Texture2D" uid="uid://2i8hura1mqa4" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_033.png" id="36_4lntk"]
 [ext_resource type="Texture2D" uid="uid://dex65bgapyc2d" path="res://Assets/FadedForegroundv2.png" id="37_w18ek"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ob6x7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fd1wu"]
 shader = ExtResource("1_t27p2")
+shader_parameter/mask = ExtResource("2_jiaa2")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i1qdv"]
 shader = ExtResource("2_ob6x7")
@@ -160,8 +162,20 @@ animations = [{
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="Control" type="Control" parent="."]
-material = SubResource("ShaderMaterial_ob6x7")
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_fd1wu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(639, 400)
+render_target_update_mode = 4
+
+[node name="Control" type="Control" parent="SubViewportContainer/SubViewport"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -170,10 +184,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Control" parent="Control" instance=ExtResource("1_ob6x7")]
+[node name="Control" parent="SubViewportContainer/SubViewport/Control" instance=ExtResource("1_ob6x7")]
 layout_mode = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/Control"]
 material = SubResource("ShaderMaterial_i1qdv")
 position = Vector2(368, 294)
 sprite_frames = SubResource("SpriteFrames_gl5ge")
@@ -181,6 +195,6 @@ animation = &"ForeGroundSprite"
 autoplay = "ForeGroundSprite"
 frame_progress = 0.261525
 
-[node name="FadeForeGroundThing" type="Sprite2D" parent="Control"]
+[node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)
 texture = ExtResource("37_w18ek")
