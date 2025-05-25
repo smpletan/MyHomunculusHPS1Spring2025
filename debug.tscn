@@ -1,17 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq3wy1v6hucsf"]
+[gd_scene load_steps=5 format=3 uid="uid://dq3wy1v6hucsf"]
 
 [ext_resource type="PackedScene" uid="uid://cwxfexte3xbc0" path="res://UI.tscn" id="1_lvjdj"]
 [ext_resource type="PackedScene" uid="uid://33t3dmdfbhtr" path="res://BackForeGround.tscn" id="1_rdi1l"]
 [ext_resource type="PackedScene" uid="uid://cymk6iug7g4hq" path="res://DialogueUI.tscn" id="2_q2td4"]
+[ext_resource type="PackedScene" uid="uid://cb4gn3j86m8pk" path="res://scrollpattern.tscn" id="2_txpwr"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("1_rdi1l")]
+layer = 0
 
-[node name="CanvasLayer" parent="." instance=ExtResource("1_lvjdj")]
+[node name="Pattern" parent="." instance=ExtResource("2_txpwr")]
+visible = false
+visibility_layer = 2
+anchors_preset = -1
+anchor_right = 2.415
+anchor_bottom = 1.0
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OuterUI" parent="." instance=ExtResource("1_lvjdj")]
 
 [node name="VisArea" type="PanelContainer" parent="."]
 
 [node name="Dialogue System" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="DialogueUI" parent="Dialogue System" instance=ExtResource("2_q2td4")]
+visible = false
