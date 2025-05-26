@@ -19,16 +19,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_16g7q")
 
-[node name="OuterUI" parent="." instance=ExtResource("1_lvjdj")]
-layer = 1
-
 [node name="Background" parent="." instance=ExtResource("1_rdi1l")]
-layer = 0
+
+[node name="OuterUI" parent="." instance=ExtResource("1_lvjdj")]
+layer = 2
 
 [node name="VisArea" type="PanelContainer" parent="."]
 
 [node name="Dialogue System" type="CanvasLayer" parent="."]
-layer = 2
+layer = 3
 visible = false
 
 [node name="DialogueUI" parent="Dialogue System" instance=ExtResource("2_q2td4")]

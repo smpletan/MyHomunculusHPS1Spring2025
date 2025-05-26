@@ -161,7 +161,6 @@ scale = Vector2(1.05, 1.05)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_200es")
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_t7a14")
 autoplay = "default"
 frame_progress = 0.417703
