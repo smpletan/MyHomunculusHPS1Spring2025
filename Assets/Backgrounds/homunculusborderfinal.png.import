@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://poanwrdogdwa"
-path="res://.godot/imported/homonculusscrollTrans.png-3c6604f5f3f069327a53e2072ade3933.ctex"
+uid="uid://cj14s7nnxn06n"
+path="res://.godot/imported/homunculusborderfinal.png-00766d2a013ffef36fedee4e18f3aa1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/homonculusscrollTrans.png"
-dest_files=["res://.godot/imported/homonculusscrollTrans.png-3c6604f5f3f069327a53e2072ade3933.ctex"]
+source_file="res://Assets/Backgrounds/homunculusborderfinal.png"
+dest_files=["res://.godot/imported/homunculusborderfinal.png-00766d2a013ffef36fedee4e18f3aa1d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ejoh0hoijm1m"
-path="res://.godot/imported/homunculusborderfinalnotransparency.png-3d1395312da4d37d17565473c79f621e.ctex"
+uid="uid://hw7pm0js4hcu"
+path="res://.godot/imported/uirough.png-c1b1fa816d20bb07bd3dddbeabfaf26a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/homunculusborderfinalnotransparency.png"
-dest_files=["res://.godot/imported/homunculusborderfinalnotransparency.png-3d1395312da4d37d17565473c79f621e.ctex"]
+source_file="res://Assets/Backgrounds/uirough.png"
+dest_files=["res://.godot/imported/uirough.png-c1b1fa816d20bb07bd3dddbeabfaf26a.ctex"]
 
 [params]
 

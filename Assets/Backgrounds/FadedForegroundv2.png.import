@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b31n0d0dsovax"
-path="res://.godot/imported/ForeGround1_test.png-210f12b2e56bf4cffcf5addc12d55659.ctex"
+uid="uid://dex65bgapyc2d"
+path="res://.godot/imported/FadedForegroundv2.png-e335a3dd6bb23440670f795ff9177ec9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ForeGround1_test.png"
-dest_files=["res://.godot/imported/ForeGround1_test.png-210f12b2e56bf4cffcf5addc12d55659.ctex"]
+source_file="res://Assets/Backgrounds/FadedForegroundv2.png"
+dest_files=["res://.godot/imported/FadedForegroundv2.png-e335a3dd6bb23440670f795ff9177ec9.ctex"]
 
 [params]
 

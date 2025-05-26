@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hw7pm0js4hcu"
-path="res://.godot/imported/uirough.png-d0f0b2868cfd7085c0f2aa595efe2462.ctex"
+uid="uid://poanwrdogdwa"
+path="res://.godot/imported/homonculusscrollTrans.png-e5533767980d016bd76ab17cb82a0f12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/uirough.png"
-dest_files=["res://.godot/imported/uirough.png-d0f0b2868cfd7085c0f2aa595efe2462.ctex"]
+source_file="res://Assets/Backgrounds/homonculusscrollTrans.png"
+dest_files=["res://.godot/imported/homonculusscrollTrans.png-e5533767980d016bd76ab17cb82a0f12.ctex"]
 
 [params]
 

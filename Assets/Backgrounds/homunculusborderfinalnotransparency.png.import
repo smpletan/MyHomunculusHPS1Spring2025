@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2x8w7ak1x2g"
-path="res://.godot/imported/FadeForeGroundThing.png-236201a2395b49b091492bffd61c7e09.ctex"
+uid="uid://ejoh0hoijm1m"
+path="res://.godot/imported/homunculusborderfinalnotransparency.png-fbb9841bd12931adbe4ebe4982e1a337.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FadeForeGroundThing.png"
-dest_files=["res://.godot/imported/FadeForeGroundThing.png-236201a2395b49b091492bffd61c7e09.ctex"]
+source_file="res://Assets/Backgrounds/homunculusborderfinalnotransparency.png"
+dest_files=["res://.godot/imported/homunculusborderfinalnotransparency.png-fbb9841bd12931adbe4ebe4982e1a337.ctex"]
 
 [params]
 

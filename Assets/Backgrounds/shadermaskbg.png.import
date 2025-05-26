@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byxoww71xiej3"
-path="res://.godot/imported/UIROUGH2x.png-71cb2298e646311795289fc3996ac3e2.ctex"
+uid="uid://c6dylmhgnhjwx"
+path="res://.godot/imported/shadermaskbg.png-292103d396794926b147fc63d723490d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIROUGH2x.png"
-dest_files=["res://.godot/imported/UIROUGH2x.png-71cb2298e646311795289fc3996ac3e2.ctex"]
+source_file="res://Assets/Backgrounds/shadermaskbg.png"
+dest_files=["res://.godot/imported/shadermaskbg.png-292103d396794926b147fc63d723490d.ctex"]
 
 [params]
 

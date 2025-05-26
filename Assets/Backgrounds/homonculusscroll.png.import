@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6dylmhgnhjwx"
-path="res://.godot/imported/shadermaskbg.png-fe07fdbb53c7ecd70cf0aca80f0d419e.ctex"
+uid="uid://da264ndxiyhyp"
+path="res://.godot/imported/homonculusscroll.png-be8859baea4c3e01106e3fcf53aaaa4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/shadermaskbg.png"
-dest_files=["res://.godot/imported/shadermaskbg.png-fe07fdbb53c7ecd70cf0aca80f0d419e.ctex"]
+source_file="res://Assets/Backgrounds/homonculusscroll.png"
+dest_files=["res://.godot/imported/homonculusscroll.png-be8859baea4c3e01106e3fcf53aaaa4e.ctex"]
 
 [params]
 

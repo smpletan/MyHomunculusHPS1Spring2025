@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwxfexte3xbc0"]
 
-[ext_resource type="Texture2D" uid="uid://cj14s7nnxn06n" path="res://Assets/homunculusborderfinal.png" id="1_3b2b5"]
+[ext_resource type="Texture2D" uid="uid://cj14s7nnxn06n" path="res://Assets/Backgrounds/homunculusborderfinal.png" id="1_3b2b5"]
 [ext_resource type="Shader" uid="uid://cglxohxd2b0l7" path="res://scrollpattern.gdshader" id="2_3b2b5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g6l6n"]

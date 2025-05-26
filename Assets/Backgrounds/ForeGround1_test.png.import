@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6e0h7crlpljo"
-path="res://.godot/imported/uiroughv2.png-7668293659feda2e3b96e3ff9703ec2a.ctex"
+uid="uid://b31n0d0dsovax"
+path="res://.godot/imported/ForeGround1_test.png-b243cb016256350e9b6048d71f2c0406.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/uiroughv2.png"
-dest_files=["res://.godot/imported/uiroughv2.png-7668293659feda2e3b96e3ff9703ec2a.ctex"]
+source_file="res://Assets/Backgrounds/ForeGround1_test.png"
+dest_files=["res://.godot/imported/ForeGround1_test.png-b243cb016256350e9b6048d71f2c0406.ctex"]
 
 [params]
 
