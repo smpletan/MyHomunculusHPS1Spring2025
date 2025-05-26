@@ -8,6 +8,7 @@ signal game_saved
 var current_save : Dictionary = {
 	scene_path = "",
 	homunculus = {
+		# Stats for the homunculus. We structure them from 0 to 1.
 		love = 0,
 		smarts = 0,
 		driving = 0,
@@ -17,7 +18,9 @@ var current_save : Dictionary = {
 		bravery = 0,
 		evil = 0
 	},
+	# The current date of the 1-30 day calendar.
 	date = 0,
+	# An array containing important plot-relevant choices
 	choices = [
 		
 	],

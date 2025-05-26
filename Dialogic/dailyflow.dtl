@@ -1,0 +1,12 @@
+It's Day {VAR.dayNumber} of the month. You've got {30 - VAR.dayNumber} days left this month until the Growth.
+homunculus (neutral): What do we wanna do today?
+- Let's talk.
+	homunculus (happy): Okay! What do you wanna say?
+	- How are you doing?
+	- Do you have any questions for me?
+	- Actually, I got nothing.
+		homunculus: Oh, really? That's okay.
+		return
+- Let's go into town.
+- Let's do something here.
+- (Ignore it...)
