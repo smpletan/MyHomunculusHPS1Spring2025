@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cymk6iug7g4hq"]
+[gd_scene load_steps=5 format=3 uid="uid://cg3jkpdg1g876"]
 
 [ext_resource type="Theme" uid="uid://bb2rg8wsyak4e" path="res://panel.tres" id="1_o37m6"]
 [ext_resource type="Texture2D" uid="uid://cmhjxuk06vqs2" path="res://Assets/cursor.png" id="1_wldyk"]

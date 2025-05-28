@@ -1,12 +1,13 @@
-[gd_scene load_steps=158 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=159 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://2eco5eiw0xf8" path="res://cutshader.gdshader" id="1_t27p2"]
-[ext_resource type="Texture2D" uid="uid://c6dylmhgnhjwx" path="res://Assets/Backgrounds/shadermaskbg.png" id="2_jiaa2"]
 [ext_resource type="Shader" uid="uid://f3ln8uexn1hx" path="res://Assets/Shaders/DitherShader.gdshader" id="2_ob6x7"]
+[ext_resource type="Texture2D" uid="uid://c6dylmhgnhjwx" path="res://Assets/Backgrounds/shadermaskbg.png" id="2_rmw63"]
 [ext_resource type="AudioStream" uid="uid://ymbpolnrnhj6" path="res://Assets/Audio/HomuncOpening1.mp3" id="3_3a2hx"]
 [ext_resource type="Texture2D" uid="uid://bbagm1holthuq" path="res://Assets/Gradientthing.png" id="3_uuawh"]
 [ext_resource type="Texture2D" uid="uid://bho6qqa0k2wf" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_001.png" id="4_jiaa2"]
+[ext_resource type="Script" uid="uid://41xcnt5cngp4" path="res://opening_animation_player.gd" id="4_rmw63"]
 [ext_resource type="Texture2D" uid="uid://cvxvm02vaxe1v" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_002.png" id="5_dwupe"]
 [ext_resource type="Texture2D" uid="uid://hwvtrfnxfnoa" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_003.png" id="6_now0s"]
 [ext_resource type="Texture2D" uid="uid://cufut53ed0atv" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_004.png" id="7_c0qf2"]
@@ -152,7 +153,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fd1wu"]
 shader = ExtResource("1_t27p2")
-shader_parameter/mask = ExtResource("2_jiaa2")
+shader_parameter/mask = ExtResource("2_rmw63")
 
 [sub_resource type="Animation" id="Animation_rmw63"]
 resource_name = "OpeningAnimation"
@@ -793,7 +794,7 @@ grow_vertical = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(639, 400)
+size = Vector2i(640, 400)
 render_target_update_mode = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer/SubViewport"]
@@ -809,11 +810,13 @@ volume_db = -1.0
 mix_target = 2
 
 [node name="OpeningAnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport/CanvasLayer/CanvasModulate"]
+unique_name_in_owner = true
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_kppa7")
 }
-autoplay = "OpeningAnimation"
+autoplay = "RESET"
+script = ExtResource("4_rmw63")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/CanvasLayer/CanvasModulate"]
 material = SubResource("ShaderMaterial_auput")
@@ -846,3 +849,5 @@ frame_progress = 0.261525
 [node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)
 texture = ExtResource("37_w18ek")
+
+[connection signal="animation_finished" from="SubViewportContainer/SubViewport/CanvasLayer/CanvasModulate/OpeningAnimationPlayer" to="SubViewportContainer/SubViewport/CanvasLayer/CanvasModulate/OpeningAnimationPlayer" method="_on_animation_finished"]

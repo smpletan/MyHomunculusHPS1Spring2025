@@ -152,10 +152,10 @@ func _apply_box_settings() -> void:
 	if ResourceLoader.exists(box_panel):
 		dialog_text_panel.add_theme_stylebox_override(&'panel', load(box_panel) as StyleBox)
 
-	#if box_color_use_global:
-	#	dialog_text_panel.self_modulate = get_global_setting(&'bg_color', box_color_custom)
-	#else:
-	#	dialog_text_panel.self_modulate = box_color_custom
+	if box_color_use_global:
+		dialog_text_panel.self_modulate = get_global_setting(&'bg_color', box_color_custom)
+	else:
+		dialog_text_panel.self_modulate = box_color_custom
 
 	var sizer: Control = %Sizer
 	sizer.size = box_size
@@ -192,15 +192,15 @@ func _apply_name_label_settings() -> void:
 	name_label.use_character_color = name_label_use_character_color
 
 	var name_label_panel: PanelContainer = %NameLabelPanel
-	#if ResourceLoader.exists(name_label_box_panel):
-	#	name_label_panel.add_theme_stylebox_override(&'panel', load(name_label_box_panel) as StyleBox)
-	#else:
-	#	name_label_panel.add_theme_stylebox_override(&'panel', load(this_folder.path_join("vn_textbox_name_label_panel.tres")) as StyleBox)
+	if ResourceLoader.exists(name_label_box_panel):
+		name_label_panel.add_theme_stylebox_override(&'panel', load(name_label_box_panel) as StyleBox)
+	else:
+		name_label_panel.add_theme_stylebox_override(&'panel', load(this_folder.path_join("vn_textbox_name_label_panel.tres")) as StyleBox)
 
-	#if name_label_box_use_global_color:
-	#	name_label_panel.self_modulate = get_global_setting(&'bg_color', name_label_box_modulate)
-	#else:
-	#	name_label_panel.self_modulate = name_label_box_modulate
+	if name_label_box_use_global_color:
+		name_label_panel.self_modulate = get_global_setting(&'bg_color', name_label_box_modulate)
+	else:
+		name_label_panel.self_modulate = name_label_box_modulate
 	var dialog_text_panel: PanelContainer = %DialogTextPanel
 	name_label_panel.position = name_label_box_offset+Vector2(0, -40)
 	name_label_panel.position -= Vector2(

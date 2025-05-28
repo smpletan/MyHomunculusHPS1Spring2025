@@ -1,12 +1,17 @@
-It's Day {VAR.dayNumber} of the month. You've got {30 - VAR.dayNumber} days left this month until the Growth.
+It's Day {dayNumber} of the month. You've got {daysLeft} days left this month until the Growth.
+join homunculus right
 homunculus (neutral): What do we wanna do today?
+label HomunculusConvoStart
 - Let's talk.
 	homunculus (happy): Okay! What do you wanna say?
 	- How are you doing?
+		if {} == "":
 	- Do you have any questions for me?
+		if :
 	- Actually, I got nothing.
-		homunculus: Oh, really? That's okay.
-		return
+		homunculus (neutral): Oh, really? That's okay.
+		jump HomunculusConvoStart
 - Let's go into town.
 - Let's do something here.
 - (Ignore it...)
+<Empty Text Event>

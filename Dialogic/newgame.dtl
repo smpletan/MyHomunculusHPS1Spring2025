@@ -1,9 +1,25 @@
 It's a fairly simple process. It's one you've done plenty of times before.
 There are a few ingredients you need. The heart to beat, the flesh to hold, the eyes to witness, and the spark of life.
-Lay out the flesh.
-Place down the heart.
-Bundle the heart, and plop on the eyes.
-There comes the spark...
-...And life is born.
+Lay out the flesh. Place down the heart. Bundle the heart, and plop on the eyes. Last comes the spark.
+[signal arg="begin_cutscene"]
 Cognition floods in, but understanding doesn't follow. That's where you come in.
-Try to do it right this time.
+Your responsibilities are simple. Raise this creature, give it attention and knowledge, and within thirty days' time it will grow. Try to do it right this time.
+Before you can even blink, the fleshy mass of newborn consciousness sloughs off of the table and crawls pathetically towards you. Its newly imbued flesh scrapes against the ground.
+join homunculus right [animation="Fade In Down" length="1.0" wait="true"]
+homunculus (neutral): Uuuuuu... Boooouuuu... Lim... Liv... I'm...
+homunculus (neutral): Life... I'm Life...
+homunculus (stressed): Nop. Nope. I'm not Life. What am I?
+- You're my Homunculus.
+	homunculus (neutral): Oh.
+	homunculus (happy): Okay! I'm your Homunculus. Are you what made me?
+	- Yup.
+		homunculus (happy): Wow! Amazing! Cool!
+		This thing is terrifically excited to know that you're responsible for its existence.
+	- Nope.
+		homunculus (neutral): Oh... That's okay.
+		You know that even if you'd try to shirk your responsibility to this thing, it's still going to depend on you. You just know.
+- (Ignore it...)
+	homunculus (neutral): Um...
+	narrator: Without any input from you, it struggles that much more to figure out where it is, why it is, or what it is.
+	Maybe it's not the most auspicious of beginnings for a growing creature, but it's the beginning that you've given it.
+jump dailyflow/
