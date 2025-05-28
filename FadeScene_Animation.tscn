@@ -1,0 +1,185 @@
+[gd_scene load_steps=24 format=3 uid="uid://boce57u1fk0f"]
+
+[ext_resource type="Texture2D" uid="uid://b24fsbhywuxul" path="res://Assets/SpriteFrames/FadePixels/FadePixes_00.png" id="1_0xxje"]
+[ext_resource type="Script" uid="uid://c62a878h30njw" path="res://fade_scene_animation.gd" id="1_xmrul"]
+[ext_resource type="Texture2D" uid="uid://c1s0lxl8fv3xc" path="res://Assets/SpriteFrames/FadePixels/FadePixes_01.png" id="2_xmrul"]
+[ext_resource type="Texture2D" uid="uid://d3ruh45urge0p" path="res://Assets/SpriteFrames/FadePixels/FadePixes_02.png" id="3_q0lp4"]
+[ext_resource type="Texture2D" uid="uid://nq54x5b214cp" path="res://Assets/SpriteFrames/FadePixels/FadePixes_03.png" id="4_1cuv0"]
+[ext_resource type="Texture2D" uid="uid://d2jv86lj1vj8s" path="res://Assets/SpriteFrames/FadePixels/FadePixes_04.png" id="5_kju6b"]
+[ext_resource type="Texture2D" uid="uid://sqyj3dji0rbo" path="res://Assets/SpriteFrames/FadePixels/FadePixes_05.png" id="6_uupgn"]
+[ext_resource type="Texture2D" uid="uid://8dw6yr1jjjxv" path="res://Assets/SpriteFrames/FadePixels/FadePixes_06.png" id="7_wf2my"]
+[ext_resource type="Texture2D" uid="uid://dx7qc51trgbjm" path="res://Assets/SpriteFrames/FadePixels/FadePixes_07.png" id="8_mwj42"]
+[ext_resource type="Texture2D" uid="uid://cmm7j61i1u6r" path="res://Assets/SpriteFrames/FadePixels/FadePixes_08.png" id="9_xtb0k"]
+[ext_resource type="Texture2D" uid="uid://dkptnckwhpfsb" path="res://Assets/SpriteFrames/FadePixels/FadePixes_09.png" id="10_m1dj1"]
+[ext_resource type="Texture2D" uid="uid://baow5earcu4m1" path="res://Assets/SpriteFrames/FadePixels/FadePixes_10.png" id="11_lq0ow"]
+[ext_resource type="Texture2D" uid="uid://nabrnb65dhsa" path="res://Assets/SpriteFrames/FadePixels/FadePixes_11.png" id="12_dge7s"]
+[ext_resource type="Texture2D" uid="uid://bmwxyhxly3wd2" path="res://Assets/SpriteFrames/FadePixels/FadePixes_12.png" id="13_s2d07"]
+[ext_resource type="Texture2D" uid="uid://8hp4nrffoqwb" path="res://Assets/SpriteFrames/FadePixels/FadePixes_13.png" id="14_77yts"]
+[ext_resource type="Texture2D" uid="uid://dr4jak27jidke" path="res://Assets/SpriteFrames/FadePixels/FadePixes_14.png" id="15_gswpw"]
+[ext_resource type="Texture2D" uid="uid://cw2mosk367mxx" path="res://Assets/SpriteFrames/FadePixels/FadePixes_15.png" id="16_lndrh"]
+[ext_resource type="Texture2D" uid="uid://culhgeo7ki5up" path="res://Assets/SpriteFrames/FadePixels/FadePixes_16.png" id="17_1xxng"]
+
+[sub_resource type="Animation" id="Animation_0xxje"]
+resource_name = "Fade_IN"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 17]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xmrul"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_q0lp4"]
+resource_name = "Fade_OUT"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [17, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0lp4"]
+_data = {
+&"Fade_IN": SubResource("Animation_0xxje"),
+&"Fade_OUT": SubResource("Animation_q0lp4"),
+&"RESET": SubResource("Animation_xmrul")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q0lp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0xxje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xmrul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q0lp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1cuv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kju6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uupgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wf2my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mwj42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xtb0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m1dj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lq0ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dge7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_s2d07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_77yts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gswpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lndrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1xxng")
+}],
+"loop": false,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="FadeSceneCanvasLayer" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_xmrul")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q0lp4")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(320, 200)
+sprite_frames = SubResource("SpriteFrames_q0lp4")
