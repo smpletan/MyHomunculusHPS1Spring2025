@@ -1,13 +1,13 @@
-[gd_scene load_steps=195 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=203 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://2eco5eiw0xf8" path="res://cutshader.gdshader" id="1_t27p2"]
 [ext_resource type="Shader" uid="uid://f3ln8uexn1hx" path="res://Assets/Shaders/DitherShader.gdshader" id="2_ob6x7"]
 [ext_resource type="Texture2D" uid="uid://c6dylmhgnhjwx" path="res://Assets/Backgrounds/shadermaskbg.png" id="2_rmw63"]
-[ext_resource type="AudioStream" uid="uid://ymbpolnrnhj6" path="res://Assets/Audio/HomuncOpening1.mp3" id="3_3a2hx"]
 [ext_resource type="Texture2D" uid="uid://bbagm1holthuq" path="res://Assets/Gradientthing.png" id="3_uuawh"]
-[ext_resource type="AudioStream" uid="uid://duvgdqt0tdi4h" path="res://Assets/Audio/HomuncFadeBackgroundOpening.mp3" id="3_x1qi1"]
+[ext_resource type="AudioStream" uid="uid://d12nkagllyjhh" path="res://Assets/Audio/HomuncOpening.mp3" id="4_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://bho6qqa0k2wf" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_001.png" id="4_jiaa2"]
+[ext_resource type="AudioStream" uid="uid://qcjaim481fti" path="res://Assets/Audio/HomunFadeBackgroundOpening.mp3" id="4_lioov"]
 [ext_resource type="Texture2D" uid="uid://b24fsbhywuxul" path="res://Assets/SpriteFrames/FadePixels/FadePixes_00.png" id="4_qspmw"]
 [ext_resource type="Script" uid="uid://41xcnt5cngp4" path="res://opening_animation_player.gd" id="4_rmw63"]
 [ext_resource type="Texture2D" uid="uid://cvxvm02vaxe1v" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_002.png" id="5_dwupe"]
@@ -87,9 +87,12 @@
 [ext_resource type="Texture2D" uid="uid://v0nm5hcyovat" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS11.png" id="51_qdxlk"]
 [ext_resource type="Texture2D" uid="uid://clhq3ccwm8r3y" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS12.png" id="52_4fixb"]
 [ext_resource type="Texture2D" uid="uid://bgnw06cd7l77f" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS13.png" id="53_ahudu"]
-[ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
+[ext_resource type="Texture2D" uid="uid://bvae4v5gwalep" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOEvil.png" id="53_lioov"]
+[ext_resource type="Texture2D" uid="uid://cs465wysv1mn7" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOMoney.png" id="54_0gtl1"]
+[ext_resource type="Script" uid="uid://dj4hojpp0dpp4" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
 [ext_resource type="Texture2D" uid="uid://ciar53uc5wwxk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS15.png" id="55_m0wq0"]
+[ext_resource type="Texture2D" uid="uid://dw4khblef0y7m" path="res://Assets/Character Sprites/EndingSprites/HomuncHorseSpeed.png" id="55_q3pey"]
 [ext_resource type="Texture2D" uid="uid://b00wrrhq3evxf" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS16.png" id="56_xheao"]
 [ext_resource type="Texture2D" uid="uid://bxu3yg33vona6" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS17.png" id="57_8e30t"]
 [ext_resource type="Texture2D" uid="uid://dnu3kokaptex4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS18.png" id="58_b7nm8"]
@@ -349,6 +352,157 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_7auws"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_lioov")
+}],
+"loop": true,
+"name": &"CEO_EVIL_End",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_0gtl1")
+}],
+"loop": true,
+"name": &"CEO_Money_End",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_q3pey")
+}],
+"loop": true,
+"name": &"Horse_Speed_End",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_lioov"]
+resource_name = "EndSpriteFade_IN"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../FadeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 17, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../FadeSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_0gtl1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../FadeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../FadeSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_q3pey"]
+resource_name = "EndSpriteFade_OUT"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../FadeSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../FadeSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 17, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q3pey"]
+_data = {
+&"EndSpriteFade_IN": SubResource("Animation_lioov"),
+&"EndSpriteFade_OUT": SubResource("Animation_q3pey"),
+&"RESET": SubResource("Animation_0gtl1")
+}
+
 [sub_resource type="Animation" id="Animation_e5uip"]
 resource_name = "LightsOffFade_OUT"
 length = 11.0
@@ -371,7 +525,7 @@ tracks/1/path = NodePath("../Control/FadeBackgroundOpening:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2.86667, 3, 3.33333, 6.5),
+"times": PackedFloat32Array(2.76667, 3, 3.33333, 6.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0, 9, 4, 12]
@@ -1015,12 +1169,16 @@ size = Vector2i(640, 400)
 render_target_update_mode = 4
 
 [node name="FadeStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
-stream = ExtResource("3_x1qi1")
+stream = ExtResource("4_lioov")
+volume_db = -8.0
+mix_target = 2
+bus = &"Sound Effects"
 
 [node name="OpeningStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
-stream = ExtResource("3_3a2hx")
-volume_db = -1.0
+stream = ExtResource("4_0gtl1")
+volume_db = -8.0
 mix_target = 2
+bus = &"Sound Effects"
 
 [node name="Control" type="Control" parent="SubViewportContainer/SubViewport"]
 layout_mode = 3
@@ -1051,9 +1209,24 @@ frame = 12
 
 [node name="Node" type="Node" parent="SubViewportContainer/SubViewport/Control/FadeBackgroundOpening"]
 
+[node name="EndingSprite2" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/Control"]
+visible = false
+texture_filter = 1
+position = Vector2(375, 191)
+sprite_frames = SubResource("SpriteFrames_7auws")
+animation = &"CEO_Money_End"
+
 [node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)
 texture = ExtResource("37_w18ek")
+
+[node name="EndSpriteFade" type="AnimationPlayer" parent="SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+root_node = NodePath("../Control/EndingSprite2")
+libraries = {
+&"": SubResource("AnimationLibrary_q3pey")
+}
+autoplay = "RESET"
 
 [node name="StartFadeAnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
