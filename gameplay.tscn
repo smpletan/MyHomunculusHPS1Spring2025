@@ -1,16 +1,136 @@
-[gd_scene load_steps=6 format=3 uid="uid://dq3wy1v6hucsf"]
+[gd_scene load_steps=16 format=3 uid="uid://dq3wy1v6hucsf"]
 
 [ext_resource type="Script" uid="uid://cs0dnsdmes72i" path="res://Scripts/gameplaymenu.gd" id="1_cbffv"]
 [ext_resource type="PackedScene" uid="uid://cb4gn3j86m8pk" path="res://scrollpattern.tscn" id="1_smepj"]
 [ext_resource type="Texture2D" uid="uid://da264ndxiyhyp" path="res://Assets/Backgrounds/homonculusscroll.png" id="2_cbffv"]
+[ext_resource type="Texture2D" uid="uid://kitvvhoig3hc" path="res://Assets/Icons/StatSymbol0.png" id="3_cbffv"]
 [ext_resource type="PackedScene" uid="uid://33t3dmdfbhtr" path="res://BackForeGround.tscn" id="3_fbudy"]
 [ext_resource type="PackedScene" uid="uid://cwxfexte3xbc0" path="res://UI.tscn" id="4_0m7cd"]
+[ext_resource type="Texture2D" uid="uid://l2a5s7r33skp" path="res://Assets/Icons/StatSymbol1.png" id="4_tyrfw"]
+[ext_resource type="Texture2D" uid="uid://c8hj6rq7ktuof" path="res://Assets/Icons/StatSymbol3.png" id="5_eod45"]
+[ext_resource type="Texture2D" uid="uid://0ica70kyk47v" path="res://Assets/Icons/StatSymbol4.png" id="6_nwk8b"]
+[ext_resource type="Texture2D" uid="uid://b15vnx33x8rsu" path="res://Assets/Icons/StatSymbol5.png" id="7_x2ust"]
+[ext_resource type="Texture2D" uid="uid://bhuha4fj2jb0e" path="res://Assets/Icons/StatSymbol6.png" id="8_7y1a3"]
+[ext_resource type="Texture2D" uid="uid://cwjejowquoii7" path="res://Assets/Icons/StatSymbol7.png" id="9_eglai"]
+[ext_resource type="Texture2D" uid="uid://dukx5w5vupwg7" path="res://Assets/Icons/StatSymbol2.png" id="10_m1ld8"]
+[ext_resource type="Texture2D" uid="uid://dtjq0pcwqls3o" path="res://Assets/statmeter.png" id="11_nwk8b"]
+[ext_resource type="Texture2D" uid="uid://dmjv40mhksvfr" path="res://Assets/meterprogress.png" id="12_x2ust"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cbffv")
 
 [node name="OuterUI" parent="." instance=ExtResource("4_0m7cd")]
 layer = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OuterUI"]
+offset_left = 5.0
+offset_top = 61.0
+offset_right = 110.0
+offset_bottom = 255.0
+theme_override_constants/separation = 0
+
+[node name="LoveIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_cbffv")
+stretch_mode = 2
+
+[node name="SmartsIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_tyrfw")
+stretch_mode = 2
+
+[node name="StrengthIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_eod45")
+stretch_mode = 2
+
+[node name="SpeedIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_nwk8b")
+stretch_mode = 2
+
+[node name="BraveryIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_x2ust")
+stretch_mode = 2
+
+[node name="DiligenceIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_7y1a3")
+stretch_mode = 2
+
+[node name="MediaLitIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_eglai")
+stretch_mode = 2
+
+[node name="DrivingIcon" type="TextureRect" parent="OuterUI/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_m1ld8")
+stretch_mode = 2
+
+[node name="StatMeterVBox" type="VBoxContainer" parent="OuterUI"]
+offset_left = 31.0
+offset_top = 61.0
+offset_right = 111.0
+offset_bottom = 253.0
+theme_override_constants/separation = 0
+
+[node name="LoveMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(77, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
+
+[node name="SmartsMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(78, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
+
+[node name="StrengthMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(78, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
+
+[node name="SpeedMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(78, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
+
+[node name="BraveryMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(78, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
+
+[node name="DiligenceMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(78, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
+
+[node name="MediaLitMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(78, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
+
+[node name="DrivingMeter" type="TextureProgressBar" parent="OuterUI/StatMeterVBox"]
+custom_minimum_size = Vector2(78, 24)
+layout_mode = 2
+nine_patch_stretch = true
+texture_over = ExtResource("11_nwk8b")
+texture_progress = ExtResource("12_x2ust")
 
 [node name="Background" parent="." instance=ExtResource("3_fbudy")]
 

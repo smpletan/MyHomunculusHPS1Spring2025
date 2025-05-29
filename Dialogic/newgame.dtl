@@ -10,12 +10,18 @@ homunculus (neutral): Uuuuuu... Boooouuuu... Lim... Liv... I'm...
 homunculus (neutral): Life... I'm Life...
 homunculus (stressed): Nop. Nope. I'm not Life. What am I?
 - You're my Homunculus.
+	set {Stats.love} += 5.0
+	[signal arg="update_stats"]
 	homunculus (neutral): Oh.
 	homunculus (happy): Okay! I'm your Homunculus. Are you what made me?
 	- Yup.
+		set {Stats.love} += 3.0
+		[signal arg="update_stats"]
 		homunculus (happy): Wow! Amazing! Cool!
 		This thing is terrifically excited to know that you're responsible for its existence.
 	- Nope.
+		set {Stats.love} -= 2.0
+		[signal arg="update_stats"]
 		homunculus (neutral): Oh... That's okay.
 		You know that even if you'd try to shirk your responsibility to this thing, it's still going to depend on you. You just know.
 - (Ignore it...)

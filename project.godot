@@ -37,6 +37,17 @@ variables={
 "Questions": {
 "Var": 0
 },
+"Stats": {
+"bravery": 0,
+"diligence": 0,
+"driving": 0,
+"evil": 0,
+"love": 0,
+"medialit": 0,
+"smarts": 0,
+"speed": 0,
+"strength": 0
+},
 "dayNumber": 1,
 "daysLeft": 29
 }
@@ -62,6 +73,7 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 animations/join_default="Instant In"
 animations/leave_default="Instant Out"
+glossary/glossary_files=["res://Dialogic/glossary.tres"]
 
 [display]
 

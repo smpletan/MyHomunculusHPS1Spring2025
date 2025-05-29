@@ -87,7 +87,7 @@
 [ext_resource type="Texture2D" uid="uid://v0nm5hcyovat" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS11.png" id="51_qdxlk"]
 [ext_resource type="Texture2D" uid="uid://clhq3ccwm8r3y" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS12.png" id="52_4fixb"]
 [ext_resource type="Texture2D" uid="uid://bgnw06cd7l77f" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS13.png" id="53_ahudu"]
-[ext_resource type="Script" uid="uid://dj4hojpp0dpp4" path="res://start_fade_animation_player.gd" id="54_e5uip"]
+[ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
 [ext_resource type="Texture2D" uid="uid://ciar53uc5wwxk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS15.png" id="55_m0wq0"]
 [ext_resource type="Texture2D" uid="uid://b00wrrhq3evxf" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS16.png" id="56_xheao"]
@@ -1016,13 +1016,11 @@ render_target_update_mode = 4
 
 [node name="FadeStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
 stream = ExtResource("3_x1qi1")
-bus = &"Sound Effects"
 
 [node name="OpeningStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
 stream = ExtResource("3_3a2hx")
 volume_db = -1.0
 mix_target = 2
-bus = &"Sound Effects"
 
 [node name="Control" type="Control" parent="SubViewportContainer/SubViewport"]
 layout_mode = 3
