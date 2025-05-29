@@ -1016,11 +1016,13 @@ render_target_update_mode = 4
 
 [node name="FadeStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
 stream = ExtResource("3_x1qi1")
+bus = &"Sound Effects"
 
 [node name="OpeningStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
 stream = ExtResource("3_3a2hx")
 volume_db = -1.0
 mix_target = 2
+bus = &"Sound Effects"
 
 [node name="Control" type="Control" parent="SubViewportContainer/SubViewport"]
 layout_mode = 3
