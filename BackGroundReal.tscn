@@ -157,11 +157,11 @@ grow_vertical = 2
 light_mask = 2
 visibility_layer = 2
 position = Vector2(380, 180)
-scale = Vector2(1.05, 1.05)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
 material = SubResource("ShaderMaterial_200es")
 sprite_frames = SubResource("SpriteFrames_t7a14")
 autoplay = "default"
-frame_progress = 0.417703
+frame = 30
+frame_progress = 0.415477
 script = ExtResource("5_daaef")

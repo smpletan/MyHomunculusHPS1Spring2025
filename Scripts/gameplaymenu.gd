@@ -4,7 +4,7 @@ var anim
 
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	Dialogic.start("newgame")
+	get_node("Background").get_node("%StartFadeAnimationPlayer").play("LightsOffFade_OUT")
 
 
 func _on_dialogic_signal(argument:String):
