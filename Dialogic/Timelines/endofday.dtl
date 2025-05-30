@@ -1,0 +1,22 @@
+Another day is done... You bring Homunculus back to the lab and let it rest there, while you head to your room for some shuteye.
+join homunculus right [animation="Instant In" length="0.0"]
+if {Stats.love} > 80.0:
+	The Homunculus squeezes you as tightly as its eight little nubby appendages can manage before unlatching itself and toddling off to sleep.
+	homunculus (happy): Nighty night!
+	leave homunculus [animation="Instant Out" length="0.0"]
+elif {Stats.love} > 50.0:
+	homunculus (happy): Good night!
+	narrator: The Homunculus nudges you gently as it toddles on to its own space.
+	leave homunculus [animation="Instant Out" length="0.0"]
+elif {Stats.love} > 20.0:
+	homunculus (neutral): Seeya tomorrow!
+	The Homunculus burbles contentedly before popping away to rest.
+	leave homunculus [animation="Instant Out" length="0.0"]
+else:
+	homunculus (neutral): Night.
+	narrator: Without another word, the Homunculus scuttles off to sleep.
+	leave homunculus [animation="Instant Out" length="0.0"]
+With the unbothered restfulness of a sinless baby, you lay your head to rest and await tomorrow's trials...
+set {dayNumber} += 1
+set {daysLeft} -= 1
+jump dailyflow/

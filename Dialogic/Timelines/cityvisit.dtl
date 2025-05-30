@@ -1,0 +1,132 @@
+narrator: You and your Homunculus leave the home and enter the nearby city. Sleepy as the city is, if you're looking for opportunities to help your Homunculus grow you certainly won't go wanting.
+homunculus (happy): Okay, we're here!
+join homunculus right
+set {currEnergy} = 3.0
+label initialQuestion
+if {currEnergy} <= 0.0:
+	homunculus (stressed): Hooie... I'm pooped. I wanna go home. Let's go home. Can we go home? I think we should go home.
+	narrator: You go home.
+	jump endofday/
+homunculus (neutral): What do you wanna do together?
+- Head to the Gym.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	narrator: You head over to the Gym, prepared to break a sweat for reasonable prices at 20 Jingles for a training session.
+	- Homunculus, pump some iron. [+Strength, -20J]
+		[signal arg="act_workout"]
+		set {cash} -= 20.0
+		[signal arg="update_stats"]
+		You pay the Jingles up front. Maintaining a professional environment that cultivates strong muscles takes time and money, after all.
+		You watch as your Homunculus manages to pump a dumbell with its own strength, yet the strenuousness of the exercise is clearly getting to it.
+		It's hard to say if your Homunculus has anything that can even be called muscles, but if it does then they're surely more toned now.
+		set {Stats.strength} += 6.0
+		set {Stats.love} -= 2.0
+		[signal arg="update_stats"]
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus (stressed): Ouuwwwww... There's nothing like a good workout, but... auwgh...
+		[signal arg="end_act"]
+		You give your Homunculus some time to cool down and relax before the two of you head back to the City Center.
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	- Homunculus, run some laps. [+Speed, -20J]
+		[signal arg="act_running"]
+		set {cash} -= 20.0
+		[signal arg="update_stats"]
+		You pay the Jingles up front. Considering how the gymnasium intends to help your Homunculus work out, you're not sure why they're asking for money.
+		They guide you to a room with a couch. The moment you take a seat, your Homunculus begins scuttling all over the place, back and forth, hither and yon.
+		Plenty of time passes, and for all of its scuttling it's clearly getting more used to using its nubs to move around.
+		set {Stats.speed} += 6.0
+		set {Stats.love} -= 2.0
+		[signal arg="update_stats"]
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus (neutral): I'm feeling a little faster now! But it's getting a little hard to just make myself stop moving my nubs...
+		[signal arg="end_act"]
+		Your Homunculus continues to walk around in circles by itself for a while, trying to drop the habit it formed. Once it stops, you two head back to the City Center.
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	- Let's not, actually. [Return]
+		jump initialQuestion
+- Head to the Library.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	You make it to the Library, where you can have your Homunculus hit books of varying difficulty to make it smarter. More advanced books require cash.
+	- Rhymez 4 Babiez [+Smarts, +Diligence, Free]
+	- Ezzay 4 Teenz [++Smarts, +Diligence, -10J]
+	- Big Theziz 4 Adultz [+++Smarts, ++Diligence, -30J]
+	- Let'z leave, actually. [Return]
+		jump initialQuestion
+- Head to the Playground.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	You make it to the Playground in the center of town, where you can have a merry ol' time with your Homunculus.
+	- You wanna sit on the swings? [+Love, +Speed, Free]
+		set {Stats.driving} += 2.0
+		[signal arg="act_playground"]
+		A gentle breeze passes along the playground as the two of you approach the swings. There are children here.
+		You feel their befuddled stares on your Homunculus - and by extension, you - as you place the squishy thing on its swing seat.
+		With one good push, the energetic little thing has enough energy to keep the swing going by itself for quite some time.
+		set {Stats.love} += 4.0
+		set {Stats.speed} += 3.0
+		[signal arg="update_stats"]
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus (happy): Hoooo! I don't think it matters how many times I do it, I'll never get sick of swinging back and forth for a really long time!
+		[signal arg="end_act"]
+		With the Homunculus sufficiently jazzed up by its swinging adventure, the two of you depart for the City Center.
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	- Nevermind, let's go back. [Return]
+		jump initialQuestion
+- Go sit at the side of the road and watch cars.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	You and Homunculus find a nice little patch on the side of a building to just watch cars pass on by.
+	- Watch the cars. [+Love, +Driving, Free]
+		[signal arg="act_watchcars"]
+		You take a seat and watch the cars pass on by alongside Homunculus.
+		It's relaxing, and you find your worries melting away with time.
+		Homunculus somehow sharpens its driving fundamentals by just watching cars move around.
+		set {Stats.love} += 4.0
+		set {Stats.driving} += 2.0
+		[signal arg="update_stats"]
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus: Wow, that much time passed already? Time flies when you're having... um... cars.
+		[signal arg="end_act"]
+		Feeling refreshed, the two of you get up and head back to the City Square.
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	- Actually I think cars are boring now. [Return]
+		jump initialQuestion
+- Enlist Homunculus on a part-time job.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	The two of you make it to the local Burgurger Gurberbergur. Through hyperspecific and arcane legal loopholes, this is the only place your Homunculus can legally work for pay.
+	- Get to flippin', Homunculus. [+Jingles, +Diligence, -Love]
+		[signal arg="act_parttime"]
+		narrator: It's repetitive and tedious stuff, but when it's not thinking about the tedium it actually gets into a pretty good flow. There's something satisfying about ticking off every box.
+		The Homunculus doesn't seem to have enjoyed itself very much, but its labors have proven worthwhile for its work ethic and for your wallet.
+		join homunculus (stressed) right [animation="Instant In" length="0.0"]
+		homunculus (stressed): Whew... It was super busy. My nubs are feeling all worn out to... um... well, nubs.
+		homunculus (happy): But hey, we got paid!
+		narrator: Your Homunculus, now a little tuckered out, managed to hustle up 60 Jingles. The two of you head back to the City Center.
+		set {cash} += 60.0
+		set {Stats.diligence} += 5.0
+		set {currEnergy} -= 1.0
+		[signal arg="update_stats"]
+		[signal arg="end_act"]
+		jump initialQuestion
+	- Nah, let's go back. [Return]
+		jump initialQuestion
+- Cast out unto the Sewers.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	if {currEnergy} < 3.0:
+		Going to the Sewers is a very physically demanding commitment. You'd need the bountiful energy of a fresh day for it.
+		jump initialQuestion
+	else:
+		Venturing out bright and early, you stand upon the threshold of the unlit, murky sewer system. It's clammy and miserable in here, but you see jewels in the dark.
+		If you want to send the Homunculus to explore here, it'll spend the whole day - and its odds of success can be increased by its speed, strength, and smarts.
+		- Plumb the depths. [-Love, +???, Free]
+			Down that 
+			jump initialQuestion
+		- We should head back. [Return]
+			jump initialQuestion
+- Just head back home.
+	Are you sure? Heading home early also ends the day early.
+	- On second thought... [Return]
+		jump 
+	- Yup, I'm sure. [Go home, end day]
+		jump endofday/

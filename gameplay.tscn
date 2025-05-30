@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dq3wy1v6hucsf"]
+[gd_scene load_steps=60 format=3 uid="uid://dq3wy1v6hucsf"]
 
 [ext_resource type="Script" uid="uid://cs0dnsdmes72i" path="res://Scripts/gameplaymenu.gd" id="1_cbffv"]
 [ext_resource type="PackedScene" uid="uid://cb4gn3j86m8pk" path="res://scrollpattern.tscn" id="1_smepj"]
@@ -15,6 +15,202 @@
 [ext_resource type="Texture2D" uid="uid://dukx5w5vupwg7" path="res://Assets/Icons/StatSymbol2.png" id="10_m1ld8"]
 [ext_resource type="Texture2D" uid="uid://dtjq0pcwqls3o" path="res://Assets/statmeter.png" id="11_nwk8b"]
 [ext_resource type="Texture2D" uid="uid://dmjv40mhksvfr" path="res://Assets/meterprogress.png" id="12_x2ust"]
+[ext_resource type="Texture2D" uid="uid://dny63agc6sup3" path="res://Assets/textboxbg.png" id="13_x2ust"]
+[ext_resource type="Texture2D" uid="uid://d0xaaf1u4dlnr" path="res://Assets/Character Sprites/ActivitySprites/Part Time Job/workingman0.png" id="14_gyere"]
+[ext_resource type="Texture2D" uid="uid://blmkr2aa0lrmg" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing0.png" id="14_yr68n"]
+[ext_resource type="Texture2D" uid="uid://u2bdern5a6o6" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing1.png" id="15_eyn1h"]
+[ext_resource type="Texture2D" uid="uid://kgkiskxw6lrn" path="res://Assets/Character Sprites/ActivitySprites/Part Time Job/workingman1.png" id="15_mg1hl"]
+[ext_resource type="Texture2D" uid="uid://dmipeso4v2slc" path="res://Assets/Character Sprites/ActivitySprites/Part Time Job/workingman2.png" id="16_7v788"]
+[ext_resource type="Texture2D" uid="uid://c0qh31vkbewr2" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing2.png" id="16_ip4p6"]
+[ext_resource type="Texture2D" uid="uid://bjjacabhvwnny" path="res://Assets/Character Sprites/ActivitySprites/Part Time Job/workingman3.png" id="17_oxrgg"]
+[ext_resource type="Texture2D" uid="uid://b18kjilgssy8l" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing3.png" id="17_xfxku"]
+[ext_resource type="Texture2D" uid="uid://40va644vwm1o" path="res://Assets/Character Sprites/ActivitySprites/Part Time Job/workingman4.png" id="18_16b2x"]
+[ext_resource type="Texture2D" uid="uid://fwlofjhftocn" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing4.png" id="18_yvepb"]
+[ext_resource type="Texture2D" uid="uid://dwrt5ic6nkuf" path="res://Assets/Character Sprites/ActivitySprites/Part Time Job/workingman5.png" id="19_leiro"]
+[ext_resource type="Texture2D" uid="uid://dsc265crc84ds" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing5.png" id="19_rix74"]
+[ext_resource type="Texture2D" uid="uid://b2rnwkjtqqh77" path="res://Assets/Character Sprites/ActivitySprites/Part Time Job/workingman6.png" id="20_mgrx5"]
+[ext_resource type="Texture2D" uid="uid://db4d4sles3c2r" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing6.png" id="20_nccno"]
+[ext_resource type="Texture2D" uid="uid://d3dwnhvppb5b3" path="res://Assets/Character Sprites/ActivitySprites/Playground/PlayGroundSwing/swing7.png" id="21_deoll"]
+[ext_resource type="Texture2D" uid="uid://djnmt8yg2mxbr" path="res://Assets/Character Sprites/ActivitySprites/School_Reading/learning0.png" id="29_t5n6l"]
+[ext_resource type="Texture2D" uid="uid://4n147m3deq0m" path="res://Assets/Character Sprites/ActivitySprites/School_Reading/learning1.png" id="30_dl0tb"]
+[ext_resource type="Texture2D" uid="uid://boxqx6wfrhkci" path="res://Assets/Character Sprites/ActivitySprites/School_Reading/learning2.png" id="31_wyj43"]
+[ext_resource type="Texture2D" uid="uid://cplgc4dybiext" path="res://Assets/Character Sprites/ActivitySprites/School_Reading/learning3.png" id="32_w3jmr"]
+[ext_resource type="Texture2D" uid="uid://0b0n0b61y6yu" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround0.png" id="33_c76ve"]
+[ext_resource type="Texture2D" uid="uid://bo0va7a18cq50" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround1.png" id="34_cg6ev"]
+[ext_resource type="Texture2D" uid="uid://bc1twu45maqg7" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround2.png" id="35_v0405"]
+[ext_resource type="Texture2D" uid="uid://d3e0xm37v5w2s" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround3.png" id="36_iexhm"]
+[ext_resource type="Texture2D" uid="uid://18ju8si4ppa3" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround4.png" id="37_4lw3v"]
+[ext_resource type="Texture2D" uid="uid://tihgs0q4fqr6" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround5.png" id="38_6rvgx"]
+[ext_resource type="Texture2D" uid="uid://cmm4mor0nkeg7" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround6.png" id="39_vp3xm"]
+[ext_resource type="Texture2D" uid="uid://bphem2j3boby2" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround7.png" id="40_xim4l"]
+[ext_resource type="Texture2D" uid="uid://icsb743fw5yg" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround8.png" id="41_d53d6"]
+[ext_resource type="Texture2D" uid="uid://fpbrkis7jnxq" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround9.png" id="42_rfgm3"]
+[ext_resource type="Texture2D" uid="uid://dxalsd1yqxvvi" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround10.png" id="43_d8lje"]
+[ext_resource type="Texture2D" uid="uid://bwe3uyr140vrm" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround11.png" id="44_d02of"]
+[ext_resource type="Texture2D" uid="uid://d0pilmnnsi6q0" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar0.png" id="45_32kdn"]
+[ext_resource type="Texture2D" uid="uid://co87yhfgutcar" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar1.png" id="46_5w3jn"]
+[ext_resource type="Texture2D" uid="uid://d5kodxsnmm5g" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar2.png" id="47_jwmkk"]
+[ext_resource type="Texture2D" uid="uid://7bsudqrufaif" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar3.png" id="48_3u6pr"]
+[ext_resource type="Texture2D" uid="uid://ck23rhnm51mgi" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout0.png" id="49_i2yc5"]
+[ext_resource type="Texture2D" uid="uid://c325lnyi4564g" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout1.png" id="50_odc00"]
+[ext_resource type="Texture2D" uid="uid://bhdb5nunjlwy5" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout2.png" id="51_8kyq1"]
+[ext_resource type="Texture2D" uid="uid://c6dghagorx272" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout3.png" id="52_pf2ql"]
+[ext_resource type="Texture2D" uid="uid://chbjqmt5v71xt" path="res://Assets/Icons/moneyicon.png" id="53_mg1hl"]
+[ext_resource type="FontFile" uid="uid://dm34l6sobmtwx" path="res://Assets/Alkhemikal.ttf" id="54_7v788"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7r3lg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_gyere")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mg1hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7v788")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_oxrgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_16b2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_leiro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mgrx5")
+}],
+"loop": true,
+"name": &"PartTimeJob",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_yr68n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eyn1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ip4p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xfxku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_yvepb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rix74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nccno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_deoll")
+}],
+"loop": true,
+"name": &"PlaygroundSwing",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_t5n6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_dl0tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wyj43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_w3jmr")
+}],
+"loop": true,
+"name": &"Reading",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_c76ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_cg6ev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_v0405")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_iexhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_4lw3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_6rvgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vp3xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_xim4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_d53d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_rfgm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_d8lje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_d02of")
+}],
+"loop": true,
+"name": &"RunningAround",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_32kdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_5w3jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_jwmkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_3u6pr")
+}],
+"loop": true,
+"name": &"WatchingCars",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_i2yc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_odc00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_8kyq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_pf2ql")
+}],
+"loop": true,
+"name": &"WorkoutBench",
+"speed": 10.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oxrgg"]
+line_spacing = 0.0
+font = ExtResource("54_7v788")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cbffv")
@@ -132,9 +328,85 @@ nine_patch_stretch = true
 texture_over = ExtResource("11_nwk8b")
 texture_progress = ExtResource("12_x2ust")
 
+[node name="ActivityContainer" type="Control" parent="OuterUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 127.0
+offset_top = 57.0
+offset_right = 423.0
+offset_bottom = 259.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="OuterUI/ActivityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_x2ust")
+region_rect = Rect2(0, 0, 96, 96)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="ActivityPlayer" type="Control" parent="OuterUI/ActivityContainer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 292.0
+offset_bottom = 197.0
+
+[node name="ActivityAnimation" type="AnimatedSprite2D" parent="OuterUI/ActivityContainer/ActivityPlayer"]
+position = Vector2(144, 97)
+sprite_frames = SubResource("SpriteFrames_7r3lg")
+animation = &"PartTimeJob"
+
+[node name="MoneyContainer" type="Control" parent="OuterUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 110.0
+offset_bottom = 28.0
+
+[node name="TextureRect" type="TextureRect" parent="OuterUI/MoneyContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("53_mg1hl")
+stretch_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="OuterUI/MoneyContainer"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 26.0
+offset_right = 109.0
+offset_bottom = 24.0
+texture = ExtResource("13_x2ust")
+region_rect = Rect2(1, 0, 94, 96)
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="MoneyDisplay" type="Label" parent="OuterUI/MoneyContainer"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 5.0
+offset_right = 107.0
+offset_bottom = 37.0
+text = "0"
+label_settings = SubResource("LabelSettings_oxrgg")
+horizontal_alignment = 2
+
 [node name="Background" parent="." instance=ExtResource("3_fbudy")]
 
 [node name="Pattern" parent="." instance=ExtResource("1_smepj")]
+visible = false
 visibility_layer = 2
 z_index = 1
 anchors_preset = -1
