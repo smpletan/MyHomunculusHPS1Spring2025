@@ -1,4 +1,4 @@
-narrator: You and your Homunculus leave the home and enter the nearby city. Sleepy as the city is, if you're looking for opportunities to help your Homunculus grow you certainly won't go wanting.
+narrator: You and your Homunculus leave the home and enter the nearby town. Sleepy as it is here, if you're looking for opportunities to help your Homunculus grow you certainly won't go wanting.
 homunculus (happy): Okay, we're here!
 join homunculus right
 set {currEnergy} = 3.0
@@ -24,14 +24,14 @@ homunculus (neutral): What do you wanna do together?
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
 		homunculus (stressed): Ouuwwwww... There's nothing like a good workout, but... auwgh...
 		[signal arg="end_act"]
-		You give your Homunculus some time to cool down and relax before the two of you head back to the City Center.
+		You give your Homunculus some time to cool down and relax before the two of you head back to the Town Square.
 		set {currEnergy} -= 1.0
 		jump initialQuestion
 	- Homunculus, run some laps. [+Speed, -20J]
 		[signal arg="act_running"]
 		set {cash} -= 20.0
 		[signal arg="update_stats"]
-		You pay the Jingles up front. Considering how the gymnasium intends to help your Homunculus work out, you're not sure why they're asking for money.
+		You pay the Jingles up front. Considering the way the gymnasium intends to help your Homunculus work out, you're not sure why they're asking for money.
 		They guide you to a room with a couch. The moment you take a seat, your Homunculus begins scuttling all over the place, back and forth, hither and yon.
 		Plenty of time passes, and for all of its scuttling it's clearly getting more used to using its nubs to move around.
 		set {Stats.speed} += 6.0
@@ -40,7 +40,7 @@ homunculus (neutral): What do you wanna do together?
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
 		homunculus (neutral): I'm feeling a little faster now! But it's getting a little hard to just make myself stop moving my nubs...
 		[signal arg="end_act"]
-		Your Homunculus continues to walk around in circles by itself for a while, trying to drop the habit it formed. Once it stops, you two head back to the City Center.
+		Your Homunculus continues to walk around in circles by itself for a while, trying to drop the habit it formed. Once it stops, you two head back to the Town Square.
 		set {currEnergy} -= 1.0
 		jump initialQuestion
 	- Let's not, actually. [Return]
@@ -49,8 +49,51 @@ homunculus (neutral): What do you wanna do together?
 	leave homunculus [animation="Instant Out" length="0.0"]
 	You make it to the Library, where you can have your Homunculus hit books of varying difficulty to make it smarter. More advanced books require cash.
 	- Rhymez 4 Babiez [+Smarts, +Diligence, Free]
-	- Ezzay 4 Teenz [++Smarts, +Diligence, -10J]
-	- Big Theziz 4 Adultz [+++Smarts, ++Diligence, -30J]
+		[signal arg="act_reading"]
+		You pick out Rhymez 4 Babiez, a nursery book on a level so insultingly basic that newborns would call it a pedestrian, uninspired, and derivative work.
+		Your Homunculus isn't impressed by the content, but it seems to be absorbing it regardless, excited to glean what little understanding it can.
+		Having finished the book from cover to cover, your Homunculus doesn't feel fulfilled but it does feel some level of mental stimulation.
+		set {Stats.smarts} += 2.0
+		set {Stats.love} -= 1.0
+		[signal arg="update_stats"]
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus (stressed): 'Bibby climbed the timber to make herself more limber...' It just doesn't really resonate with me as much as I thought it would on my first read. Oh well!
+		[signal arg="end_act"]
+		Its mind buzzing with simple and inane rhymes, your Homunculus joins you as you move back to the Town Square.
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	- Ezzayz 4 Teenz [++Smarts, +Diligence, -10J]
+		[signal arg="act_reading"]
+		set {cash} -= 10.0
+		[signal arg="update_stats"]
+		Ezzayz 4 Teenz is the more popular sequel to Rhymez 4 Babiez, and while it's still somehow just as patronizing as a nursery rhyme book it's still more advanced.
+		Your Homunculus's mind is opened to the fact that there are many different ways for one to format an essay, and that you're in big big trouble if you mess the format up.
+		While it's undoubtedly an intellectual exercise, your Homunculus is rendered much more paranoid that it doesn't appropriately cite its sources.
+		set {Stats.smarts} += 5.0
+		set {Stats.love} -= 2.0
+		[signal arg="update_stats"]
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus (stressed): Ohhh... I promise that I'll never, ever put my page numbers in any spot but the top-right part of the page. Oh. Oh! Hi! I didn't see you there.
+		[signal arg="end_act"]
+		Instilled with mental stimulation and bone-deep fear, your Homunculus joins you as you move back to the Town Square.
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	- Big Theziz 4 Adultz & Bugz [+++Smarts, ++Diligence, -30J]
+		set {currEnergy} -= 1.0
+		[signal arg="act_reading"]
+		set {cash} -= 30.0
+		[signal arg="update_stats"]
+		Big Theziz 4 Adultz & Bugz is a seminary work in the 'Literary Buddyz' series that cleanly breaks from tradition by showing some level of respect to the reader.
+		'Some respect' doesn't mean that it fully respects the reader's intelligence, but it does impress the importance of declaring clear and concise arguments.
+		It also helps that the book has an absurd amount of encyclopedic knowledge on bugs for some reason. Your Homunculus learns so much about insects.
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus (neutral): Hey, did you know that all weevils are beetles? They're silly-looking guys, but they have wings under their elytra that do let some species actually take flight!
+		[signal arg="end_act"]
+		set {Stats.smarts} += 9.0
+		set {Stats.love} -= 3.0
+		[signal arg="update_stats"]
+		Your Homunculus regales you with more fun facts about weevils the entire time it takes for you to make it back to Town Square.
+		jump initialQuestion
 	- Let'z leave, actually. [Return]
 		jump initialQuestion
 - Head to the Playground.
@@ -68,7 +111,7 @@ homunculus (neutral): What do you wanna do together?
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
 		homunculus (happy): Hoooo! I don't think it matters how many times I do it, I'll never get sick of swinging back and forth for a really long time!
 		[signal arg="end_act"]
-		With the Homunculus sufficiently jazzed up by its swinging adventure, the two of you depart for the City Center.
+		With the Homunculus sufficiently jazzed up by its swinging adventure, the two of you depart for the Town Center.
 		set {currEnergy} -= 1.0
 		jump initialQuestion
 	- Nevermind, let's go back. [Return]
@@ -87,7 +130,7 @@ homunculus (neutral): What do you wanna do together?
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
 		homunculus: Wow, that much time passed already? Time flies when you're having... um... cars.
 		[signal arg="end_act"]
-		Feeling refreshed, the two of you get up and head back to the City Square.
+		Feeling refreshed, the two of you get up and head back to the Town Square.
 		set {currEnergy} -= 1.0
 		jump initialQuestion
 	- Actually I think cars are boring now. [Return]
@@ -102,7 +145,7 @@ homunculus (neutral): What do you wanna do together?
 		join homunculus (stressed) right [animation="Instant In" length="0.0"]
 		homunculus (stressed): Whew... It was super busy. My nubs are feeling all worn out to... um... well, nubs.
 		homunculus (happy): But hey, we got paid!
-		narrator: Your Homunculus, now a little tuckered out, managed to hustle up 60 Jingles. The two of you head back to the City Center.
+		narrator: Your Homunculus, now a little tuckered out, managed to hustle up 60 Jingles. The two of you head back to the Town Square.
 		set {cash} += 60.0
 		set {Stats.diligence} += 5.0
 		set {currEnergy} -= 1.0
@@ -120,7 +163,7 @@ homunculus (neutral): What do you wanna do together?
 		Venturing out bright and early, you stand upon the threshold of the unlit, murky sewer system. It's clammy and miserable in here, but you see jewels in the dark.
 		If you want to send the Homunculus to explore here, it'll spend the whole day - and its odds of success can be increased by its speed, strength, and smarts.
 		- Plumb the depths. [-Love, +???, Free]
-			Down that 
+			Down that
 			jump initialQuestion
 		- We should head back. [Return]
 			jump initialQuestion
