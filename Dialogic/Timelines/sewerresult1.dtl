@@ -1,0 +1,14 @@
+Your Homunculus winds up getting stuck around a bend; a colony of rats accost it along its path, keeping it from progressing too far into the sewers.
+The rats don't seem to be dangerous by themselves, but the sheer mass of them discourages the Homunculus from even trying to ask if it can pass.
+It does manage to work up the courage to ask if it can have something to bring back, but the mass of rats seem to just stare back with no comprehension of its words.
+In spite of this, as they disperse they leave behind a piece of petrified cheese, too fossilized to be edible but too fascinating to overlook.
+join homunculus (neutral) right [animation="Instant In" length="0.0"]
+[signal arg="end_act"]
+homunculus (stressed): Phew...
+homunculus (neutral): I didn't know there'd be so many of them. I didn't even think they'd be down there at all! I didn't get very far, but I did manage to get something!
+leave homunculus [animation="Instant Out" length="0.0"]
+[signal arg="update_stats"]
+set {Stats.love} -= 9.0
+set {currEnergy} -= 3.0
+narrator: You spend some time cleaning rat sheddings off of your Homunculus before you pawn off the piece of fossilized cheese and head back to Town Square.
+jump cityvisit/initialQuestion

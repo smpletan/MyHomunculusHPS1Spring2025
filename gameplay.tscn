@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://dq3wy1v6hucsf"]
+[gd_scene load_steps=70 format=3 uid="uid://dq3wy1v6hucsf"]
 
 [ext_resource type="Script" uid="uid://cs0dnsdmes72i" path="res://Scripts/gameplaymenu.gd" id="1_cbffv"]
 [ext_resource type="PackedScene" uid="uid://cb4gn3j86m8pk" path="res://scrollpattern.tscn" id="1_smepj"]
@@ -48,15 +48,25 @@
 [ext_resource type="Texture2D" uid="uid://dxalsd1yqxvvi" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround10.png" id="43_d8lje"]
 [ext_resource type="Texture2D" uid="uid://bwe3uyr140vrm" path="res://Assets/Character Sprites/ActivitySprites/Running Around/runningaround11.png" id="44_d02of"]
 [ext_resource type="Texture2D" uid="uid://d0pilmnnsi6q0" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar0.png" id="45_32kdn"]
+[ext_resource type="Texture2D" uid="uid://danjvodmeg0v7" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer0.png" id="45_cg6ev"]
 [ext_resource type="Texture2D" uid="uid://co87yhfgutcar" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar1.png" id="46_5w3jn"]
+[ext_resource type="Texture2D" uid="uid://dc3catf15uke" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer1.png" id="46_v0405"]
+[ext_resource type="Texture2D" uid="uid://weh0gims532b" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer2.png" id="47_iexhm"]
 [ext_resource type="Texture2D" uid="uid://d5kodxsnmm5g" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar2.png" id="47_jwmkk"]
 [ext_resource type="Texture2D" uid="uid://7bsudqrufaif" path="res://Assets/Character Sprites/ActivitySprites/Watching Cars/watchingcar3.png" id="48_3u6pr"]
+[ext_resource type="Texture2D" uid="uid://ulr7poyl3sph" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer3.png" id="48_4lw3v"]
+[ext_resource type="Texture2D" uid="uid://ifl1byoidhoc" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer4.png" id="49_6rvgx"]
 [ext_resource type="Texture2D" uid="uid://ck23rhnm51mgi" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout0.png" id="49_i2yc5"]
 [ext_resource type="Texture2D" uid="uid://c325lnyi4564g" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout1.png" id="50_odc00"]
+[ext_resource type="Texture2D" uid="uid://8kuk84lh73x" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer5.png" id="50_vp3xm"]
 [ext_resource type="Texture2D" uid="uid://bhdb5nunjlwy5" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout2.png" id="51_8kyq1"]
+[ext_resource type="Texture2D" uid="uid://cftnyvstt0jjl" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer6.png" id="51_xim4l"]
+[ext_resource type="Texture2D" uid="uid://b8y6smmxmtn70" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer7.png" id="52_d53d6"]
 [ext_resource type="Texture2D" uid="uid://c6dghagorx272" path="res://Assets/Character Sprites/ActivitySprites/Gym/Workout Bench/benchworkout3.png" id="52_pf2ql"]
 [ext_resource type="Texture2D" uid="uid://chbjqmt5v71xt" path="res://Assets/Icons/moneyicon.png" id="53_mg1hl"]
+[ext_resource type="Texture2D" uid="uid://papnlujo3njd" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer8.png" id="53_rfgm3"]
 [ext_resource type="FontFile" uid="uid://dm34l6sobmtwx" path="res://Assets/Alkhemikal.ttf" id="54_7v788"]
+[ext_resource type="Texture2D" uid="uid://0bp54ehmf0we" path="res://Assets/Character Sprites/ActivitySprites/Sewers/sewer9.png" id="54_d8lje"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7r3lg"]
 animations = [{
@@ -172,6 +182,41 @@ animations = [{
 "loop": true,
 "name": &"RunningAround",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_cg6ev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_v0405")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iexhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_4lw3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_6rvgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_vp3xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_xim4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_d53d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_rfgm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_d8lje")
+}],
+"loop": true,
+"name": &"Sewers",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -362,7 +407,7 @@ offset_bottom = 197.0
 [node name="ActivityAnimation" type="AnimatedSprite2D" parent="OuterUI/ActivityContainer/ActivityPlayer"]
 position = Vector2(144, 97)
 sprite_frames = SubResource("SpriteFrames_7r3lg")
-animation = &"PartTimeJob"
+animation = &"Sewers"
 
 [node name="MoneyContainer" type="Control" parent="OuterUI"]
 layout_mode = 3

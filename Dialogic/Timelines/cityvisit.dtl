@@ -146,7 +146,7 @@ homunculus (neutral): What do you wanna do together?
 		homunculus (stressed): Whew... It was super busy. My nubs are feeling all worn out to... um... well, nubs.
 		homunculus (happy): But hey, we got paid!
 		narrator: Your Homunculus, now a little tuckered out, managed to hustle up 60 Jingles. The two of you head back to the Town Square.
-		set {cash} += 60.0
+		set {cash} += 40.0
 		set {Stats.diligence} += 5.0
 		set {currEnergy} -= 1.0
 		[signal arg="update_stats"]
@@ -163,8 +163,11 @@ homunculus (neutral): What do you wanna do together?
 		Venturing out bright and early, you stand upon the threshold of the unlit, murky sewer system. It's clammy and miserable in here, but you see jewels in the dark.
 		If you want to send the Homunculus to explore here, it'll spend the whole day - and its odds of success can be increased by its speed, strength, and smarts.
 		- Plumb the depths. [-Love, +???, Free]
-			Down that
-			jump initialQuestion
+			[signal arg="act_sewers"]
+			Down that yawning, miserable hole your Homunculus plunges alone, though with a specialized camera system you're able to watch its progress.
+			The journey will be arduous, and certainly long enough to take the entire day. Still, your Homunculus presses on, very much daunted but with only one way to go.
+			[signal arg="chance_sewers"]
+			[end_timeline]
 		- We should head back. [Return]
 			jump initialQuestion
 - Just head back home.

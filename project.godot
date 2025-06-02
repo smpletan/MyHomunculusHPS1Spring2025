@@ -31,7 +31,13 @@ directories/dtl_directory={
 "dailyflow": "res://Dialogic/dailyflow.dtl",
 "endofday": "res://Dialogic/Timelines/endofday.dtl",
 "homevisit": "res://Dialogic/Timelines/homevisit.dtl",
-"newgame": "res://Dialogic/newgame.dtl"
+"newgame": "res://Dialogic/newgame.dtl",
+"sewerresult0": "res://Dialogic/Timelines/sewerresult0.dtl",
+"sewerresult1": "res://Dialogic/Timelines/sewerresult1.dtl",
+"sewerresult2": "res://Dialogic/Timelines/sewerresult2.dtl",
+"sewerresult3": "res://Dialogic/Timelines/sewerresult3.dtl",
+"sewerresult4": "res://Dialogic/Timelines/sewerresult4.dtl",
+"sewerresult5": "res://Dialogic/Timelines/sewerresult5.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://Assets/Dialogic/VNStyle.tres"]
@@ -55,6 +61,7 @@ variables={
 "currEnergy": 3,
 "dayNumber": 1,
 "daysLeft": 29,
+"sewerDialogue": "",
 "sewerOdds": 0.0
 }
 extensions_folder="res://addons/dialogic_additions"
