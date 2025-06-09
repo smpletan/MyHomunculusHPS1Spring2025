@@ -1,4 +1,4 @@
-[gd_scene load_steps=203 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=218 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://2eco5eiw0xf8" path="res://cutshader.gdshader" id="1_t27p2"]
@@ -88,18 +88,33 @@
 [ext_resource type="Texture2D" uid="uid://clhq3ccwm8r3y" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS12.png" id="52_4fixb"]
 [ext_resource type="Texture2D" uid="uid://bgnw06cd7l77f" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS13.png" id="53_ahudu"]
 [ext_resource type="Texture2D" uid="uid://bvae4v5gwalep" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOEvil.png" id="53_lioov"]
+[ext_resource type="Texture2D" uid="uid://ng5x0scfkn2o" path="res://Assets/SpriteFrames/BackgroundGym.png" id="53_o3kne"]
 [ext_resource type="Texture2D" uid="uid://cs465wysv1mn7" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOMoney.png" id="54_0gtl1"]
-[ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
+[ext_resource type="Texture2D" uid="uid://dqe3uefsq7x3" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_001.png" id="54_015r6"]
+[ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="54_55ecv"]
+[ext_resource type="Script" uid="uid://dj4hojpp0dpp4" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
+[ext_resource type="Texture2D" uid="uid://d1p52bg3tql0y" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_002.png" id="55_1e1bp"]
+[ext_resource type="Texture2D" uid="uid://davp7qdehd2jk" path="res://Assets/SpriteFrames/PCRenderBackground.png" id="55_1ovk6"]
 [ext_resource type="Texture2D" uid="uid://ciar53uc5wwxk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS15.png" id="55_m0wq0"]
 [ext_resource type="Texture2D" uid="uid://dw4khblef0y7m" path="res://Assets/Character Sprites/EndingSprites/HomuncHorseSpeed.png" id="55_q3pey"]
+[ext_resource type="Texture2D" uid="uid://bsqw6xf68qrqi" path="res://Assets/SpriteFrames/SewerBackground2.png" id="56_6dpm1"]
+[ext_resource type="Texture2D" uid="uid://madecjykb6qi" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_003.png" id="56_me362"]
 [ext_resource type="Texture2D" uid="uid://b00wrrhq3evxf" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS16.png" id="56_xheao"]
 [ext_resource type="Texture2D" uid="uid://bxu3yg33vona6" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS17.png" id="57_8e30t"]
+[ext_resource type="Texture2D" uid="uid://pilbdk2df0j0" path="res://Assets/SpriteFrames/TVRenderBackground.png" id="57_w2bxo"]
+[ext_resource type="Texture2D" uid="uid://sta5mwdi6w64" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_004.png" id="57_wvxwo"]
 [ext_resource type="Texture2D" uid="uid://dnu3kokaptex4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS18.png" id="58_b7nm8"]
+[ext_resource type="Texture2D" uid="uid://p2yun1ycqcxi" path="res://Assets/SpriteFrames/FastFoodBackground.png" id="58_pt216"]
+[ext_resource type="Texture2D" uid="uid://2w1fdq4vi0d0" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_005.png" id="58_spw5l"]
+[ext_resource type="Texture2D" uid="uid://dwmgh4og8ujim" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_006.png" id="59_71crj"]
 [ext_resource type="Texture2D" uid="uid://do6yb2gkmw4io" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS19.png" id="59_dppv7"]
 [ext_resource type="Texture2D" uid="uid://bwkj2fmcxuuf7" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS20.png" id="60_qspmw"]
+[ext_resource type="Texture2D" uid="uid://b71fnom7xdhtt" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_007.png" id="60_xjlu5"]
+[ext_resource type="Texture2D" uid="uid://cckl545bvlbvu" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_008.png" id="61_j2geo"]
 [ext_resource type="Texture2D" uid="uid://c06ptikqcgkyh" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS21.png" id="61_o0spv"]
 [ext_resource type="Texture2D" uid="uid://bbmswc0sai2nk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS22.png" id="62_kc3fg"]
+[ext_resource type="Texture2D" uid="uid://chv21r4elx4wr" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_009.png" id="62_lneff"]
 [ext_resource type="Texture2D" uid="uid://bax0p4666d2a4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS23.png" id="63_1lg36"]
 [ext_resource type="Texture2D" uid="uid://0b6makik00bw" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS24.png" id="64_uxje1"]
 [ext_resource type="Texture2D" uid="uid://dbkx8gfeqjexr" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS25.png" id="65_vcn31"]
@@ -356,10 +371,90 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("53_o3kne")
+}],
+"loop": true,
+"name": &"Background_Gym",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_015r6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_1e1bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_me362")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wvxwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_spw5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_71crj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_xjlu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_j2geo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_lneff")
+}],
+"loop": true,
+"name": &"Background_IPAD_animation",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_55ecv")
+}],
+"loop": true,
+"name": &"Background_Kitchen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_1ovk6")
+}],
+"loop": true,
+"name": &"Background_PC",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_6dpm1")
+}],
+"loop": true,
+"name": &"Background_Sewer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_w2bxo")
+}],
+"loop": true,
+"name": &"Background_TV",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_pt216")
+}],
+"loop": true,
+"name": &"Background_Work",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("53_lioov")
 }],
 "loop": true,
-"name": &"CEO_EVIL_End",
+"name": &"End_CEO_EVIL",
 "speed": 5.0
 }, {
 "frames": [{
@@ -367,7 +462,7 @@ animations = [{
 "texture": ExtResource("54_0gtl1")
 }],
 "loop": true,
-"name": &"CEO_Money_End",
+"name": &"End_CEO_Money",
 "speed": 5.0
 }, {
 "frames": [{
@@ -375,7 +470,7 @@ animations = [{
 "texture": ExtResource("55_q3pey")
 }],
 "loop": true,
-"name": &"Horse_Speed_End",
+"name": &"End_Horse_Speed",
 "speed": 5.0
 }]
 
@@ -1209,12 +1304,15 @@ frame = 12
 
 [node name="Node" type="Node" parent="SubViewportContainer/SubViewport/Control/FadeBackgroundOpening"]
 
-[node name="EndingSprite2" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/Control"]
+[node name="Background_EndingSprite" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/Control"]
+unique_name_in_owner = true
 visible = false
 texture_filter = 1
 position = Vector2(375, 191)
 sprite_frames = SubResource("SpriteFrames_7auws")
-animation = &"CEO_Money_End"
+animation = &"Background_IPAD_animation"
+autoplay = "Background_IPAD_animation"
+frame_progress = 0.23583
 
 [node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)
@@ -1222,7 +1320,7 @@ texture = ExtResource("37_w18ek")
 
 [node name="EndSpriteFade" type="AnimationPlayer" parent="SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
-root_node = NodePath("../Control/EndingSprite2")
+root_node = NodePath("../Control/Background_EndingSprite")
 libraries = {
 &"": SubResource("AnimationLibrary_q3pey")
 }
