@@ -1,13 +1,16 @@
-Unfortunately for your Homunculus, it's much too dark down here for it to make out much of anything at all.
-Through an uninterrupted string of misplays, misadventures, bad calls, and completely mindless judgements, your Homunculus gets terribly lost.
-Only through the debatable fortune of a VERY pungent scent in the sewers that your Homunculus is scared off in the right direction back to the surface.
+Your Homunculus manages to make it pretty far into the sewer, plumbing the depths and probing for neat little trinkets and baubles.
+Deep enough into the interminable abyss, the path opens up into a cavern. It finally starts seeing the little glittering gems and stars that you yourself were able to see.
+It gets a little too invested in the glitz that it spies, however. It doesn't take long for its ambitions for riches to fly too high, and as a result it becomes distracted.
+Too distracted to realize that there's a fuzzy beast with multiple heads - an alley cat and a lamb on the front, and a garden snake on the back.
+It prowls on your Homunculus, which immediately skitters away in abject terror having retrieved a tidy portion of the twinkling bits tucked around the sewers.
 join homunculus (neutral) right [animation="Instant In" length="0.0"]
 [signal arg="end_act"]
-homunculus (stressed): Snfff... Uhh... Ughhmmm...
-homunculus: I'm sorry... I'm really sorry. I did such a bad job down there... I couldn't find anything to bring back up. I didn't mean to waste your time, honest...
+homunculus (happy): Hey, I got something! I got some nice stuff!
+narrator: Your Homunculus dumps a small collection of twinkling rocks and shinier-looking pieces of trash.
+homunculus (stressed): There was a REALLY big thing in there, though. It was all scary and more-than-one-head-having, and I just wasn't gonna stand a chance. But we got nice stuff!
 leave homunculus [animation="Instant Out" length="0.0"]
+set {Stats.love} -= 6.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
-narrator: You give your deeply remorseful Homunculus some time to gather its senses before you leave the sewer grate it emerged from and head to the Town Center.
+narrator: Spooked but still proud of what it managed to accomplish, your Homunculus joins you after you pawn off its findings and head back to the Town Square.
 jump cityvisit/initialQuestion
-set {Stats.love} -= 10.0

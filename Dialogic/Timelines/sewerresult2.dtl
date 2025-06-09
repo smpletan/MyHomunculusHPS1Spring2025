@@ -1,13 +1,15 @@
-Unfortunately for your Homunculus, it's much too dark down here for it to make out much of anything at all.
-Through an uninterrupted string of misplays, misadventures, bad calls, and completely mindless judgements, your Homunculus gets terribly lost.
-Only through the debatable fortune of a VERY pungent scent in the sewers that your Homunculus is scared off in the right direction back to the surface.
+In the dark, your Homunculus barely manages to scrape past a horde of territorial rats scarpering to bite it. It squeezes into a sickly green-glowing knothole.
+What it manages to glean within the wet passage is... slime. A lot of really vibrant-looking green slime that pains the eyes, a stark contrast from the darkness all around.
+The dripping slime falls upon your Homunculus, coating it in a viscous shell that sloughs on and off as it toddles through the tunnel.
+Like an enticing chocolate sauce that hardens into a candy coating shell, your Homunculus's movement slows to a crawl until it's forced to waddle back out of the sewers.
 join homunculus (neutral) right [animation="Instant In" length="0.0"]
 [signal arg="end_act"]
-homunculus (stressed): Snfff... Uhh... Ughhmmm...
-homunculus: I'm sorry... I'm really sorry. I did such a bad job down there... I couldn't find anything to bring back up. I didn't mean to waste your time, honest...
+homunculus (stressed): Mmrgph. Mmph. Hmmprhg.
+narrator: It takes a frankly excessive amount of effort to crack your Homunculus out of the shell, but you notice that it might actually be valuable as some kind of resin.
+homunculus (stressed): Hey, I... didn't like that very much! The gunk didn't taste very good. The green stuff wasn't much better, either.
 leave homunculus [animation="Instant Out" length="0.0"]
+set {Stats.love} -= 7.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
-narrator: You give your deeply remorseful Homunculus some time to gather its senses before you leave the sewer grate it emerged from and head to the Town Center.
+narrator: You fob off the hardened green resin to a crafts store and return to the Town Square with your Homunculus.
 jump cityvisit/initialQuestion
-set {Stats.love} -= 10.0

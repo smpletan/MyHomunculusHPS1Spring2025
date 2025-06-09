@@ -1,13 +1,15 @@
-Unfortunately for your Homunculus, it's much too dark down here for it to make out much of anything at all.
-Through an uninterrupted string of misplays, misadventures, bad calls, and completely mindless judgements, your Homunculus gets terribly lost.
-Only through the debatable fortune of a VERY pungent scent in the sewers that your Homunculus is scared off in the right direction back to the surface.
+Your Homunculus pushes deep into the belly of the sewer until it opens into a yawning cavern, glittering with worthy little treasures.
+Towards the end it beholds a chimeric creation, a mix of cat, lamb, and garden snake. It glowers imposingly, but your Homunculus is both prepared and unafraid.
+Undeterred by its attempts at intimidation, your Homunculus puffs up right back at it, before diving at it with a full-body tackle that dings up both of them.
+Much was taken out of your Homunculus in the scuffle, but it comes out of the matter conscious. It assembles a little twinkling horde to bring back to you.
 join homunculus (neutral) right [animation="Instant In" length="0.0"]
 [signal arg="end_act"]
-homunculus (stressed): Snfff... Uhh... Ughhmmm...
-homunculus: I'm sorry... I'm really sorry. I did such a bad job down there... I couldn't find anything to bring back up. I didn't mean to waste your time, honest...
+homunculus (stressed): Oof... owie... owowow ouch... Oooh...
+homunculus (happy): I DID IT!
+homunculus (neutral): I'm stinging something real bad, but I beat the weird guy at the end of the sewers and got a bunch of stuff! You're proud of me, right?
 leave homunculus [animation="Instant Out" length="0.0"]
+set {Stats.love} -= 6.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
-narrator: You give your deeply remorseful Homunculus some time to gather its senses before you leave the sewer grate it emerged from and head to the Town Center.
+narrator: Your hands laden with sparkling lucre, you get a robust sum of Jingles from the pawn shop and return to Town Square.
 jump cityvisit/initialQuestion
-set {Stats.love} -= 10.0
