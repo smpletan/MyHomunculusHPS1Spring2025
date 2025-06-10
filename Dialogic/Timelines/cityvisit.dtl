@@ -1,14 +1,16 @@
 narrator: You and your Homunculus leave the home and enter the nearby town. Sleepy as it is here, if you're looking for opportunities to help your Homunculus grow you certainly won't go wanting.
-homunculus (happy): Okay, we're here!
 join homunculus right
+homunculus (happy): Okay, we're here!
 set {currEnergy} = 3.0
 label initialQuestion
 if {currEnergy} <= 0.0:
 	homunculus (stressed): Hooie... I'm pooped. I wanna go home. Let's go home. Can we go home? I think we should go home.
 	narrator: You go home.
 	jump endofday/
+join homunculus right
 homunculus (neutral): What do you wanna do together?
 - Head to the Gym.
+	[signal arg="gym_transition"]
 	leave homunculus [animation="Instant Out" length="0.0"]
 	narrator: You head over to the Gym, prepared to break a sweat for reasonable prices at 20 Jingles for a training session.
 	- Homunculus, pump some iron. [+Strength, -20J]
@@ -22,7 +24,7 @@ homunculus (neutral): What do you wanna do together?
 		set {Stats.love} -= 2.0
 		[signal arg="update_stats"]
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus (stressed): Ouuwwwww... There's nothing like a good workout, but... auwgh...
+		homunculus (stressed): There's nothing like a good workout, but... auwgh...
 		[signal arg="end_act"]
 		You give your Homunculus some time to cool down and relax before the two of you head back to the Town Square.
 		set {currEnergy} -= 1.0

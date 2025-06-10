@@ -92,7 +92,7 @@
 [ext_resource type="Texture2D" uid="uid://cs465wysv1mn7" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOMoney.png" id="54_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://dqe3uefsq7x3" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_001.png" id="54_015r6"]
 [ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="54_55ecv"]
-[ext_resource type="Script" uid="uid://dj4hojpp0dpp4" path="res://start_fade_animation_player.gd" id="54_e5uip"]
+[ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
 [ext_resource type="Texture2D" uid="uid://d1p52bg3tql0y" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_002.png" id="55_1e1bp"]
 [ext_resource type="Texture2D" uid="uid://davp7qdehd2jk" path="res://Assets/SpriteFrames/PCRenderBackground.png" id="55_1ovk6"]
@@ -1284,10 +1284,12 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Control" parent="SubViewportContainer/SubViewport/Control" instance=ExtResource("1_ob6x7")]
+[node name="BackGroundReal" parent="SubViewportContainer/SubViewport/Control" instance=ExtResource("1_ob6x7")]
+unique_name_in_owner = true
 layout_mode = 1
 
 [node name="ForeGroundSpriteAnimated" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/Control"]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_i1qdv")
 position = Vector2(368, 294)
 sprite_frames = SubResource("SpriteFrames_gl5ge")

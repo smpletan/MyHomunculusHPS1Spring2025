@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bbawrs0q2au2o"]
+[gd_scene load_steps=41 format=3 uid="uid://bbawrs0q2au2o"]
 
 [ext_resource type="Shader" uid="uid://ikbfkybglbtg" path="res://Assets/Shaders/ColorPallette.gdshader" id="1_1011i"]
 [ext_resource type="Texture2D" uid="uid://dq63ntx4l2f4l" path="res://Assets/pc-98_Adjusted.png" id="2_1011i"]
@@ -34,6 +34,10 @@
 [ext_resource type="Texture2D" uid="uid://cwukbyp5ge4oi" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_029.png" id="31_4oum7"]
 [ext_resource type="Texture2D" uid="uid://dyqy2xsuu0gvc" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_030.png" id="32_wd6c6"]
 [ext_resource type="Texture2D" uid="uid://bc4cybt1xotqc" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_031.png" id="33_6faqk"]
+[ext_resource type="Texture2D" uid="uid://p2yun1ycqcxi" path="res://Assets/SpriteFrames/FastFoodBackground.png" id="34_k4m2u"]
+[ext_resource type="Texture2D" uid="uid://ng5x0scfkn2o" path="res://Assets/SpriteFrames/BackgroundGym.png" id="35_tmm8g"]
+[ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="36_6ttwu"]
+[ext_resource type="Texture2D" uid="uid://bsqw6xf68qrqi" path="res://Assets/SpriteFrames/SewerBackground2.png" id="37_rjipy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_200es"]
 shader = ExtResource("1_1011i")
@@ -143,6 +147,38 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_k4m2u")
+}],
+"loop": true,
+"name": &"fastfood",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_tmm8g")
+}],
+"loop": true,
+"name": &"gym",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_6ttwu")
+}],
+"loop": true,
+"name": &"kitchen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_rjipy")
+}],
+"loop": true,
+"name": &"sewers",
+"speed": 5.0
 }]
 
 [node name="Control" type="Control"]
@@ -158,10 +194,10 @@ light_mask = 2
 visibility_layer = 2
 position = Vector2(380, 180)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+[node name="BackGround" type="AnimatedSprite2D" parent="Node2D"]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_200es")
 sprite_frames = SubResource("SpriteFrames_t7a14")
+animation = &"fastfood"
 autoplay = "default"
-frame = 30
-frame_progress = 0.415477
 script = ExtResource("5_daaef")

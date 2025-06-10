@@ -9,19 +9,26 @@ homunculus (neutral): It wasn't all that friendly to begin with, but maybe we ca
 narrator: It's a little difficult to explain exactly why you can't - or shouldn't, but you might as well try.
 - It's a runaway pet, sorry. We have to bring it to its home.
 	homunculus (neutral): Oh... Well, that's okay. If it's a pet that makes it okay. Let's bring it over to the owner's house!
-- We don't know where this thing's been. [Leave]
+	set {Stats.evil} -= 5.0
+	set {Stats.diligence} += 4.0
+- We don't know where this thing's been.
 	homunculus (happy): Oh, that's easy! I know where it's been! It's been in the sewer! I've been in the sewer too! And you're letting me back, so it's okay, right?
+	set {Stats.smarts} += 1.0
 	- I know where YOU came from though.
 		homunculus (neutral): Oh. I guess it works like that. That thing could have been from anywhere else... so, um, where will we take it then?
+		- I know a place.
 	- I guess you have a point...
 		homunculus (happy): I do? I do! Yay! I love being right! So I'm right, right? We can take it home with us?
-- This thing's GorLabs property. [Leave...]
+		- No.
+		- Absolutely not.
+- This thing's GorLabs property.
 	homunculus (neutral): GorLabs? What's that? Property? But it could be OUR property if we kept it home with us, right? And then we wouldn't even have to call it property.
 	- They'll get really really mad at us.
 		homunculus (stressed): Okay, okay... I don't like people getting mad at me. Or you. We can bring it back to its... home, right?
 	- They'll kill us if we don't.
 		homunculus (neutral): ...
 		narrator: The severity of the statement troubles your Homunculus enough to win its silence. It seems to understand and acquiesces.
+		set {Stats.evil} += 5.0
 leave homunculus [animation="Instant Out" length="0.0"]
 set {Stats.love} -= 5.0
 [signal arg="update_stats"]

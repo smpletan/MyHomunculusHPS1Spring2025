@@ -3,12 +3,13 @@ extends Node2D
 var anim
 var rng = RandomNumberGenerator.new()
 var sewersVisit = ""
+var sewersFullSuccess = false
 
 func _ready():
 	$OuterUI/ActivityContainer.visible = false
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	get_node("Background").get_node("%StartFadeAnimationPlayer").play("LightsOffFade_OUT")
-
+	# get_node("Background").get_node("%BackGround").get_node("AnimatedSprite2D").play("LightsOffFade_OUT")
 
 func _on_dialogic_signal(argument:String):
 	if argument == "begin_cutscene":
@@ -28,7 +29,17 @@ func _on_dialogic_signal(argument:String):
 		pass
 	elif argument == "home_transition":
 		pass
+	elif argument == "gym_transition":
+		get_node("Background").get_node("%ForeGroundSpriteAnimated").visible = false
+		get_node("Background").get_node("%BackGroundReal").get_node("%BackGround").play("gym")
+		pass
+	elif argument == "fastfood_transition":
+		pass
+	elif argument == "sewers_transition":
+		pass
 	elif argument == "lab_transition":
+		get_node("Background").get_node("%ForeGroundSpriteAnimated").visible = true
+		get_node("Background").get_node("%BackGroundReal").get_node("%BackGround").play("default")
 		pass
 	elif argument == "act_workout":
 		$OuterUI/ActivityContainer.visible = true
@@ -61,8 +72,17 @@ func _on_dialogic_signal(argument:String):
 			if( odds > rng.randi_range(0, 100) ) :
 				successcount += 1
 				print("Successes: " + str(successcount))
+		if(successcount == 5) :
+			if(!sewersFullSuccess) :
+				sewersFullSuccess = true
+				sewersVisit = ""
+				Dialogic.VAR.cash += 50
+			else :
+				sewersVisit = "b"
+		else :
+			sewersVisit = ""
 		Dialogic.VAR.Stats.strength += int(rng.randf_range(0, (randf_range(successcount, successcount * 1.5))))
 		Dialogic.VAR.Stats.speed += int(rng.randf_range(0, (randf_range(successcount, successcount * 1.5))))
 		Dialogic.VAR.Stats.bravery += int(rng.randf_range(0, (randf_range(successcount, successcount * 1.5))))
 		Dialogic.VAR.cash += (successcount * 30) + int(10 * rng.randf_range(0, successcount * 1.2))
-		Dialogic.start("sewerresult" + str(successcount))
+		Dialogic.start("sewerresult" + str(successcount) + sewersVisit)
