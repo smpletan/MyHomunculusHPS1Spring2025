@@ -1,19 +1,30 @@
-[gd_scene load_steps=41 format=3 uid="uid://bbawrs0q2au2o"]
+[gd_scene load_steps=54 format=3 uid="uid://bbawrs0q2au2o"]
 
 [ext_resource type="Shader" uid="uid://ikbfkybglbtg" path="res://Assets/Shaders/ColorPallette.gdshader" id="1_1011i"]
 [ext_resource type="Texture2D" uid="uid://dq63ntx4l2f4l" path="res://Assets/pc-98_Adjusted.png" id="2_1011i"]
+[ext_resource type="Texture2D" uid="uid://dqe3uefsq7x3" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_001.png" id="3_sv5ko"]
 [ext_resource type="Texture2D" uid="uid://ceu45vh10626t" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_001.png" id="3_ydi5c"]
+[ext_resource type="Texture2D" uid="uid://d1p52bg3tql0y" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_002.png" id="4_a6shd"]
 [ext_resource type="Texture2D" uid="uid://beqmv2xay202x" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_002.png" id="4_yab2g"]
 [ext_resource type="Script" uid="uid://wbcjgkr20a6d" path="res://Scripts/BackgroundUse.gd" id="5_daaef"]
+[ext_resource type="Texture2D" uid="uid://madecjykb6qi" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_003.png" id="5_k1nyy"]
 [ext_resource type="Texture2D" uid="uid://g0mlx5is5t4f" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_003.png" id="5_r1qu4"]
+[ext_resource type="Texture2D" uid="uid://sta5mwdi6w64" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_004.png" id="6_2qeeb"]
 [ext_resource type="Texture2D" uid="uid://clmurepodoy72" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_004.png" id="6_k4m2u"]
+[ext_resource type="Texture2D" uid="uid://2w1fdq4vi0d0" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_005.png" id="7_a3d27"]
 [ext_resource type="Texture2D" uid="uid://n3nnvygggxs0" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_005.png" id="7_tmm8g"]
 [ext_resource type="Texture2D" uid="uid://wrckf8g2jubq" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_006.png" id="8_6ttwu"]
+[ext_resource type="Texture2D" uid="uid://dwmgh4og8ujim" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_006.png" id="8_ocxjh"]
+[ext_resource type="Texture2D" uid="uid://b71fnom7xdhtt" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_007.png" id="9_nij65"]
 [ext_resource type="Texture2D" uid="uid://c1c2h34fqtefr" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_007.png" id="9_rjipy"]
 [ext_resource type="Texture2D" uid="uid://c4qk4jmxwn74e" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_008.png" id="10_586g3"]
+[ext_resource type="Texture2D" uid="uid://cckl545bvlbvu" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_008.png" id="10_lp55v"]
+[ext_resource type="Texture2D" uid="uid://chv21r4elx4wr" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_009.png" id="11_dwogs"]
 [ext_resource type="Texture2D" uid="uid://bxqttkmaa84gd" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_009.png" id="11_hu2j2"]
 [ext_resource type="Texture2D" uid="uid://hap23xbk5yb8" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_010.png" id="12_7jjkl"]
+[ext_resource type="Texture2D" uid="uid://pilbdk2df0j0" path="res://Assets/SpriteFrames/TVRenderBackground.png" id="12_hws5f"]
 [ext_resource type="Texture2D" uid="uid://xsbuj4kfci4c" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_011.png" id="13_0b6c5"]
+[ext_resource type="Texture2D" uid="uid://davp7qdehd2jk" path="res://Assets/SpriteFrames/PCRenderBackground.png" id="13_xvlv4"]
 [ext_resource type="Texture2D" uid="uid://ssa3jx0r8g6y" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_012.png" id="14_7avsp"]
 [ext_resource type="Texture2D" uid="uid://dg7qvdmmjowaf" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_013.png" id="15_7iv2d"]
 [ext_resource type="Texture2D" uid="uid://b8fsljfjh2vs6" path="res://Assets/SpriteFrames/Background/BackgroundPIXEL_014.png" id="16_rhk7i"]
@@ -38,6 +49,8 @@
 [ext_resource type="Texture2D" uid="uid://ng5x0scfkn2o" path="res://Assets/SpriteFrames/BackgroundGym.png" id="35_tmm8g"]
 [ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="36_6ttwu"]
 [ext_resource type="Texture2D" uid="uid://bsqw6xf68qrqi" path="res://Assets/SpriteFrames/SewerBackground2.png" id="37_rjipy"]
+[ext_resource type="Texture2D" uid="uid://dqcydix5emdrh" path="res://Assets/SpriteFrames/BackgroundLibrary2.png" id="48_rqm0r"]
+[ext_resource type="Texture2D" uid="uid://b8sbaycufbte" path="res://Assets/SpriteFrames/PlayGroundBackground.png" id="49_4oum7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_200es"]
 shader = ExtResource("1_1011i")
@@ -50,6 +63,54 @@ shader_parameter/quantization_level = 14
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t7a14"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sv5ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a6shd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k1nyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2qeeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a3d27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ocxjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nij65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lp55v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dwogs")
+}],
+"loop": true,
+"name": &"Ipad",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_hws5f")
+}],
+"loop": true,
+"name": &"TV",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_xvlv4")
+}],
+"loop": true,
+"name": &"computer",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_ydi5c")
@@ -174,6 +235,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("48_rqm0r")
+}],
+"loop": true,
+"name": &"library",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_4oum7")
+}],
+"loop": true,
+"name": &"playground",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("37_rjipy")
 }],
 "loop": true,
@@ -198,6 +275,5 @@ position = Vector2(380, 180)
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_200es")
 sprite_frames = SubResource("SpriteFrames_t7a14")
-animation = &"fastfood"
 autoplay = "default"
 script = ExtResource("5_daaef")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=218 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=220 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://2eco5eiw0xf8" path="res://cutshader.gdshader" id="1_t27p2"]
@@ -92,7 +92,7 @@
 [ext_resource type="Texture2D" uid="uid://cs465wysv1mn7" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOMoney.png" id="54_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://dqe3uefsq7x3" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_001.png" id="54_015r6"]
 [ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="54_55ecv"]
-[ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
+[ext_resource type="Script" uid="uid://dj4hojpp0dpp4" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
 [ext_resource type="Texture2D" uid="uid://d1p52bg3tql0y" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_002.png" id="55_1e1bp"]
 [ext_resource type="Texture2D" uid="uid://davp7qdehd2jk" path="res://Assets/SpriteFrames/PCRenderBackground.png" id="55_1ovk6"]
@@ -116,8 +116,10 @@
 [ext_resource type="Texture2D" uid="uid://bbmswc0sai2nk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS22.png" id="62_kc3fg"]
 [ext_resource type="Texture2D" uid="uid://chv21r4elx4wr" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_009.png" id="62_lneff"]
 [ext_resource type="Texture2D" uid="uid://bax0p4666d2a4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS23.png" id="63_1lg36"]
+[ext_resource type="Texture2D" uid="uid://dqcydix5emdrh" path="res://Assets/SpriteFrames/BackgroundLibrary2.png" id="64_me362"]
 [ext_resource type="Texture2D" uid="uid://0b6makik00bw" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS24.png" id="64_uxje1"]
 [ext_resource type="Texture2D" uid="uid://dbkx8gfeqjexr" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS25.png" id="65_vcn31"]
+[ext_resource type="Texture2D" uid="uid://b8sbaycufbte" path="res://Assets/SpriteFrames/PlayGroundBackground.png" id="66_wvxwo"]
 [ext_resource type="Texture2D" uid="uid://gh7h48jrsm4b" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS26.png" id="66_xfleg"]
 [ext_resource type="Texture2D" uid="uid://0pyg1hjbcug8" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS27.png" id="67_wfwhh"]
 [ext_resource type="Texture2D" uid="uid://pnxyw00a6mdk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS28.png" id="68_kecmj"]
@@ -419,10 +421,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("64_me362")
+}],
+"loop": true,
+"name": &"Background_Library",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("55_1ovk6")
 }],
 "loop": true,
 "name": &"Background_PC",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_wvxwo")
+}],
+"loop": true,
+"name": &"Background_Playground",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1312,9 +1330,7 @@ visible = false
 texture_filter = 1
 position = Vector2(375, 191)
 sprite_frames = SubResource("SpriteFrames_7auws")
-animation = &"Background_IPAD_animation"
-autoplay = "Background_IPAD_animation"
-frame_progress = 0.23583
+animation = &"Background_Library"
 
 [node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)
