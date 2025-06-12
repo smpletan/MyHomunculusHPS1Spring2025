@@ -5,7 +5,7 @@ Place down the heart. Bind the flesh. Plop on the eyes. Imbue it with a moment o
 Cognition floods in, but understanding doesn't follow. That's where you come in.
 Your responsibilities are simple. Raise this creature, give it attention and knowledge, and within thirty days' time it will grow. Try to do it right this time.
 Before you can even blink, the fleshy mass of newborn consciousness sloughs off of the table and crawls pathetically towards you. Its newly imbued flesh scrapes against the ground.
-join homunculus right [animation="Fade In Down" length="1.0" wait="true"]
+join homunculus right [animation="Instant In" length="0.0" wait="true"]
 homunculus (neutral): Uuuuuu... Boooouuuu... Lim... Liv... I'm...
 homunculus (neutral): Life... I'm Life...
 homunculus (stressed): Nop. Nope. I'm not Life. What am I?

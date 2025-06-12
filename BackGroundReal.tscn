@@ -275,5 +275,6 @@ position = Vector2(380, 180)
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_200es")
 sprite_frames = SubResource("SpriteFrames_t7a14")
+animation = &"fastfood"
 autoplay = "default"
 script = ExtResource("5_daaef")

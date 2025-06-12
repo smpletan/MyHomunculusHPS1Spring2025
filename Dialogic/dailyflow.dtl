@@ -1,4 +1,5 @@
 It's Day {dayNumber} of the month. You've got {daysLeft} days left this month until the Growth.
+set {currEnergy} = 3.0
 join homunculus right
 label HomunculusConvoStart
 homunculus (neutral): What do we wanna do today?
@@ -19,5 +20,5 @@ homunculus (neutral): What do we wanna do today?
 	- Eh, let's think about it. [Return]
 		jump HomunculusConvoStart
 - Let's do something here.
-- (Ignore it...)
+	jump stayinside/
 <Empty Text Event>

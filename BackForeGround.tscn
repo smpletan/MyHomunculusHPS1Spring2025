@@ -92,7 +92,7 @@
 [ext_resource type="Texture2D" uid="uid://cs465wysv1mn7" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOMoney.png" id="54_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://dqe3uefsq7x3" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_001.png" id="54_015r6"]
 [ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="54_55ecv"]
-[ext_resource type="Script" uid="uid://dj4hojpp0dpp4" path="res://start_fade_animation_player.gd" id="54_e5uip"]
+[ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
 [ext_resource type="Texture2D" uid="uid://d1p52bg3tql0y" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_002.png" id="55_1e1bp"]
 [ext_resource type="Texture2D" uid="uid://davp7qdehd2jk" path="res://Assets/SpriteFrames/PCRenderBackground.png" id="55_1ovk6"]
@@ -1330,7 +1330,7 @@ visible = false
 texture_filter = 1
 position = Vector2(375, 191)
 sprite_frames = SubResource("SpriteFrames_7auws")
-animation = &"Background_Library"
+animation = &"Background_TV"
 
 [node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)

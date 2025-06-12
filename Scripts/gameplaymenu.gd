@@ -30,8 +30,13 @@ func _on_dialogic_signal(argument:String):
 		await get_tree().create_timer(0.4).timeout
 		print("CITY")
 		#TEMPORARY BACKGROUND till we can get a city
-		get_node("Background").get_node("%Background_EndingSprite").play("Backgound_Playground")
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_Playground")
 		pass
+	elif argument == "playground_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		#TEMPORARY BACKGROUND till we can get a city
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_Playground")
 	elif argument == "home_transition":
 		pass
 	elif argument == "gym_transition":
@@ -51,8 +56,27 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "sewers_transition":
 		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
 		await get_tree().create_timer(0.4).timeout
-		print("SEWER")
 		get_node("Background").get_node("%Background_EndingSprite").play("Background_Sewer")
+		pass
+	elif argument == "tv_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_TV")
+		pass
+	elif argument == "kitchen_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_Kitchen")
+		pass
+	elif argument == "ipad_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_IPAD_animation")
+		pass
+	elif argument == "pc_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_PC")
 		pass
 	elif argument == "lab_transition":
 		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_OUT")

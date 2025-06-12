@@ -1,11 +1,14 @@
 narrator: You and your Homunculus leave the home and enter the nearby town. Sleepy as it is here, if you're looking for opportunities to help your Homunculus grow you certainly won't go wanting.
 join homunculus right
 homunculus (happy): Okay, we're here!
-set {currEnergy} = 3.0
 label initialQuestion
+[signal arg="city_transition"]
 if {currEnergy} <= 0.0:
+	join homunculus right
 	homunculus (stressed): Hooie... I'm pooped. I wanna go home. Let's go home. Can we go home? I think we should go home.
 	narrator: You go home.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="lab_transition"]
 	jump endofday/
 join homunculus right
 homunculus (neutral): What do you wanna do together?
@@ -100,6 +103,7 @@ homunculus (neutral): What do you wanna do together?
 		jump initialQuestion
 - Head to the Playground.
 	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="playground_transition"]
 	You make it to the Playground in the center of town, where you can have a merry ol' time with your Homunculus.
 	- You wanna sit on the swings? [+Love, +Speed, Free]
 		set {Stats.driving} += 2.0
@@ -139,6 +143,7 @@ homunculus (neutral): What do you wanna do together?
 		jump initialQuestion
 - Enlist Homunculus on a part-time job.
 	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="fastfood_transition"]
 	The two of you make it to the local Burgurger Gurberbergur. Through hyperspecific and arcane legal loopholes, this is the only place your Homunculus can legally work for pay.
 	- Get to flippin', Homunculus. [+Jingles, +Diligence, -Love]
 		[signal arg="act_parttime"]
@@ -158,6 +163,7 @@ homunculus (neutral): What do you wanna do together?
 		jump initialQuestion
 - Cast out unto the Sewers.
 	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="sewers_transition"]
 	if {currEnergy} < 3.0:
 		Going to the Sewers is a very physically demanding commitment. You'd need the bountiful energy of a fresh day for it.
 		jump initialQuestion
@@ -178,3 +184,4 @@ homunculus (neutral): What do you wanna do together?
 		jump 
 	- Yup, I'm sure. [Go home, end day]
 		jump endofday/
+		[signal arg="lab_transition"]

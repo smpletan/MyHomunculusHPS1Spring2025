@@ -38,7 +38,8 @@ directories/dtl_directory={
 "sewerresult3": "res://Dialogic/Timelines/sewerresult3.dtl",
 "sewerresult4": "res://Dialogic/Timelines/sewerresult4.dtl",
 "sewerresult5": "res://Dialogic/Timelines/sewerresult5.dtl",
-"sewerresult5b": "res://Dialogic/Timelines/sewerresult5b.dtl"
+"sewerresult5b": "res://Dialogic/Timelines/sewerresult5b.dtl",
+"stayinside": "res://Dialogic/Timelines/stayinside.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://Assets/Dialogic/VNStyle.tres"]
@@ -62,6 +63,7 @@ variables={
 "currEnergy": 3,
 "dayNumber": 1,
 "daysLeft": 29,
+"insideNotif": false,
 "sewerDialogue": "",
 "sewerOdds": 0.0
 }
