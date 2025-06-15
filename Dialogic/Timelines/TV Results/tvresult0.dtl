@@ -1,0 +1,13 @@
+Through an uninterrupted string of misplays, misadventures, bad calls, and completely mindless judgements, your Homunculus gets terribly lost.
+Only through the debatable fortune of a VERY pungent scent in the sewers that your Homunculus is scared off in the right direction back to the surface.
+join homunculus (neutral) right [animation="Instant In" length="0.0"]
+[signal arg="end_act"]
+homunculus (stressed): Snfff... Uhh... Ughhmmm...
+homunculus: I'm sorry... I'm really sorry. I did such a bad job down there... I couldn't find anything to bring back up. I didn't mean to waste your time, honest...
+leave homunculus [animation="Instant Out" length="0.0"]
+set {Stats.love} -= 10.0
+set {currEnergy} -= 3.0
+[signal arg="update_stats"]
+narrator: You give your deeply remorseful Homunculus some time to gather its senses before you leave the sewer grate it emerged from and head to Town Square.
+jump cityvisit/initialQuestion
+Unfortunately for your Homunculus, it's much too dark down here for it to make out much of anything at all. It swiftly falls prey to its panicking nerves.

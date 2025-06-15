@@ -4,6 +4,22 @@ var anim
 var rng = RandomNumberGenerator.new()
 var sewersVisit = ""
 var sewersFullSuccess = false
+var ending_scene = ""
+# God I really wasn't hoping to do it like this, but it's a solid fallback for a growth points system.
+#  Index : Ending
+#  0 : Indifferent (All stats below 10)
+#  1 : Horse (Speed highest at above 80, no other stat high enough)
+#  2 : Neglected (Love below 15, Evil above 40-50)
+#  3 : CEO Mindset Neutral (Diligence above 80, Smarts above 60, Evil below 30)
+#  4 : CEO Mindset Evil (Diligence above 80, Smarts above 60, Evil above 30)
+#  5 : Gym Bro (Strength + Speed above 70-80, Love above 50)
+#  6 : Firefighter (Bravery above 80, Strength above 60, Speed above 60)
+#  7 : Film Buff (Smarts above 60, Below 10 Media Literacy)
+#  8 : NL (Smarts above 60, Above 50 Media Literacy)
+#  9 : Car (Speed above 80, Driving above 50)
+# 10 : Driver (Driving at 100. Overrides any other ending.)
+# 11 : Butler (Diligence above 80, Love above 60, Smarts below 60, Bravery below 50)
+var growth_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 func _ready():
 	$OuterUI/ActivityContainer.visible = false
@@ -11,11 +27,31 @@ func _ready():
 	get_node("Background").get_node("%StartFadeAnimationPlayer").play("LightsOffFade_OUT")
 	# get_node("Background").get_node("%BackGround").get_node("AnimatedSprite2D").play("LightsOffFade_OUT")
 
+func resolve_growth():
+	growth_array[0] = (Dialogic.VAR.Stats.love < 10 && Dialogic.VAR.Stats.smarts < 10 && Dialogic.VAR.Stats.strength < 10 \
+		&& Dialogic.VAR.Stats.speed < 10 && Dialogic.VAR.Stats.bravery < 10 && Dialogic.VAR.Stats.diligence < 10 \
+		&& Dialogic.VAR.Stats.diligence < 10 && Dialogic.VAR.Stats.medialit < 10 && Dialogic.VAR.Stats.driving < 10)
+	growth_array[1] = (Dialogic.VAR.Stats.speed >= 80)
+	growth_array[2] = (Dialogic.VAR.Stats.love <= 15) + (Dialogic.VAR.Stats.evil >= 40)
+	growth_array[3] = (Dialogic.VAR.Stats.diligence >= 80) + (Dialogic.VAR.Stats.smarts >= 60) + (Dialogic.VAR.Stats.evil <= 30)
+	growth_array[4] = (Dialogic.VAR.Stats.diligence >= 80) + (Dialogic.VAR.Stats.smarts >= 60) + (Dialogic.VAR.Stats.evil > 30)
+	growth_array[5] = (Dialogic.VAR.Stats.strength >= 70) + (Dialogic.VAR.Stats.speed >= 70) + (Dialogic.VAR.Stats.love >= 50)
+	growth_array[6] = (Dialogic.VAR.Stats.bravery >= 60) + (Dialogic.VAR.Stats.strength >= 60) + (Dialogic.VAR.Stats.diligence >= 60)
+	
+	growth_array[10] = (Dialogic.VAR.Stats.driving >= 100)
+	print("Yes")
+	
+func check_in_range(stat: float, target: float, low_range: int, high_range: int):
+	return (stat >= target - low_range && stat <= target + high_range)
+
 func _on_dialogic_signal(argument:String):
 	if argument == "begin_cutscene":
 		Dialogic.paused = true
 		get_node("Background").get_node("%OpeningAnimationPlayer").play("OpeningAnimation")
 	elif argument == "update_stats":
+		#Force a lower clamp to the Love stat.
+		if(Dialogic.VAR.Stats.love < -20):
+			Dialogic.VAR.Stats.love = -20
 		$OuterUI/StatMeterVBox/LoveMeter.value = Dialogic.VAR.Stats.love
 		$OuterUI/StatMeterVBox/SmartsMeter.value = Dialogic.VAR.Stats.smarts
 		$OuterUI/StatMeterVBox/StrengthMeter.value = Dialogic.VAR.Stats.strength
@@ -104,6 +140,20 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "act_sewers":
 		$OuterUI/ActivityContainer.visible = true
 		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("Sewers")
+	elif argument == "act_tv":
+		$OuterUI/ActivityContainer.visible = true
+		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("WatchTV")
+	elif argument == "act_ipad":
+		pass
+	elif argument == "act_pc":
+		$OuterUI/ActivityContainer.visible = true
+		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("Computer")
+	elif argument == "act_beatup":
+		$OuterUI/ActivityContainer.visible = true
+		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("BeatUp")
+	elif argument == "act_dinner":
+		$OuterUI/ActivityContainer.visible = true
+		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("Cooking")
 	elif argument == "end_act":
 		$OuterUI/ActivityContainer.visible = false
 		#get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_OUT")
@@ -122,6 +172,18 @@ func _on_dialogic_signal(argument:String):
 				Dialogic.VAR.cash += 50
 			else :
 				sewersVisit = "b"
+		elif(successcount == 4) :
+			if(!sewersFullSuccess) :
+				sewersFullSuccess = true
+				sewersVisit = ""
+			else :
+				sewersVisit = "a"
+		elif(successcount == 3) :
+			if(!sewersFullSuccess) :
+				sewersFullSuccess = true
+				sewersVisit = ""
+			else :
+				sewersVisit = "a"
 		else :
 			sewersVisit = ""
 		Dialogic.VAR.Stats.strength += int(rng.randf_range(0, (randf_range(successcount, successcount * 1.5))))

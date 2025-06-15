@@ -1,3 +1,6 @@
+if {dayNumber} == 30.0:
+	It's the last day of the month. The Growth is upon us...
+	[end_timeline]
 It's Day {dayNumber} of the month. You've got {daysLeft} days left this month until the Growth.
 set {currEnergy} = 3.0
 join homunculus right
@@ -21,4 +24,3 @@ homunculus (neutral): What do we wanna do today?
 		jump HomunculusConvoStart
 - Let's do something here.
 	jump stayinside/
-<Empty Text Event>

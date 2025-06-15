@@ -152,7 +152,7 @@ homunculus (neutral): What do you wanna do together?
 		join homunculus (stressed) right [animation="Instant In" length="0.0"]
 		homunculus (stressed): Whew... It was super busy. My nubs are feeling all worn out to... um... well, nubs.
 		homunculus (happy): But hey, we got paid!
-		narrator: Your Homunculus, now a little tuckered out, managed to hustle up 60 Jingles. The two of you head back to the Town Square.
+		narrator: Your Homunculus, now a little tuckered out, managed to hustle up Jingles. The two of you head back to the Town Square.
 		set {cash} += 40.0
 		set {Stats.diligence} += 5.0
 		set {currEnergy} -= 1.0
@@ -181,7 +181,7 @@ homunculus (neutral): What do you wanna do together?
 - Just head back home.
 	Are you sure? Heading home early also ends the day early.
 	- On second thought... [Return]
-		jump 
+		jump initialQuestion
 	- Yup, I'm sure. [Go home, end day]
-		jump endofday/
 		[signal arg="lab_transition"]
+		jump endofday/

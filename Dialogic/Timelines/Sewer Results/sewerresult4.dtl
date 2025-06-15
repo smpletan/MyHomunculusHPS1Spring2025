@@ -1,7 +1,7 @@
 Your Homunculus pushes deep into the belly of the sewer until it opens into a yawning cavern, glittering with worthy little treasures.
 Towards the end it beholds a chimeric creation, a mix of cat, lamb, and garden snake. It glowers imposingly, but your Homunculus is both prepared and unafraid.
 Undeterred by its attempts at intimidation, your Homunculus puffs up right back at it, before diving at it with a full-body tackle that dings up both of them.
-Much was taken out of your Homunculus in the scuffle, but it comes out of the matter conscious. It assembles a little twinkling horde to bring back to you.
+Much was taken out of your Homunculus in the scuffle, but it comes out of the matter conscious. It assembles a little twinkling horde to bring back to you with what remains of its strength.
 join homunculus (neutral) right [animation="Instant In" length="0.0"]
 [signal arg="end_act"]
 homunculus (stressed): Oof... owie... owowow ouch... Oooh...

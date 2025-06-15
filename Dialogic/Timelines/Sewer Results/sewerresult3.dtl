@@ -1,7 +1,7 @@
 Your Homunculus manages to make it pretty far into the sewer, plumbing the depths and probing for neat little trinkets and baubles.
 Deep enough into the interminable abyss, the path opens up into a cavern. It finally starts seeing the little glittering gems and stars that you yourself were able to see.
-It gets a little too invested in the glitz that it spies, however. It doesn't take long for its ambitions for riches to fly too high, and as a result it becomes distracted.
-Too distracted to realize that there's a fuzzy beast with multiple heads - an alley cat and a lamb on the front, and a garden snake on the back.
+It gets a little too invested in the glitz that it spies, however. It doesn't take long for its ambitions for riches to fly too high, and as a result it's distracted.
+Too distracted to realize that there approaches a fuzzy beast with multiple heads - an alley cat and a lamb on the front, and a garden snake on the back.
 It prowls on your Homunculus, which immediately skitters away in abject terror having retrieved a tidy portion of the twinkling bits tucked around the sewers.
 join homunculus (neutral) right [animation="Instant In" length="0.0"]
 [signal arg="end_act"]

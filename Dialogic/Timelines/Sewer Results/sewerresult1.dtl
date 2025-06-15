@@ -7,8 +7,8 @@ join homunculus (neutral) right [animation="Instant In" length="0.0"]
 homunculus (stressed): Phew...
 homunculus (neutral): I didn't know there'd be so many of them. I didn't even think they'd be down there at all! I didn't get very far, but I did manage to get something!
 leave homunculus [animation="Instant Out" length="0.0"]
-[signal arg="update_stats"]
 set {Stats.love} -= 9.0
 set {currEnergy} -= 3.0
+[signal arg="update_stats"]
 narrator: You spend some time cleaning rat sheddings off of your Homunculus before you pawn off the piece of fossilized cheese and head back to Town Square.
 jump cityvisit/initialQuestion

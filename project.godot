@@ -32,14 +32,22 @@ directories/dtl_directory={
 "endofday": "res://Dialogic/Timelines/endofday.dtl",
 "homevisit": "res://Dialogic/Timelines/homevisit.dtl",
 "newgame": "res://Dialogic/newgame.dtl",
-"sewerresult0": "res://Dialogic/Timelines/sewerresult0.dtl",
-"sewerresult1": "res://Dialogic/Timelines/sewerresult1.dtl",
-"sewerresult2": "res://Dialogic/Timelines/sewerresult2.dtl",
-"sewerresult3": "res://Dialogic/Timelines/sewerresult3.dtl",
-"sewerresult4": "res://Dialogic/Timelines/sewerresult4.dtl",
-"sewerresult5": "res://Dialogic/Timelines/sewerresult5.dtl",
-"sewerresult5b": "res://Dialogic/Timelines/sewerresult5b.dtl",
-"stayinside": "res://Dialogic/Timelines/stayinside.dtl"
+"sewerresult0": "res://Dialogic/Timelines/Sewer Results/sewerresult0.dtl",
+"sewerresult1": "res://Dialogic/Timelines/Sewer Results/sewerresult1.dtl",
+"sewerresult2": "res://Dialogic/Timelines/Sewer Results/sewerresult2.dtl",
+"sewerresult3": "res://Dialogic/Timelines/Sewer Results/sewerresult3.dtl",
+"sewerresult3a": "res://Dialogic/Timelines/Sewer Results/sewerresult3a.dtl",
+"sewerresult4": "res://Dialogic/Timelines/Sewer Results/sewerresult4.dtl",
+"sewerresult4a": "res://Dialogic/Timelines/Sewer Results/sewerresult4a.dtl",
+"sewerresult5": "res://Dialogic/Timelines/Sewer Results/sewerresult5.dtl",
+"sewerresult5b": "res://Dialogic/Timelines/Sewer Results/sewerresult5b.dtl",
+"stayinside": "res://Dialogic/Timelines/stayinside.dtl",
+"tvresult0": "res://Dialogic/Timelines/TV Results/tvresult0.dtl",
+"tvresult1": "res://Dialogic/Timelines/TV Results/tvresult1.dtl",
+"tvresult2": "res://Dialogic/Timelines/TV Results/tvresult2.dtl",
+"tvresult3": "res://Dialogic/Timelines/TV Results/tvresult3.dtl",
+"tvresult4": "res://Dialogic/Timelines/TV Results/tvresult4.dtl",
+"tvresult5": "res://Dialogic/Timelines/TV Results/tvresult5.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://Assets/Dialogic/VNStyle.tres"]

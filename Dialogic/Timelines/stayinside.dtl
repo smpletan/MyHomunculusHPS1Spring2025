@@ -3,6 +3,12 @@ if {insideNotif} == false:
 	narrator: (Do be aware that using any time at all inside means that you can no longer go outside for the day. This message will only show up once!)
 	set {insideNotif} = true
 label initialQuestion
+if {currEnergy} <= 0.0:
+	join homunculus (stressed) right [animation="Instant In" length="0.0"]
+	homunculus: Okie-dokie, I'm pooped. I don't think I can do more things today.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="lab_transition"]
+	jump endofday/
 join homunculus right [animation="Instant In" length="0.0"]
 homunculus (neutral): What do you wanna do here?
 - Let's watch some TV.
@@ -11,6 +17,7 @@ homunculus (neutral): What do you wanna do here?
 	Your Homunculus is drawn to it. The operations and offerings the TV change erratically, and as a result might affect your Homunculus's growth erratically.
 	The nice thing is your cable bill's paid for the entire month, so having your Homunculus watch TV is basically free.
 	- Alright, have fun watching stuff. [+???]
+		[signal arg="act_tv"]
 	- Actually, let's leave it be. [Leave]
 	set {currEnergy} -= 1.0
 	jump initialQuestion
@@ -18,25 +25,115 @@ homunculus (neutral): What do you wanna do here?
 	[signal arg="kitchen_transition"]
 	You stop into your kitchen with your Homunculus. It doesn't need to eat, but you can work together on a meal to bolster its growth.
 	The ingredients aren't free, and the classier the meal the more your Homunculus has to gain from it.
-	- 
-	- 
-	set {currEnergy} -= 1.0
-	jump initialQuestion
+	- A Modest Meal [+???, -20J]
+		set {currEnergy} -= 1.0
+		[signal arg="act_dinner"]
+		set {cash} -= 20.0
+		[signal arg="update_stats"]
+		You decide to dine on a budget, and whip up a cheap meal swirled together from small cans of beans, meats, and brussels sprouts...
+		What the two of you come up with is actually pretty decent\: a humble meat and veggie plate that doesn't nourish the body as much as the soul.
+		set {Stats.strength} += 1.0
+		set {Stats.diligence} += 1.0
+		set {Stats.speed} += 1.0
+		set {Stats.love} += 3.0
+		[signal arg="update_stats"]
+		[signal arg="end_act"]
+		homunculus (happy): That was nice! Light, but really nice! Thanks!
+		narrator: With your Homunculus pleased, it toddles back out of the kitchen with you.
+		[signal arg="lab_transition"]
+		jump initialQuestion
+	- A Pricier Meal [+???, -40J]
+		set {currEnergy} -= 1.0
+		[signal arg="act_dinner"]
+		set {cash} -= 40.0
+		[signal arg="update_stats"]
+		You splurge a bit by assembling ingredients that are a little more pricey than average\: fresh greens, robust proteins, pasta, and sauce.
+		A solid, flavorful bowl of creamy pasta topped with chopped meats and diced veggies... it's a warming, reliable meal.
+		set {Stats.strength} += 2.0
+		set {Stats.diligence} += 2.0
+		set {Stats.speed} += 2.0
+		set {Stats.love} += 4.0
+		[signal arg="update_stats"]
+		[signal arg="end_act"]
+		homunculus (happy): Hooie... That was yummy! I'm stuffed to the... um...
+		homunculus (neutral): Do I have gills?
+		narrator: A satisfied and satiated Homunculus joins you as you leave the kitchen.
+		[signal arg="lab_transition"]
+		jump initialQuestion
+	- A Luxurious Meal [+???, -80J]
+		set {currEnergy} -= 1.0
+		[signal arg="act_dinner"]
+		set {cash} -= 80.0
+		[signal arg="update_stats"]
+		narrator: You defy humility by assembling the ingredients to a succulent, luxurious, and certainly excessive meal. Cooking all of it is a task in and of itself.
+		By the time you're done, a holiday feast's worth of food is sitting in front of you that you're certain you couldn't finish.
+		Somehow, your Homunculus manages to leave no leftovers.
+		set {Stats.strength} += 5.0
+		set {Stats.diligence} += 6.0
+		set {Stats.speed} += 5.0
+		set {Stats.love} += 8.0
+		[signal arg="update_stats"]
+		[signal arg="end_act"]
+		homunculus (happy): I don't even really know how to describe it, but it was yummy! It was also a LOT! SO much! TOO much, maybe!
+		homunculus (neutral): But I can tell that you put together something that cost a pretty penny. I'm really grateful, y'know?
+		narrator: Somehow not having noticeably grown despite having eaten an entire feast's worth of food, your Homunculus bounces out of the kitchen.
+		[signal arg="lab_transition"]
+		jump initialQuestion
+	- Nevermind, actually. [Leave]
+		jump initialQuestion
 - You wanna do surveys? On the computer?
 	[signal arg="pc_transition"]
-	<Empty Text Event>
-	set {currEnergy} -= 1.0
-	jump initialQuestion
+	There's an argument to be made in favor of profit via mindlessly filling personal information out on random sketchy surveys online.
+	As a being that has yet to coalesce any real identity, your Homunculus turns out to be perfectly suited for the task.
+	Said task will also be soul-crushingly monotonous, but the rigid consistency of the task will help your Homunculus gain a sense of diligence.
+	- Hit the keyboard, Homunculus. [-Love, +Diligence, +J]
+		[signal arg="act_pc"]
+		narrator: It's a breeze of a process, just having to fill in (weirdly anomalous) personal data that your Homunculus simultaneously does and doesn't have.
+		But it goes on and on and on.
+		narrator: Your Homunculus goes through some real drudgery, just filling forms and clicking buttons. Mind-numbing as it is, at least it doesn't have to do this forever.
+		narrator: Eventually it's over, and by the time it's over your Homunculus's eyes look a little glazed-over from staring right at blue light for hours.
+		[signal arg="end_act"]
+		homunculus (stressed): Ugh... sorry, gimme some time. My eyes sting real bad... And my nubs? Forget about it, my nubs are toast.
+		narrator: Your Homunculus is pretty upset about the whole experience, but it's acquired some work and internet acumen while you've acquired some Jingles.
+		set {Stats.evil} += 1.0
+		set {Stats.smarts} += 2.0
+		set {Stats.diligence} += 4.0
+		set {Stats.love} -= 8.0
+		set {cash} += 20.0
+		[signal arg="update_stats"]
+		[signal arg="lab_transition"]
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	- Don't touch that mouse... [Leave]
+		jump initialQuestion
 - Here, just take this FunTab.
 	[signal arg="ipad_transition"]
-	<Empty Text Event>
-	set {currEnergy} -= 1.0
-	jump initialQuestion
+	The invention of the GorLabs FunTab was a mixed blessing for civilization.
+	Full of easy entertainment, the FunTab distracts the mind and lets it wander on a tide of debatably worthwhile content for hours upon hours.
+	Convenient as it is, it's also brought rise to a generation of 'FunTab' kids and is not considered a viable alternative to entertaining your child.
+	- Go on, have fun. [+Love, +???, -???]
+		set {currEnergy} -= 1.0
+		[signal arg="act_ipad"]
+		jump initialQuestion
+	- Actually, give it back. [Leave]
+		jump initialQuestion
 - [Don't do anything...]
-	homunculus (neutral): ...
-	narrator: You do nothing with the Homunculus. Somehow, this takes up some time.
-	homunculus (neutral): So, um...
-	set {currEnergy} -= 1.0
-	jump initialQuestion
-if {currEnergy} >= 3.0:
-- On second thought... [Go back]
+	Inaction is also an action. Do you plan to commit to it?
+	- ... [Don't do anything]
+		[signal arg="act_inaction"]
+		homunculus (neutral): ...
+		narrator: You do nothing with the Homunculus. Somehow, this takes up some time.
+		homunculus (neutral): Um...
+		set {currEnergy} -= 1.0
+		jump initialQuestion
+	if {currEnergy} <= 0.0:
+		join homunculus right
+		homunculus (stressed): Hooie... I'm pooped. I wanna go home. Let's go home. Can we go home? I think we should go home.
+		narrator: You go home.
+		leave homunculus [animation="Instant Out" length="0.0"]
+		[signal arg="lab_transition"]
+		jump endofday/
+		- ... [Leave and do something]
+			jump initialQuestion
+	if {currEnergy} >= 3.0:
+	- On second thought... [Go back]

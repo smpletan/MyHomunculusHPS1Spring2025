@@ -6,8 +6,8 @@ join homunculus (neutral) right [animation="Instant In" length="0.0"]
 homunculus (stressed): Snfff... Uhh... Ughhmmm...
 homunculus: I'm sorry... I'm really sorry. I did such a bad job down there... I couldn't find anything to bring back up. I didn't mean to waste your time, honest...
 leave homunculus [animation="Instant Out" length="0.0"]
-[signal arg="update_stats"]
 set {Stats.love} -= 10.0
 set {currEnergy} -= 3.0
+[signal arg="update_stats"]
 narrator: You give your deeply remorseful Homunculus some time to gather its senses before you leave the sewer grate it emerged from and head to Town Square.
 jump cityvisit/initialQuestion

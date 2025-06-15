@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://dq3wy1v6hucsf"]
+[gd_scene load_steps=109 format=3 uid="uid://dq3wy1v6hucsf"]
 
 [ext_resource type="Script" uid="uid://cs0dnsdmes72i" path="res://Scripts/gameplaymenu.gd" id="1_cbffv"]
 [ext_resource type="PackedScene" uid="uid://cb4gn3j86m8pk" path="res://scrollpattern.tscn" id="1_smepj"]
@@ -16,45 +16,80 @@
 [ext_resource type="Texture2D" uid="uid://dtjq0pcwqls3o" path="res://Assets/statmeter.png" id="11_nwk8b"]
 [ext_resource type="Texture2D" uid="uid://dmjv40mhksvfr" path="res://Assets/meterprogress.png" id="12_x2ust"]
 [ext_resource type="Texture2D" uid="uid://dny63agc6sup3" path="res://Assets/textboxbg.png" id="13_x2ust"]
+[ext_resource type="Texture2D" uid="uid://cw48ra7lwmydx" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup1.png" id="14_ddhve"]
 [ext_resource type="Texture2D" uid="uid://d0xaaf1u4dlnr" path="res://Assets/Character Sprites/ActivitySprites/Outside/Part Time Job/workingman0.png" id="14_gyere"]
 [ext_resource type="Texture2D" uid="uid://blmkr2aa0lrmg" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing0.png" id="14_yr68n"]
+[ext_resource type="Texture2D" uid="uid://dbq45yckdiasw" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup2.png" id="15_8oop5"]
 [ext_resource type="Texture2D" uid="uid://u2bdern5a6o6" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing1.png" id="15_eyn1h"]
 [ext_resource type="Texture2D" uid="uid://kgkiskxw6lrn" path="res://Assets/Character Sprites/ActivitySprites/Outside/Part Time Job/workingman1.png" id="15_mg1hl"]
+[ext_resource type="Texture2D" uid="uid://c43eo0n16q7qj" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup3.png" id="16_1taq6"]
 [ext_resource type="Texture2D" uid="uid://dmipeso4v2slc" path="res://Assets/Character Sprites/ActivitySprites/Outside/Part Time Job/workingman2.png" id="16_7v788"]
 [ext_resource type="Texture2D" uid="uid://c0qh31vkbewr2" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing2.png" id="16_ip4p6"]
+[ext_resource type="Texture2D" uid="uid://bxvan80lhoijc" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup4.png" id="17_hei7h"]
 [ext_resource type="Texture2D" uid="uid://bjjacabhvwnny" path="res://Assets/Character Sprites/ActivitySprites/Outside/Part Time Job/workingman3.png" id="17_oxrgg"]
 [ext_resource type="Texture2D" uid="uid://b18kjilgssy8l" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing3.png" id="17_xfxku"]
 [ext_resource type="Texture2D" uid="uid://40va644vwm1o" path="res://Assets/Character Sprites/ActivitySprites/Outside/Part Time Job/workingman4.png" id="18_16b2x"]
+[ext_resource type="Texture2D" uid="uid://bxm321uy88m43" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup5.png" id="18_mwrix"]
 [ext_resource type="Texture2D" uid="uid://fwlofjhftocn" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing4.png" id="18_yvepb"]
+[ext_resource type="Texture2D" uid="uid://bk74urnwyylvm" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup6.png" id="19_1o34q"]
 [ext_resource type="Texture2D" uid="uid://dwrt5ic6nkuf" path="res://Assets/Character Sprites/ActivitySprites/Outside/Part Time Job/workingman5.png" id="19_leiro"]
 [ext_resource type="Texture2D" uid="uid://dsc265crc84ds" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing5.png" id="19_rix74"]
+[ext_resource type="Texture2D" uid="uid://k45t88f4ohgu" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup7.png" id="20_iv0p5"]
 [ext_resource type="Texture2D" uid="uid://b2rnwkjtqqh77" path="res://Assets/Character Sprites/ActivitySprites/Outside/Part Time Job/workingman6.png" id="20_mgrx5"]
 [ext_resource type="Texture2D" uid="uid://db4d4sles3c2r" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing6.png" id="20_nccno"]
 [ext_resource type="Texture2D" uid="uid://d3dwnhvppb5b3" path="res://Assets/Character Sprites/ActivitySprites/Outside/Playground/PlayGroundSwing/swing7.png" id="21_deoll"]
+[ext_resource type="Texture2D" uid="uid://xwuet78j7qvy" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup8.png" id="21_xosqx"]
+[ext_resource type="Texture2D" uid="uid://cepmlccidyhl4" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup9.png" id="22_cose8"]
+[ext_resource type="Texture2D" uid="uid://c77y6f47k5siq" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup10.png" id="23_k762q"]
+[ext_resource type="Texture2D" uid="uid://t1i0nmxprrme" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup11.png" id="24_epo6s"]
+[ext_resource type="Texture2D" uid="uid://w301bo52g06x" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup12.png" id="25_bk8jq"]
+[ext_resource type="Texture2D" uid="uid://1k603cfguuko" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup13.png" id="26_plard"]
+[ext_resource type="Texture2D" uid="uid://dpa8q3ljdtalb" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup14.png" id="27_r82ng"]
+[ext_resource type="Texture2D" uid="uid://b5t8ujktmunk1" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup15.png" id="28_mwgvf"]
+[ext_resource type="Texture2D" uid="uid://bq17ybs2sxiro" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup16.png" id="29_cyp4k"]
 [ext_resource type="Texture2D" uid="uid://djnmt8yg2mxbr" path="res://Assets/Character Sprites/ActivitySprites/Outside/School_Reading/learning0.png" id="29_t5n6l"]
 [ext_resource type="Texture2D" uid="uid://4n147m3deq0m" path="res://Assets/Character Sprites/ActivitySprites/Outside/School_Reading/learning1.png" id="30_dl0tb"]
+[ext_resource type="Texture2D" uid="uid://on2te0gs0uxj" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup17.png" id="30_yb45o"]
+[ext_resource type="Texture2D" uid="uid://bx0ouwtyaewrj" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup18.png" id="31_tpjd8"]
 [ext_resource type="Texture2D" uid="uid://boxqx6wfrhkci" path="res://Assets/Character Sprites/ActivitySprites/Outside/School_Reading/learning2.png" id="31_wyj43"]
+[ext_resource type="Texture2D" uid="uid://dro56e65k2532" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup19.png" id="32_b3hmv"]
 [ext_resource type="Texture2D" uid="uid://cplgc4dybiext" path="res://Assets/Character Sprites/ActivitySprites/Outside/School_Reading/learning3.png" id="32_w3jmr"]
+[ext_resource type="Texture2D" uid="uid://dpdffalin1pse" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup20.png" id="33_8jqkw"]
 [ext_resource type="Texture2D" uid="uid://0b0n0b61y6yu" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround0.png" id="33_c76ve"]
 [ext_resource type="Texture2D" uid="uid://bo0va7a18cq50" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround1.png" id="34_cg6ev"]
+[ext_resource type="Texture2D" uid="uid://bltnd2d6y7hdi" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup21.png" id="34_pcnb5"]
+[ext_resource type="Texture2D" uid="uid://c2761m16fxi8s" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup22.png" id="35_uss77"]
 [ext_resource type="Texture2D" uid="uid://bc1twu45maqg7" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround2.png" id="35_v0405"]
+[ext_resource type="Texture2D" uid="uid://cq1fxtaj4ehuc" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup23.png" id="36_32qq2"]
 [ext_resource type="Texture2D" uid="uid://d3e0xm37v5w2s" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround3.png" id="36_iexhm"]
 [ext_resource type="Texture2D" uid="uid://18ju8si4ppa3" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround4.png" id="37_4lw3v"]
+[ext_resource type="Texture2D" uid="uid://bxs3gu5c16vmt" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup24.png" id="37_t73hb"]
 [ext_resource type="Texture2D" uid="uid://tihgs0q4fqr6" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround5.png" id="38_6rvgx"]
+[ext_resource type="Texture2D" uid="uid://mb7v8lrstxr7" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup25.png" id="38_vlcmd"]
+[ext_resource type="Texture2D" uid="uid://dqyq0ym88laek" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup26.png" id="39_0len7"]
 [ext_resource type="Texture2D" uid="uid://cmm4mor0nkeg7" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround6.png" id="39_vp3xm"]
+[ext_resource type="Texture2D" uid="uid://ucxe4tbilhsw" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/BeatUp/beatup27.png" id="40_bk68n"]
 [ext_resource type="Texture2D" uid="uid://bphem2j3boby2" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround7.png" id="40_xim4l"]
+[ext_resource type="Texture2D" uid="uid://cx0tsbli7o7jx" path="res://Assets/Character Sprites/ActivitySprites/Inside/typing/type1.jpeg" id="41_6ljg4"]
 [ext_resource type="Texture2D" uid="uid://icsb743fw5yg" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround8.png" id="41_d53d6"]
+[ext_resource type="Texture2D" uid="uid://f8ovemrw2ntn" path="res://Assets/Character Sprites/ActivitySprites/Inside/typing/type2.jpeg" id="42_4yc6j"]
 [ext_resource type="Texture2D" uid="uid://fpbrkis7jnxq" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround9.png" id="42_rfgm3"]
 [ext_resource type="Texture2D" uid="uid://dxalsd1yqxvvi" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround10.png" id="43_d8lje"]
+[ext_resource type="Texture2D" uid="uid://bayaullx3mv5i" path="res://Assets/Character Sprites/ActivitySprites/Inside/typing/type3.jpeg" id="43_q3kcu"]
 [ext_resource type="Texture2D" uid="uid://bwe3uyr140vrm" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Running Around/runningaround11.png" id="44_d02of"]
+[ext_resource type="Texture2D" uid="uid://8vod6kpmh6hg" path="res://Assets/Character Sprites/ActivitySprites/Inside/typing/type4.jpeg" id="44_jiw8t"]
 [ext_resource type="Texture2D" uid="uid://d0pilmnnsi6q0" path="res://Assets/Character Sprites/ActivitySprites/Outside/Watching Cars/watchingcar0.png" id="45_32kdn"]
 [ext_resource type="Texture2D" uid="uid://danjvodmeg0v7" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer0.png" id="45_cg6ev"]
+[ext_resource type="Texture2D" uid="uid://dwemq03mk2rih" path="res://Assets/Character Sprites/ActivitySprites/Inside/Cooking/cooking1.png" id="45_mmhoe"]
 [ext_resource type="Texture2D" uid="uid://co87yhfgutcar" path="res://Assets/Character Sprites/ActivitySprites/Outside/Watching Cars/watchingcar1.png" id="46_5w3jn"]
+[ext_resource type="Texture2D" uid="uid://40b3plmldmvl" path="res://Assets/Character Sprites/ActivitySprites/Inside/Cooking/cooking2.png" id="46_iy8xf"]
 [ext_resource type="Texture2D" uid="uid://dc3catf15uke" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer1.png" id="46_v0405"]
 [ext_resource type="Texture2D" uid="uid://weh0gims532b" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer2.png" id="47_iexhm"]
 [ext_resource type="Texture2D" uid="uid://d5kodxsnmm5g" path="res://Assets/Character Sprites/ActivitySprites/Outside/Watching Cars/watchingcar2.png" id="47_jwmkk"]
+[ext_resource type="Texture2D" uid="uid://drjii0xxw4pcs" path="res://Assets/Character Sprites/ActivitySprites/Inside/Cooking/cooking3.png" id="47_x6jyh"]
 [ext_resource type="Texture2D" uid="uid://7bsudqrufaif" path="res://Assets/Character Sprites/ActivitySprites/Outside/Watching Cars/watchingcar3.png" id="48_3u6pr"]
 [ext_resource type="Texture2D" uid="uid://ulr7poyl3sph" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer3.png" id="48_4lw3v"]
+[ext_resource type="Texture2D" uid="uid://b7gol30g01txq" path="res://Assets/Character Sprites/ActivitySprites/Inside/Cooking/cooking4.png" id="48_bts8w"]
 [ext_resource type="Texture2D" uid="uid://ifl1byoidhoc" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer4.png" id="49_6rvgx"]
 [ext_resource type="Texture2D" uid="uid://ck23rhnm51mgi" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Workout Bench/benchworkout0.png" id="49_i2yc5"]
 [ext_resource type="Texture2D" uid="uid://c325lnyi4564g" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Workout Bench/benchworkout1.png" id="50_odc00"]
@@ -67,9 +102,133 @@
 [ext_resource type="Texture2D" uid="uid://papnlujo3njd" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer8.png" id="53_rfgm3"]
 [ext_resource type="FontFile" uid="uid://dm34l6sobmtwx" path="res://Assets/Alkhemikal.ttf" id="54_7v788"]
 [ext_resource type="Texture2D" uid="uid://0bp54ehmf0we" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer9.png" id="54_d8lje"]
+[ext_resource type="Texture2D" uid="uid://brobymuv85nvn" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV1.png" id="90_6kffv"]
+[ext_resource type="Texture2D" uid="uid://dm3oasmdtaxwd" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV2.png" id="91_px57k"]
+[ext_resource type="Texture2D" uid="uid://cpxqxe043kf4c" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV3.png" id="92_7xnv0"]
+[ext_resource type="Texture2D" uid="uid://bhckfwv1cd280" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV4.png" id="93_s5eh5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7r3lg"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ddhve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8oop5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1taq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hei7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mwrix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1o34q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_iv0p5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xosqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cose8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_k762q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_epo6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bk8jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_plard")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_r82ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mwgvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_cyp4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yb45o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_tpjd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_b3hmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_8jqkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_pcnb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_uss77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_32qq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_t73hb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_vlcmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_0len7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_bk68n")
+}],
+"loop": true,
+"name": &"BeatUp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_6ljg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_4yc6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_q3kcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_jiw8t")
+}],
+"loop": true,
+"name": &"Computer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_mmhoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_iy8xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_x6jyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_bts8w")
+}],
+"loop": true,
+"name": &"Cooking",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("14_gyere")
@@ -216,6 +375,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"Sewers",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("90_6kffv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_px57k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_7xnv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_s5eh5")
+}],
+"loop": true,
+"name": &"WatchTV",
 "speed": 5.0
 }, {
 "frames": [{
@@ -407,7 +583,7 @@ offset_bottom = 197.0
 [node name="ActivityAnimation" type="AnimatedSprite2D" parent="OuterUI/ActivityContainer/ActivityPlayer"]
 position = Vector2(144, 97)
 sprite_frames = SubResource("SpriteFrames_7r3lg")
-animation = &"Sewers"
+animation = &"BeatUp"
 
 [node name="MoneyContainer" type="Control" parent="OuterUI"]
 layout_mode = 3

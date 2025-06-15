@@ -1,0 +1,14 @@
+The end of the sewers feels just a little bit emptier without a chimeric creature to harass your Homunculus.
+The sparkling bits look a little more dull and the junk feels a little less worthwhile, and it's this ennui that wraps around your Homunculus's fatigued little brain.
+It still retrieves a bundle, but its exertions during its journey means it doesn't gather as much as it could have before it tires out.
+join homunculus (neutral) right [animation="Instant In" length="0.0"]
+[signal arg="end_act"]
+homunculus (stressed): Hm...
+homunculus (neutral): Oh! Hi. I brought a bunch of little twinkling guys. Hope you enjoy!
+homunculus (neutral): Sorry, I was just thinking about something. And stuff. For a while.
+leave homunculus [animation="Instant Out" length="0.0"]
+set {Stats.love} -= 6.0
+[signal arg="update_stats"]
+set {currEnergy} -= 3.0
+narrator: Your hands laden with sparkling lucre, you get a robust sum of Jingles from the pawn shop and return to Town Square.
+jump cityvisit/initialQuestion
