@@ -304,7 +304,7 @@ layout_mode = 2
 theme_override_styles/focus = ExtResource("4_3pujl")
 theme_override_styles/hover = ExtResource("4_3pujl")
 theme_override_styles/normal = ExtResource("4_igs2m")
-text = "Quit"
+text = "Quit Game"
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("57_lrtsm")

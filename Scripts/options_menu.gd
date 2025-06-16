@@ -55,3 +55,19 @@ func _on_resume_button_pressed() -> void:
 
 func _on_options_button_pressed() -> void:
 	PauseOn()
+
+
+
+#func _on_option_button_item_selected(index: int) -> void:
+	#match index:
+		#0: print("Fullscreen")
+		#	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+		#1: print("Windowed")
+			
+	
+
+func _on_check_box_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
