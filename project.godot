@@ -13,12 +13,14 @@ config_version=5
 config/name="HPS1Spring"
 run/main_scene="uid://db7f048fntx2r"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/image="uid://dmm75aw6xgttf"
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 TransitionScreen="*res://FadeScene_Animation.tscn"
+MusicPlayer="*res://Scripts/Music_player.gd"
 
 [dialogic]
 

@@ -2,6 +2,7 @@ extends Control
 
 func _ready():
 	$VBoxContainer/StartButton.grab_focus()
+	MusicPlayer.play_song("HomuncMenu1")
 
 func _on_start_button_pressed():
 	TransitionScreen.transition()

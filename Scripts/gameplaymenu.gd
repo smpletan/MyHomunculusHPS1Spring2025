@@ -16,6 +16,7 @@ var holiday_complete = [false, false, false, false, false]
 
 func _ready():
 	$OuterUI/ActivityContainer.visible = false
+	MusicPlayer.play_song("Silence")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	get_node("Background").get_node("%StartFadeAnimationPlayer").play("LightsOffFade_OUT")
 	# get_node("Background").get_node("%BackGround").get_node("AnimatedSprite2D").play("LightsOffFade_OUT")

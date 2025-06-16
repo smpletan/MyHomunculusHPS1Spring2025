@@ -9,16 +9,10 @@ func _ready() -> void:
 func _input(event):
 	if Input.is_action_just_pressed("Pause"):
 		if Pause_Menu == true:
-			#visible = true
-			#Pause_Menu = true
-			#print("PAUSE ON")
 			PauseOn()
 			#get_node("Background").get_node("%OpeningStreamPlayer").stop(music_position)
 			pass
 		else:
-			#visible = false
-			#Pause_Menu = false
-			#print("PAUSE OFF")
 			PauseOff()
 			#music_position = get_node("Background").get_node("%OpeningStreamPlayer").get_playback_position()
 			pass
@@ -29,6 +23,8 @@ func PauseOn()-> void:
 	$VBoxContainer/ResumeButton.disabled = false
 	$VBoxContainer/QuitButton.disabled = false
 	Engine.time_scale = 0
+	#MusicPlayer.set_stream_paused(true)
+	AudioServer.set_bus_effect_enabled(2, 0, true)
 	#get_node("Background").get_node("%OpeningStreamPlayer").stop(music_position)
 	Pause_Menu = false
 #	$VBoxContainer/ResumeButton.grab_focus()
@@ -39,8 +35,10 @@ func PauseOff()-> void:
 	$AnimationPlayer.play("Pause_OFF")
 	$VBoxContainer/ResumeButton.disabled = true
 	$VBoxContainer/QuitButton.disabled = true
+	AudioServer.set_bus_effect_enabled(2, 0, false)
 	#get_node("VBoxContainer").get_node("%StartButton").grab_focus()
 	Engine.time_scale = 1
+	#MusicPlayer.set_stream_paused(false)
 	#music_position = get_node("Background").get_node("%OpeningStreamPlayer").get_playback_position()
 	Pause_Menu = true
 	print("PAUSE OFF")

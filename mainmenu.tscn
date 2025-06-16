@@ -235,7 +235,6 @@ grow_vertical = 2
 script = ExtResource("1_wgsso")
 
 [node name="OptionsMenuCanvas" parent="." instance=ExtResource("2_7uvds")]
-visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_ttaj3")
@@ -309,7 +308,6 @@ text = "Quit"
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("57_lrtsm")
-autoplay = true
 bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

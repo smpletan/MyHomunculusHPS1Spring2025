@@ -1044,6 +1044,20 @@ tracks/4/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("%OpeningAnimationPlayer/StartMusicNode")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(10.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"notify_property_list_changed"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_auput"]
 length = 0.001
@@ -1613,6 +1627,8 @@ libraries = {
 autoplay = "RESET"
 script = ExtResource("4_rmw63")
 
+[node name="StartMusicNode" type="Node" parent="SubViewportContainer/SubViewport/OpeningAnimationPlayer"]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport"]
 visible = false
 material = SubResource("ShaderMaterial_auput")
@@ -1633,3 +1649,4 @@ sprite_frames = SubResource("SpriteFrames_lioov")
 [connection signal="animation_finished" from="SubViewportContainer/SubViewport/StartFadeAnimationPlayer" to="SubViewportContainer/SubViewport/StartFadeAnimationPlayer" method="_on_animation_finished"]
 [connection signal="animation_finished" from="SubViewportContainer/SubViewport/OpeningAnimationPlayer" to="SubViewportContainer/SubViewport/OpeningAnimationPlayer" method="_on_animation_finished"]
 [connection signal="animation_started" from="SubViewportContainer/SubViewport/OpeningAnimationPlayer" to="SubViewportContainer/SubViewport/OpeningAnimationPlayer" method="_on_animation_started"]
+[connection signal="property_list_changed" from="SubViewportContainer/SubViewport/OpeningAnimationPlayer/StartMusicNode" to="SubViewportContainer/SubViewport/OpeningAnimationPlayer" method="_on_start_music_node_property_list_changed"]

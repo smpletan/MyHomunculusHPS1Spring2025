@@ -502,7 +502,6 @@ font = ExtResource("54_7v788")
 script = ExtResource("1_cbffv")
 
 [node name="OptionsMenuCanvas" parent="." instance=ExtResource("2_r82ng")]
-visible = false
 
 [node name="OuterUI" parent="." instance=ExtResource("4_0m7cd")]
 layer = 1
@@ -707,8 +706,9 @@ texture = ExtResource("2_cbffv")
 
 [node name="MainMusicPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+visible = false
 stream = ExtResource("120_mwgvf")
-autoplay = true
+volume_db = -80.0
 bus = &"Music"
 parameters/looping = true
 
