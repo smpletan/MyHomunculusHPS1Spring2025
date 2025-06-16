@@ -242,7 +242,7 @@ material = SubResource("ShaderMaterial_ttaj3")
 position = Vector2(320, 200)
 sprite_frames = SubResource("SpriteFrames_i53bc")
 autoplay = "default"
-frame_progress = 0.621917
+frame_progress = 0.665217
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0.133333, 0.12549, 0.203922, 1)
