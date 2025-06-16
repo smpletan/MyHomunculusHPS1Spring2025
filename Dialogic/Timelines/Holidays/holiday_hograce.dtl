@@ -19,7 +19,9 @@ homunculus: Look! Look at all the hogs! You'll let me join in, right?
 	join homunculus (happy) right [animation="Fade In" length="0.0"]
 	homunculus (happy): Hi! I ran among the pigs! They're a really interesting people. I can't speak their language, but I fit right in with them!
 	homunculus (neutral): We had so much fun walking into tables and knocking them over, then squealing... What a foolhardy bunch!
-	narrator: <Empty Text Event>
+	narrator: Contented, your hog-befriended Homunculus toddles away to the town square with you.
+	set {next_holiday} = "hotdogs"
 	jump cityvisit/initialQuestion
 - Pig out. [Leave]
+	set {next_holiday} = "hotdogs"
 	jump cityvisit/initialQuestion

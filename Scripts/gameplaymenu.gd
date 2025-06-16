@@ -20,73 +20,139 @@ func _ready():
 	get_node("Background").get_node("%StartFadeAnimationPlayer").play("LightsOffFade_OUT")
 	# get_node("Background").get_node("%BackGround").get_node("AnimatedSprite2D").play("LightsOffFade_OUT")
 
+func reset():
+	holiday_complete = [false, false, false, false, false]
+	var sewersVisit = ""
+	var sewersFullSuccess = false
+	var ending_scene = ""
+
 func resolve_growth():
-	if (Dialogic.Var.Stats.driving >= 100) :
+	if (Dialogic.VAR.Stats.driving >= 100) :
 		# The Driver
+		Dialogic.VAR.ending_scene = "End_Driver"
+		print("End Driver")
+		Dialogic.start("end_driver")
 		pass
 	elif (Dialogic.VAR.Stats.love < 10 && Dialogic.VAR.Stats.smarts < 10 && Dialogic.VAR.Stats.strength < 10 \
 		&& Dialogic.VAR.Stats.speed < 10 && Dialogic.VAR.Stats.bravery < 10 && Dialogic.VAR.Stats.diligence < 10 \
 		&& Dialogic.VAR.Stats.diligence < 10 && Dialogic.VAR.Stats.medialit < 10 && Dialogic.VAR.Stats.driving < 10) :
 		# Indifferent
+		Dialogic.VAR.ending_scene = "End_Indifferent"
+		print("End Indiff")
+		Dialogic.start("end_indifferent")
 		pass
 	elif (Dialogic.VAR.Stats.love >= 80 && Dialogic.VAR.Stats.smarts >= 80 && Dialogic.VAR.Stats.strength >= 80 \
 		&& Dialogic.VAR.Stats.speed >= 80 && Dialogic.VAR.Stats.bravery >= 80 && Dialogic.VAR.Stats.diligence >= 80 \
 		&& Dialogic.VAR.Stats.diligence >= 80 && Dialogic.VAR.Stats.medialit >= 80 && Dialogic.VAR.Stats.driving >= 80) :
 		# The Writer
+		Dialogic.start("end_writer")
+		print("End Writer")
 		pass
 	elif (Dialogic.VAR.Stats.love < 30 && Dialogic.VAR.Stats.smarts >= 80 && Dialogic.VAR.Stats.strength < 30 \
 		&& Dialogic.VAR.Stats.speed < 30 && Dialogic.VAR.Stats.bravery < 30 && Dialogic.VAR.Stats.diligence < 30 \
 		&& Dialogic.VAR.Stats.diligence < 30 && Dialogic.VAR.Stats.medialit < 30 && Dialogic.VAR.Stats.driving < 30) :
 		# The Nerd
+		Dialogic.VAR.ending_scene = "End_Nerd"
+		Dialogic.start("end_nerd")
+		print("End Nerd")
 		pass
 	elif (Dialogic.VAR.Stats.love < 20 && Dialogic.VAR.Stats.smarts < 20 && Dialogic.VAR.Stats.strength < 20 \
 		&& Dialogic.VAR.Stats.speed < 20 && Dialogic.VAR.Stats.bravery >= 80 && Dialogic.VAR.Stats.diligence < 20 \
 		&& Dialogic.VAR.Stats.diligence < 20 && Dialogic.VAR.Stats.medialit < 20 && Dialogic.VAR.Stats.driving < 20) :
 		# Hot Dogged
-		pass
-	elif (Dialogic.VAR.Stats.love >= 50 && Dialogic.VAR.Stats.smarts >= 50 && Dialogic.VAR.Stats.strength >= 50 \
-		&& Dialogic.VAR.Stats.speed >= 50 && Dialogic.VAR.Stats.bravery >= 50 && Dialogic.VAR.Stats.diligence >= 50 \
-		&& Dialogic.VAR.Stats.diligence >= 50) :
-		# Middle of the Road
+		Dialogic.VAR.ending_scene = "End_HotDog"
+		print("End Hotdo")
 		pass
 	elif (Dialogic.VAR.Stats.diligence >= 90) && (Dialogic.VAR.Stats.smarts >= 90) && (Dialogic.VAR.Stats.evil >= 50) :
 		# The Wizard
+		Dialogic.VAR.ending_scene = "End_Wizard"
+		Dialogic.start("end_wizard")
+		print("End Wiz")
 		pass
 	elif (Dialogic.VAR.Stats.diligence >= 80) && (Dialogic.VAR.Stats.smarts >= 60) && (Dialogic.VAR.Stats.evil <= 30) :
 		# CEO Normal
+		Dialogic.VAR.ending_scene = "End_CEO_Money"
+		Dialogic.start("end_ceo_normal")
+		print("End CEO")
 		pass
 	elif (Dialogic.VAR.Stats.diligence >= 80) && (Dialogic.VAR.Stats.smarts >= 60) && (Dialogic.VAR.Stats.evil > 30) :
 		# CEO Evil
+		Dialogic.VAR.ending_scene = "End_CEO_EVIL"
+		Dialogic.start("end_ceo_evil")
+		print("End Evil CEO")
 		pass
 	elif (Dialogic.VAR.Stats.strength >= 70) && (Dialogic.VAR.Stats.speed >= 70) && (Dialogic.VAR.Stats.love >= 50) :
 		# Gym Bro
+		Dialogic.VAR.ending_scene = "End_GymBro"
+		Dialogic.start("end_gymbro")
+		print("End GymBro")
 		pass
 	elif (Dialogic.VAR.Stats.love >= 80) && (Dialogic.VAR.Stats.strength <= 30) && (Dialogic.VAR.Stats.diligence >= 40):
 		# Best in Show
+		Dialogic.VAR.ending_scene = "End_BestInShow"
+		Dialogic.start("end_bestinshow")
+		print("End BestInShow")
 		pass
 	elif (Dialogic.VAR.Stats.love >= 80) && (Dialogic.VAR.Stats.medialit >= 50) && (Dialogic.VAR.Stats.smarts <= 50):
 		# Love to See It
+		Dialogic.VAR.ending_scene = "End_LoveToSeeIt"
+		Dialogic.start("end_lovetoseeit")
+		print("End LoveToSee")
 		pass
 	elif (Dialogic.VAR.Stats.bravery >= 80) && (Dialogic.VAR.Stats.love >= 80) && (Dialogic.VAR.Stats.driving >= 40):
 		# The Sully Ending
+		Dialogic.VAR.ending_scene = "End_Sully"
+		Dialogic.start("end_sully")
+		print("End Sully")
 		pass
 	elif (Dialogic.VAR.Stats.love >= 80) && (Dialogic.VAR.Stats.medialit >= 50) && (Dialogic.VAR.Stats.smarts <= 50):
 		# The Foolhardy Butler Sir
+		Dialogic.VAR.ending_scene = "End_Butler"
+		Dialogic.start("end_butler")
+		print("End Butler")
 		pass
 	elif (Dialogic.VAR.Stats.strength >= 80) && (Dialogic.VAR.Stats.love >= 80) :
 		# The Thing (of the Lake)
+		Dialogic.VAR.ending_scene = "End_Thing"
+		Dialogic.start("end_thing")
+		print("End Thing")
 		pass
 	elif (Dialogic.VAR.Stats.speed >= 80) && (Dialogic.VAR.Stats.driving >= 50) :
 		# The Car
+		Dialogic.VAR.ending_scene = "End_Car"
+		Dialogic.start("end_car")
+		print("End Car")
 		pass
 	elif (Dialogic.VAR.Stats.speed >= 80) :
 		# The Horse
+		Dialogic.VAR.ending_scene = "End_Horse_Speed"
+		Dialogic.start("end_horse")
+		print("End Horse")
 		pass
 	elif (Dialogic.VAR.Stats.love <= 15) && (Dialogic.VAR.Stats.evil >= 40) :
 		# Neglected
+		Dialogic.VAR.ending_scene = "End_Neglect"
+		Dialogic.start("end_neglect")
+		print("End Neglect")
+		pass
+	elif (Dialogic.VAR.Stats.love >= 30 && Dialogic.VAR.Stats.smarts >= 30 && Dialogic.VAR.Stats.strength >= 30 \
+		&& Dialogic.VAR.Stats.speed >= 30 && Dialogic.VAR.Stats.bravery >= 30 && Dialogic.VAR.Stats.diligence >= 30 \
+		&& Dialogic.VAR.Stats.diligence >= 30) :
+		# Middle of the Road
+		Dialogic.VAR.ending_scene = "End_RegularGuy"
+		Dialogic.start("end_regularguy")
+		print("End Regular")
 		pass
 	elif (Dialogic.VAR.Stats.love >= 110) :
 		# My Animal
+		Dialogic.VAR.ending_scene = "End_My_Animal"
+		Dialogic.start("end_myanimal")
+		print("End MyAnimal")
+		pass
+	else :
+		Dialogic.VAR.ending_scene = "End_Error"
+		Dialogic.start("end_error")
+		print("End Uh-Oh")
 		pass
 	
 func check_in_range(stat: float, target: float, low_range: int, high_range: int):
@@ -96,6 +162,8 @@ func _on_dialogic_signal(argument:String):
 	if argument == "begin_cutscene":
 		Dialogic.paused = true
 		get_node("Background").get_node("%OpeningAnimationPlayer").play("OpeningAnimation")
+	elif argument == "ending_sequence":
+		resolve_growth()
 	elif argument == "roll_holiday":
 		while Dialogic.VAR.next_holiday.is_empty() :
 			var roll = randi_range(0, 4)
@@ -133,6 +201,16 @@ func _on_dialogic_signal(argument:String):
 		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
 		await get_tree().create_timer(0.4).timeout
 		get_node("Background").get_node("%Background_EndingSprite").play("Background_City")
+		pass
+	elif argument == "ending_prompt":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play(Dialogic.VAR.ending_scene)
+		pass
+	elif argument == "blank_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Blank")
 		pass
 	elif argument == "cars_transition":
 		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
@@ -255,7 +333,7 @@ func _on_dialogic_signal(argument:String):
 		var odds = (Dialogic.VAR.Stats.bravery / 100) * 70 + 30
 		for n in 2:
 			if( odds > rng.randi_range(0, 100) ) :
-				Dialogic.VAR.Stats.hotdog_success += 1
+				Dialogic.VAR.hotdog_success += 1
 	elif argument == "chance_sewers":
 		var odds = ( (Dialogic.VAR.Stats.smarts / 100) * 20 + (Dialogic.VAR.Stats.strength / 100) * 20 + 
 						(Dialogic.VAR.Stats.speed / 100) * 20 + (Dialogic.VAR.Stats.bravery / 100) * 20 + 20)
@@ -273,13 +351,11 @@ func _on_dialogic_signal(argument:String):
 				sewersVisit = "b"
 		elif(successcount == 4) :
 			if(!sewersFullSuccess) :
-				sewersFullSuccess = true
 				sewersVisit = ""
 			else :
 				sewersVisit = "a"
 		elif(successcount == 3) :
 			if(!sewersFullSuccess) :
-				sewersFullSuccess = true
 				sewersVisit = ""
 			else :
 				sewersVisit = "a"

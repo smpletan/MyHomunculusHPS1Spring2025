@@ -11,8 +11,12 @@ elif {next_holiday} == "biggame":
 	jump holiday_biggame/
 elif {next_holiday} == "hograce":
 	jump holiday_hograce/
+elif {next_holiday} == "springcleaning":
+	jump holiday_hograce/
 label initialQuestion
 [signal arg="city_transition"]
+if {next_holiday} != "hotdogs":
+	set {next_holiday} = ""
 if {currEnergy} <= 0.0:
 	join homunculus right
 	homunculus (stressed): Hooie... I'm pooped. I wanna go home. Let's go home. Can we go home? I think we should go home.
@@ -127,6 +131,7 @@ homunculus (neutral): What do you wanna do together?
 		[signal arg="end_act"]
 		homunculus (neutral): Hey, did you know that all weevils are beetles? They're silly-looking guys, but they have wings under their elytra that do let some species actually take flight!
 		set {Stats.smarts} += 9.0
+		set {Stats.diligence} += 2.0
 		set {Stats.love} -= 3.0
 		[signal arg="city_transition"]
 		[signal arg="update_stats"]

@@ -11,10 +11,14 @@ Since everyone is too reluctant to eat it, the 'holiday' consists of everyone ju
 	homunculus (stressed): ...
 	narrator: That same bright red glow suffuses your Homunculus in its light, before dissipating into its squishy little body.
 	For a moment, you see a flash of red in its eyes as they open back up. One can only imagine the darkness that has clouded over its mind...
+	Then again, its eyes might also just be going red. From tears. The tears it's very obviously shedding.
 	set {Stats.evil} += 50.0
 	set {Stats.bravery} += 10.0
 	homunculus (neutral): It was okay. It wasn't THAT spicy.
-	narrator: Otherwise nonplussed, you and your Homunculus walk away as the perturbed crowd slowly disperses.
+	narrator: Once again, it's saying this through its flowing tears.
+	narrator: Your Homunculus puts on a very brave and ineffective face while it departs with you, all while the perturbed crowd slowly disperses.
+	set {next_holiday} = ""
 	jump cityvisit/initialQuestion
 - No, don't eat that berry.
+	set {next_holiday} = ""
 	jump cityvisit/initialQuestion
