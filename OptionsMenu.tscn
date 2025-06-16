@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4toaqjnmoacp"]
+
+[ext_resource type="Script" uid="uid://dd3k1fot6yo2w" path="res://Scripts/options_menu.gd" id="1_10bho"]
+[ext_resource type="Texture2D" uid="uid://dqp5yqb7qgmtm" path="res://Assets/OptionsMenu.png" id="1_qvdm5"]
+[ext_resource type="Texture2D" uid="uid://ba6l8d86f5cwd" path="res://Assets/GrabberStyleMain.png" id="2_10bho"]
+[ext_resource type="Texture2D" uid="uid://cfri537rbw5v4" path="res://Assets/GrabberStyleHighlighted.png" id="3_1gfi4"]
+[ext_resource type="Script" uid="uid://ba7hg3pn32573" path="res://Scripts/VolumeSlider.gd" id="4_wjedm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qvdm5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_10bho"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1gfi4"]
+
+[sub_resource type="Animation" id="Animation_10bho"]
+resource_name = "Pause_OFF"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_1gfi4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wjedm"]
+_data = {
+&"Pause_OFF": SubResource("Animation_10bho"),
+&"Pause_ON": SubResource("Animation_1gfi4")
+}
+
+[node name="OptionsMenuCanvas" type="CanvasLayer"]
+layer = 64
+visible = false
+script = ExtResource("1_10bho")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -200.0
+offset_right = 320.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qvdm5")
+
+[node name="SliderMaster" type="VSlider" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 245.0
+offset_top = 262.0
+offset_right = 267.0
+offset_bottom = 324.0
+theme_override_icons/grabber = ExtResource("2_10bho")
+theme_override_icons/grabber_highlight = ExtResource("3_1gfi4")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_qvdm5")
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("4_wjedm")
+bus_name = "Master"
+
+[node name="SliderSFX" type="VSlider" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 309.0
+offset_top = 262.0
+offset_right = 331.0
+offset_bottom = 324.0
+theme_override_icons/grabber = ExtResource("2_10bho")
+theme_override_icons/grabber_highlight = ExtResource("3_1gfi4")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_10bho")
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("4_wjedm")
+bus_name = "Sound Effects"
+
+[node name="SliderMusic" type="VSlider" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 373.0
+offset_top = 262.0
+offset_right = 395.0
+offset_bottom = 324.0
+theme_override_icons/grabber = ExtResource("2_10bho")
+theme_override_icons/grabber_highlight = ExtResource("3_1gfi4")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_1gfi4")
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("4_wjedm")
+bus_name = "Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wjedm")
+}
+autoplay = "Pause_OFF"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
