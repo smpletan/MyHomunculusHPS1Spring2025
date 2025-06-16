@@ -13,4 +13,5 @@ set {Stats.love} -= 6.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
 narrator: Your Homunculus shakes off a bit of residual slime stuck to it as it toddles with you back to the Town Square.
+[signal arg="city_transition"]
 jump cityvisit/initialQuestion

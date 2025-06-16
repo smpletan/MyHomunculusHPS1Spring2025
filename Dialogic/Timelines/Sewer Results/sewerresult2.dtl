@@ -12,4 +12,5 @@ set {Stats.love} -= 7.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
 narrator: You fob off the hardened green resin to a crafts store and return to the Town Square with your Homunculus.
+[signal arg="city_transition"]
 jump cityvisit/initialQuestion

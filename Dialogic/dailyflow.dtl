@@ -1,20 +1,25 @@
-if {dayNumber} == 30.0:
-	It's the last day of the month. The Growth is upon us...
+if {dayNumber} >= 21.0:
 	[end_timeline]
 It's Day {dayNumber} of the month. You've got {daysLeft} days left this month until the Growth.
+if {next_holiday} == "hotdogs":
+	You're made aware that today is the Hogsden Hot Dog Festival, where everyone can... eat hot dogs. Might be a fun idea for you and your Homunculus if you go out today.
+elif {dayNumber} == 3.0 || {dayNumber} == 7.0 || {dayNumber} == 14.0 || {dayNumber} == 19.0:
+	[signal arg="roll_holiday"]
+	if {next_holiday} == "biggame":
+		It's the day of the Big Game, which means that foot traffic in Hogsden is already unbearable. Even so, it might be worth going out for it.
+	elif {next_holiday} == "evilberry":
+		Today is the day of the Evil Berry's Growth. You know what that means. Your Homunculus doesn't, but you can enlighten them at Town Square.
+	elif {next_holiday} == "hograce":
+		Today is the vaunted day of the Hog Race. You can already hear the raucous squealing of prized pigs echoing from beneath the hills where you live.
+	elif {next_holiday} == "filmfest":
+		So comes the day of the Film Fest, where reputed film buffs roam the streets of Hogsden. Maybe you could take your Homunculus to see it.
+	elif {next_holiday} == "springcleaning":
+		Today is Spring Cleaning Day, somehow the only holiday where you're encouraged to stay in for the day.
 set {currEnergy} = 3.0
 join homunculus right
 label HomunculusConvoStart
 homunculus (neutral): What do we wanna do today?
-- Let's talk.
-	homunculus (happy): Okay! What do you wanna say?
-	- How are you doing?
-		if {} == "":
-	- Do you have any questions for me?
-		if :
-	- Actually, I got nothing.
-		homunculus (neutral): Oh, really? That's okay.
-		jump HomunculusConvoStart
+- How are you doing?
 - Let's go into town.
 	homunculus (happy): Okay! You're sure? We can't come back until the end of the day.
 	- I'm sure. [Enter Town]

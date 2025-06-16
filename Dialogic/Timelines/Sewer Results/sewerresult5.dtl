@@ -34,4 +34,5 @@ set {Stats.love} -= 5.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
 narrator: Within your Homunculus is instilled a bone-deep pride, and within your pockets are a bounty of Jingles for returning the missing Chimera to the local GorLabs facility.
+[signal arg="city_transition"]
 jump cityvisit/initialQuestion

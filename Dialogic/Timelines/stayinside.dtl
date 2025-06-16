@@ -114,6 +114,14 @@ homunculus (neutral): What do you wanna do here?
 	- Go on, have fun. [+Love, +???, -???]
 		set {currEnergy} -= 1.0
 		[signal arg="act_ipad"]
+		Your Homunculus is granted unrestricted access to the Internet - but mostly videos - through the yawning portal of the FunTab.
+		You do just about anything else in the background while it remains transfixed on the screen...
+		The exposure to a litany of different content has triggered volatile - if limited - change in your Homunculus's growth.
+		homunculus (happy): That was fun. It also got really weird! It was fun and really weird. Sometimes scary, even? Maybe do that again. Or don't? I dunno!
+		narrator: You take the FunPad off of your Homunculus's nubs and put it away.
+		set {Stats.love} += 3.0
+		[signal arg="update_stats"]
+		[signal arg="lab_transition"]
 		jump initialQuestion
 	- Actually, give it back. [Leave]
 		jump initialQuestion

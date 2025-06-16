@@ -13,4 +13,5 @@ set {Stats.love} -= 6.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
 narrator: Spooked but still proud of what it managed to accomplish, your Homunculus joins you after you pawn off its findings and head back to the Town Square.
+[signal arg="city_transition"]
 jump cityvisit/initialQuestion

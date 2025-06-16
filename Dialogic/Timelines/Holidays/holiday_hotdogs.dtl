@@ -1,0 +1,55 @@
+[signal arg="hotdogs_transition"]
+Excitement abounds\: the Hot Dog Festival is taking place today, and droves of citizens from Hogsden and beyond are clamoring for it.
+Clamoring for a bite of bunned meat, no matter what condiments, fix-ins, and so on are put on them.
+Participation in the event itself - to just eat as many hot dogs as one can for a chance at a cash prize - is a mere 20 Jingles.
+Allured by the scent of cheap grilled meats, your Homunculus starts hopping up and down restlessly. It's craving some hotdo.
+join homunculus right [animation="Instant In" length="0.0"]
+homunculus: Can I? Can you? Can we? Can us? Can we join in? I bet I can suuuuper win that contest!
+narrator: While your Homunculus doesn't need to eat, you're not really sure how much of an upper threshold it can withstand. It's definitely a mental battle that taxes one's bravery.
+narrator: It'll grow stronger for being able to attempt the competition no matter how successful it is or isn't.
+- Yeah, alright. Let's do it. [+Love, +Strength, -20J]
+	homunculus (happy): Wish me luck!
+	[signal arg="chance_hotdog"]
+	leave homunculus
+	narrator: You pony up the entry fee and before you can blink your Homunculus is already bolting through like a streak of fleshy pink lightning.
+	if {hotdog_success} == 0.0:
+		It doesn't manage to push as hard as it might have liked, as the mental stack of consuming hot dogs very, very quickly occupies too much of its intellect.
+		The interminable march of WAY too much meat forms a wall in your Homunculus's synapses, a wall that its little brain can't hope to climb.
+		Though it doesn't place anywhere in the rankings, it still manages to make a good enough show of strength that grants it more robustness.
+		set {Stats.strength} += 12.0
+		set {Stats.love} += 10.0
+		join homunculus (stressed) right [animation="Instant In" length="0.0"]
+		homunculus (stressed): I um. If it's okay with you, I don't wanna see any meat again for a bit. But you're still proud of me, right?
+		narrator: Pride or no pride notwithstanding, the two of you return to town square; you felt exhausted just watching the festival take place.
+		leave homunculus
+		jump cityvisit/initialQuestion
+	elif {hotdog_success} == 1.0:
+		Your Homunculus summons its willpower before the massive mountain of meat (and buns) and pushes to actually make some progress.
+		Dog after dog is funneled into whatever counts as a maw, and its efforts mark it as a warrior to be reckoned with.
+		Tragically a warrior is still not a champion, and despite reaching 2nd Place your Homunculus does not come home as a champion today.
+		Loss or no loss, your Homunculus is still rewarded with a pretty little silver medal that looks like it'll pawn for a nice packet of Jingles.
+		set {Stats.strength} += 12.0
+		set {Stats.love} += 10.0
+		set {cash} += 40.0
+		[signal arg="update_stats"]
+		join homunculus right [animation="Instant In" length="0.0"]
+		homunculus (happy): I was SO close! Did you see? I ALMOST won! That was awesome, I think! Are you proud of me?
+		narrator: Pride or no pride notwithstanding, the two of you return to town square; you felt exhausted just watching the festival take place.
+		leave homunculus
+		jump cityvisit/initialQuestion
+	else:
+		The power pulses through your Homunculus's synapses. The sense of raw hunger, the drive to succeed, and the desire to defeat... meat.
+		Fierce and oppressive does the tower of hot dog stand, its numerous buns staring down at all mortals with contempt and condescension.
+		Even so, it is no match - your Homunculus practically inhales dog after dog and the other competitors can't even hope to match its power.
+		Your Homunculus lowers its head in pride as a sparkly gold medal is draped over its neck(?). It shines radiantly, glistening with sweat and hot dog water.
+		set {Stats.strength} += 12.0
+		set {Stats.love} += 10.0
+		set {cash} += 90.0
+		[signal arg="update_stats"]
+		join homunculus right [animation="Instant In" length="0.0"]
+		homunculus (happy): I DID IT! I won! I won BIG time! All the hot dogs - I beat them! You're SOOO proud of me, admit it!
+		narrator: Pride or no pride notwithstanding, the two of you return to town square; you felt exhausted just watching the festival take place.
+		leave homunculus
+		jump cityvisit/initialQuestion
+- No dogs, dog. [Leave]
+	jump cityvisit/initialQuestion

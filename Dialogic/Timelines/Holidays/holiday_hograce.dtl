@@ -1,0 +1,25 @@
+[signal arg="hograce_transition"]
+Today is the big day. At least, it's ONE of the big days of the year. It's the Hog Races.
+Town officials place flags on hogs and then let them run loose throughout the city. It's difficult to call it a race, considering there is absolutely no structure.
+With no checkpoints, no track, and no goal, in essence it's just a day where the municipality just lets hogs run loose and cause chaos wherever they may.
+Your Homunculus looks excited for what it's worth, though, and seems more than eager to join in the festivities itself.
+join homunculus (happy) right [animation="Fade In" length="0.0"]
+homunculus: Look! Look at all the hogs! You'll let me join in, right?
+- Pig it. [+Bravery, +Speed, Free]
+	leave homunculus [animation="Instant Out" length="0.0"]
+	You let your Homunculus out into the surging mass of hogs. Its spirit flies as free as a spirit is meant to be as it falls in line with the squealing stampeders.
+	The Hog Race is a time-honored tradition, but you're not sure how or why it came to be.
+	A cluster of thirty to fifty boarlets led by a mother boar toddles by you, and you THINK you see your Homunculus among their bristly backs.
+	Eventually you lose track of it entirely, and you let time pass by just watching any pigs in any distance do anything.
+	Somehow, your Homunculus returns to you.
+	set {currEnergy} = 0
+	set {Stats.speed} += 8.0
+	set {Stats.bravery} += 8.0
+	set {Stats.love} += 2.0
+	join homunculus (happy) right [animation="Fade In" length="0.0"]
+	homunculus (happy): Hi! I ran among the pigs! They're a really interesting people. I can't speak their language, but I fit right in with them!
+	homunculus (neutral): We had so much fun walking into tables and knocking them over, then squealing... What a foolhardy bunch!
+	narrator: <Empty Text Event>
+	jump cityvisit/initialQuestion
+- Pig out. [Leave]
+	jump cityvisit/initialQuestion

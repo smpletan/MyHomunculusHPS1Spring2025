@@ -1,6 +1,16 @@
-narrator: You and your Homunculus leave the home and enter the nearby town. Sleepy as it is here, if you're looking for opportunities to help your Homunculus grow you certainly won't go wanting.
+narrator: You and your Homunculus leave the home and enter the nearby town of Hogsden. Sleepy as it is here, there are plenty of opportunities to help your Homunculus grow.
 join homunculus right
 homunculus (happy): Okay, we're here!
+if {next_holiday} == "hotdogs":
+	jump holiday_hotdogs/
+elif {next_holiday} == "evilberry":
+	jump holiday_evilberry/
+elif {next_holiday} == "filmfest":
+	jump holiday_filmfest/
+elif {next_holiday} == "biggame":
+	jump holiday_biggame/
+elif {next_holiday} == "hograce":
+	jump holiday_hograce/
 label initialQuestion
 [signal arg="city_transition"]
 if {currEnergy} <= 0.0:
@@ -27,10 +37,11 @@ homunculus (neutral): What do you wanna do together?
 		set {Stats.love} -= 2.0
 		[signal arg="update_stats"]
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus (stressed): There's nothing like a good workout, but... auwgh...
 		[signal arg="end_act"]
+		homunculus (stressed): There's nothing like a good workout, but... auwgh...
 		You give your Homunculus some time to cool down and relax before the two of you head back to the Town Square.
 		set {currEnergy} -= 1.0
+		[signal arg="city_transition"]
 		jump initialQuestion
 	- Homunculus, run some laps. [+Speed, -20J]
 		[signal arg="act_running"]
@@ -43,12 +54,31 @@ homunculus (neutral): What do you wanna do together?
 		set {Stats.love} -= 2.0
 		[signal arg="update_stats"]
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus (neutral): I'm feeling a little faster now! But it's getting a little hard to just make myself stop moving my nubs...
 		[signal arg="end_act"]
+		homunculus (neutral): I'm feeling a little faster now! But it's getting a little hard to just make myself stop moving my nubs...
 		Your Homunculus continues to walk around in circles by itself for a while, trying to drop the habit it formed. Once it stops, you two head back to the Town Square.
 		set {currEnergy} -= 1.0
+		[signal arg="city_transition"]
+		jump initialQuestion
+	- Go be a punching bag. [-Love, +Bravery, Free]
+		[signal arg="act_beatup"]
+		set {Stats.love} -= 8.0
+		[signal arg="update_stats"]
+		You volunteer your Homunculus to act as a punching bag for the town's many fierce warriors that all congregate here.
+		With gusto, a particularly beefy gym-goer approaches your Homunculus and beats the absolute tar out of it with a powerful air juggle.
+		While it's a deeply unpleasant experience for your Homunculus, it incurs no real damage and you can tell it's much tougher for its struggles.
+		[signal arg="end_act"]
+		join homunculus (neutral) right [animation="Instant In" length="0.0"]
+		homunculus (stressed): Ow. Owowow. Oof. Ouch. Ow. OW!
+		homunculus (neutral): That really hurt. You're not going to have me do that again, are you?
+		set {Stats.bravery} += 7.0
+		[signal arg="update_stats"]
+		It'll take some time for your Homunculus to get over the strenuation of getting beat around like a ragdoll, but that time passes and you return to the Town Square.
+		set {currEnergy} -= 1.0
+		[signal arg="city_transition"]
 		jump initialQuestion
 	- Let's not, actually. [Return]
+		[signal arg="city_transition"]
 		jump initialQuestion
 - Head to the Library.
 	leave homunculus [animation="Instant Out" length="0.0"]
@@ -62,9 +92,10 @@ homunculus (neutral): What do you wanna do together?
 		set {Stats.love} -= 1.0
 		[signal arg="update_stats"]
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus (stressed): 'Bibby climbed the timber to make herself more limber...' It just doesn't really resonate with me as much as I thought it would on my first read. Oh well!
 		[signal arg="end_act"]
+		homunculus (stressed): 'Bibby climbed the timber to make herself more limber...' It just doesn't really resonate with me as much as I thought it would on my first read. Oh well!
 		Its mind buzzing with simple and inane rhymes, your Homunculus joins you as you move back to the Town Square.
+		[signal arg="city_transition"]
 		set {currEnergy} -= 1.0
 		jump initialQuestion
 	- Ezzayz 4 Teenz [++Smarts, +Diligence, -10J]
@@ -78,10 +109,11 @@ homunculus (neutral): What do you wanna do together?
 		set {Stats.love} -= 2.0
 		[signal arg="update_stats"]
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus (stressed): Ohhh... I promise that I'll never, ever put my page numbers in any spot but the top-right part of the page. Oh. Oh! Hi! I didn't see you there.
 		[signal arg="end_act"]
+		homunculus (stressed): Ohhh... I promise that I'll never, ever put my page numbers in any spot but the top-right part of the page. Oh. Oh! Hi! I didn't see you there.
 		Instilled with mental stimulation and bone-deep fear, your Homunculus joins you as you move back to the Town Square.
 		set {currEnergy} -= 1.0
+		[signal arg="city_transition"]
 		jump initialQuestion
 	- Big Theziz 4 Adultz & Bugz [+++Smarts, ++Diligence, -30J]
 		set {currEnergy} -= 1.0
@@ -92,14 +124,16 @@ homunculus (neutral): What do you wanna do together?
 		'Some respect' doesn't mean that it fully respects the reader's intelligence, but it does impress the importance of declaring clear and concise arguments.
 		It also helps that the book has an absurd amount of encyclopedic knowledge on bugs for some reason. Your Homunculus learns so much about insects.
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus (neutral): Hey, did you know that all weevils are beetles? They're silly-looking guys, but they have wings under their elytra that do let some species actually take flight!
 		[signal arg="end_act"]
+		homunculus (neutral): Hey, did you know that all weevils are beetles? They're silly-looking guys, but they have wings under their elytra that do let some species actually take flight!
 		set {Stats.smarts} += 9.0
 		set {Stats.love} -= 3.0
+		[signal arg="city_transition"]
 		[signal arg="update_stats"]
 		Your Homunculus regales you with more fun facts about weevils the entire time it takes for you to make it back to Town Square.
 		jump initialQuestion
 	- Let'z leave, actually. [Return]
+		[signal arg="city_transition"]
 		jump initialQuestion
 - Head to the Playground.
 	leave homunculus [animation="Instant Out" length="0.0"]
@@ -115,15 +149,18 @@ homunculus (neutral): What do you wanna do together?
 		set {Stats.speed} += 3.0
 		[signal arg="update_stats"]
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus (happy): Hoooo! I don't think it matters how many times I do it, I'll never get sick of swinging back and forth for a really long time!
 		[signal arg="end_act"]
+		homunculus (happy): Hoooo! I don't think it matters how many times I do it, I'll never get sick of swinging back and forth for a really long time!
 		With the Homunculus sufficiently jazzed up by its swinging adventure, the two of you depart for the Town Center.
 		set {currEnergy} -= 1.0
+		[signal arg="city_transition"]
 		jump initialQuestion
 	- Nevermind, let's go back. [Return]
+		[signal arg="city_transition"]
 		jump initialQuestion
 - Go sit at the side of the road and watch cars.
 	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="cars_transition"]
 	You and Homunculus find a nice little patch on the side of a building to just watch cars pass on by.
 	- Watch the cars. [+Love, +Driving, Free]
 		[signal arg="act_watchcars"]
@@ -134,12 +171,14 @@ homunculus (neutral): What do you wanna do together?
 		set {Stats.driving} += 2.0
 		[signal arg="update_stats"]
 		join homunculus (neutral) right [animation="Instant In" length="0.0"]
-		homunculus: Wow, that much time passed already? Time flies when you're having... um... cars.
 		[signal arg="end_act"]
+		homunculus: Wow, that much time passed already? Time flies when you're having... um... cars.
 		Feeling refreshed, the two of you get up and head back to the Town Square.
 		set {currEnergy} -= 1.0
+		[signal arg="city_transition"]
 		jump initialQuestion
 	- Actually I think cars are boring now. [Return]
+		[signal arg="city_transition"]
 		jump initialQuestion
 - Enlist Homunculus on a part-time job.
 	leave homunculus [animation="Instant Out" length="0.0"]
@@ -150,6 +189,7 @@ homunculus (neutral): What do you wanna do together?
 		narrator: It's repetitive and tedious stuff, but when it's not thinking about the tedium it actually gets into a pretty good flow. There's something satisfying about ticking off every box.
 		The Homunculus doesn't seem to have enjoyed itself very much, but its labors have proven worthwhile for its work ethic and for your wallet.
 		join homunculus (stressed) right [animation="Instant In" length="0.0"]
+		[signal arg="end_act"]
 		homunculus (stressed): Whew... It was super busy. My nubs are feeling all worn out to... um... well, nubs.
 		homunculus (happy): But hey, we got paid!
 		narrator: Your Homunculus, now a little tuckered out, managed to hustle up Jingles. The two of you head back to the Town Square.
@@ -158,8 +198,10 @@ homunculus (neutral): What do you wanna do together?
 		set {currEnergy} -= 1.0
 		[signal arg="update_stats"]
 		[signal arg="end_act"]
+		[signal arg="city_transition"]
 		jump initialQuestion
 	- Nah, let's go back. [Return]
+		[signal arg="city_transition"]
 		jump initialQuestion
 - Cast out unto the Sewers.
 	leave homunculus [animation="Instant Out" length="0.0"]
@@ -177,6 +219,7 @@ homunculus (neutral): What do you wanna do together?
 			[signal arg="chance_sewers"]
 			[end_timeline]
 		- We should head back. [Return]
+			[signal arg="city_transition"]
 			jump initialQuestion
 - Just head back home.
 	Are you sure? Heading home early also ends the day early.

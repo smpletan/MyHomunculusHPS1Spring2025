@@ -1,4 +1,4 @@
-[gd_scene load_steps=220 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=225 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://2eco5eiw0xf8" path="res://cutshader.gdshader" id="1_t27p2"]
@@ -89,19 +89,24 @@
 [ext_resource type="Texture2D" uid="uid://bgnw06cd7l77f" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS13.png" id="53_ahudu"]
 [ext_resource type="Texture2D" uid="uid://bvae4v5gwalep" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOEvil.png" id="53_lioov"]
 [ext_resource type="Texture2D" uid="uid://ng5x0scfkn2o" path="res://Assets/SpriteFrames/BackgroundGym.png" id="53_o3kne"]
+[ext_resource type="Texture2D" uid="uid://dmujhuoie0g2s" path="res://Assets/SpriteFrames/HomuncCars.png" id="53_spw5l"]
 [ext_resource type="Texture2D" uid="uid://cs465wysv1mn7" path="res://Assets/Character Sprites/EndingSprites/HomuncCEOMoney.png" id="54_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://dqe3uefsq7x3" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_001.png" id="54_015r6"]
 [ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="54_55ecv"]
+[ext_resource type="Texture2D" uid="uid://6vb2yrgcuytb" path="res://Assets/SpriteFrames/HomuncCity.png" id="54_71crj"]
 [ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
 [ext_resource type="Texture2D" uid="uid://d1p52bg3tql0y" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_002.png" id="55_1e1bp"]
 [ext_resource type="Texture2D" uid="uid://davp7qdehd2jk" path="res://Assets/SpriteFrames/PCRenderBackground.png" id="55_1ovk6"]
+[ext_resource type="Texture2D" uid="uid://dkhbqqke7asgf" path="res://Assets/SpriteFrames/chili.png" id="55_j2geo"]
 [ext_resource type="Texture2D" uid="uid://ciar53uc5wwxk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS15.png" id="55_m0wq0"]
 [ext_resource type="Texture2D" uid="uid://dw4khblef0y7m" path="res://Assets/Character Sprites/EndingSprites/HomuncHorseSpeed.png" id="55_q3pey"]
 [ext_resource type="Texture2D" uid="uid://bsqw6xf68qrqi" path="res://Assets/SpriteFrames/SewerBackground2.png" id="56_6dpm1"]
 [ext_resource type="Texture2D" uid="uid://madecjykb6qi" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_003.png" id="56_me362"]
 [ext_resource type="Texture2D" uid="uid://b00wrrhq3evxf" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS16.png" id="56_xheao"]
+[ext_resource type="Texture2D" uid="uid://dxmvp0onch13t" path="res://Assets/SpriteFrames/hograce.png" id="56_xjlu5"]
 [ext_resource type="Texture2D" uid="uid://bxu3yg33vona6" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS17.png" id="57_8e30t"]
+[ext_resource type="Texture2D" uid="uid://d0txl6osqgxhe" path="res://Assets/SpriteFrames/hotdogs.png" id="57_j2geo"]
 [ext_resource type="Texture2D" uid="uid://pilbdk2df0j0" path="res://Assets/SpriteFrames/TVRenderBackground.png" id="57_w2bxo"]
 [ext_resource type="Texture2D" uid="uid://sta5mwdi6w64" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_004.png" id="57_wvxwo"]
 [ext_resource type="Texture2D" uid="uid://dnu3kokaptex4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS18.png" id="58_b7nm8"]
@@ -373,10 +378,50 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("53_spw5l")
+}],
+"loop": true,
+"name": &"Background_Cars",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_71crj")
+}],
+"loop": true,
+"name": &"Background_City",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_j2geo")
+}],
+"loop": true,
+"name": &"Background_EvilBerry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("53_o3kne")
 }],
 "loop": true,
 "name": &"Background_Gym",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_xjlu5")
+}],
+"loop": true,
+"name": &"Background_HogRace",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_j2geo")
+}],
+"loop": true,
+"name": &"Background_HotDogs",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1330,7 +1375,7 @@ visible = false
 texture_filter = 1
 position = Vector2(375, 191)
 sprite_frames = SubResource("SpriteFrames_7auws")
-animation = &"Background_TV"
+animation = &"Background_EvilBerry"
 
 [node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)

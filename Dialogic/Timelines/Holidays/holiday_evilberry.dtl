@@ -1,0 +1,20 @@
+[signal arg="evilberry_transition"]
+The citizens of the town have gathered around the Square today to inspect a single planter that grows a single crop.
+Yes, it's today. The day of the Evil Berry.
+Once a year the people of Hogsden collaborate in the germination of an evil seed that produces the singular Evil Berry, but everyone usually leaves it behind because they're too scared to eat it.
+Since everyone is too reluctant to eat it, the 'holiday' consists of everyone just gathering around the berry and staring at it with an awed, fearful reverence.
+...You could have the Homunculus eat the berry if you wanted to.
+- Yeah, eat that berry.
+	join homunculus right [animation="Instant In" length="0.0"]
+	homunculus (happy): Uhm, okay!
+	narrator: There's a collective gasp that ushers silence into the murmuring crowd, who watch as your Homunculus brazenly consumes the vibrantly-colored coalescence of evil.
+	homunculus (stressed): ...
+	narrator: That same bright red glow suffuses your Homunculus in its light, before dissipating into its squishy little body.
+	For a moment, you see a flash of red in its eyes as they open back up. One can only imagine the darkness that has clouded over its mind...
+	set {Stats.evil} += 50.0
+	set {Stats.bravery} += 10.0
+	homunculus (neutral): It was okay. It wasn't THAT spicy.
+	narrator: Otherwise nonplussed, you and your Homunculus walk away as the perturbed crowd slowly disperses.
+	jump cityvisit/initialQuestion
+- No, don't eat that berry.
+	jump cityvisit/initialQuestion

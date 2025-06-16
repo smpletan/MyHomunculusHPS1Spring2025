@@ -11,4 +11,5 @@ set {Stats.love} -= 6.0
 [signal arg="update_stats"]
 set {currEnergy} -= 3.0
 narrator: Your hands laden with sparkling lucre, you get a robust sum of Jingles from the pawn shop and return to Town Square.
+[signal arg="city_transition"]
 jump cityvisit/initialQuestion
