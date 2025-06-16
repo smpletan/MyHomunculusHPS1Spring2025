@@ -1,4 +1,27 @@
-It's Spring Cleaning day. The season may not necessarily be spring, but each year the town of Hogsden picks an arbitrary day where everyone should clean up their houses.
-Things around your home could definitely be spruced up a bit, and enlisting your Homunculus's assistance in cleaning would help instill a sense of diligence.
-The state of your home might mean it won't enjoy this time-honored tradition, but who knows what you might have lying around that you can just pawn off?
+leave homunculus [animation="Instant Out" length="0.0"]
+It's Spring Cleaning day. The season may not necessarily be spring, but each year the town of Hogsden picks an arbitrary day where everyone should clean up the streets.
+There's a lot of dross, trash, and junk that can be picked up, but the problem is that the work is done so quickly that there's little else to do in the day.
+As a result, the remainder of the time spent in the day is the entire town's populace walking around the streets with pushbrooms and mops just working on completely blank asphalt.
+Your Homunculus can join in, of course; it may not enjoy its time there but it'll definitely be more diligent for all of its labors. Plus, you might find some lucre.
+- Let's sweep up, Homunculus.
+	[signal arg="act_cleaning"]
+	Your Homunculus enters into the Spring Cleaning efforts with great gusto. As mentioned before, the actual trash-picking efforts were done VERY quickly.
+	Your Homunculus just sort of starts wandering around with a feather duster, ineffectually dusting off everything in its path. Emphasis on ineffectual.
+	If anything it causes more messes than before. At least there's nothing particularly dangerous that needs cleaning up, so your Homunculus should be fine.
+	Hours and hours pass, and the two of you do a fairly bang-up job in the cleanup efforts. You even manage to scrounge up a solid amount of discarded Jingle along the way.
+	set {currEnergy} = 0.0
+	set {Stats.diligence} += 14.0
+	set {Stats.love} -= 4.0
+	[signal arg="update_stats"]
+	[signal arg="end_act"]
+	set {cash} += 80.0
+	join homunculus right [animation="Instant In" length="0.0"]
+	homunculus (neutral): What a mess! But we dealt with it all easily, right? No more mess!
+	The open canisters of sickly green-glowing waste strewn here and there might disagree if they had voices to speak with.
+	homunculus (happy): I'd call that a success! Let's go home.
+	leave homunculus [animation="Instant Out" length="0.0"]
+	Some messes can never be cleaned, but those messes aren't for you or your Homunculus to clean. Instead, you return to the town square.
+	jump cityvisit/initialQuestion
+- Nah, we don't gotta.
+	jump cityvisit/initialQuestion
 set {next_holiday} = ""

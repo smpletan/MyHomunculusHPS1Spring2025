@@ -1,4 +1,5 @@
 [signal arg="hograce_transition"]
+leave homunculus [animation="Instant Out" length="0.0"]
 Today is the big day. At least, it's ONE of the big days of the year. It's the Hog Races.
 Town officials place flags on hogs and then let them run loose throughout the city. It's difficult to call it a race, considering there is absolutely no structure.
 With no checkpoints, no track, and no goal, in essence it's just a day where the municipality just lets hogs run loose and cause chaos wherever they may.
@@ -16,6 +17,7 @@ homunculus: Look! Look at all the hogs! You'll let me join in, right?
 	set {Stats.speed} += 8.0
 	set {Stats.bravery} += 8.0
 	set {Stats.love} += 2.0
+	[signal arg="update_stats"]
 	join homunculus (happy) right [animation="Fade In" length="0.0"]
 	homunculus (happy): Hi! I ran among the pigs! They're a really interesting people. I can't speak their language, but I fit right in with them!
 	homunculus (neutral): We had so much fun walking into tables and knocking them over, then squealing... What a foolhardy bunch!

@@ -7,6 +7,8 @@ Since everyone is too reluctant to eat it, the 'holiday' consists of everyone ju
 - Yeah, eat that berry.
 	join homunculus right [animation="Instant In" length="0.0"]
 	homunculus (happy): Uhm, okay!
+	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="act_evilberry"]
 	narrator: There's a collective gasp that ushers silence into the murmuring crowd, who watch as your Homunculus brazenly consumes the vibrantly-colored coalescence of evil.
 	homunculus (stressed): ...
 	narrator: That same bright red glow suffuses your Homunculus in its light, before dissipating into its squishy little body.
@@ -14,6 +16,8 @@ Since everyone is too reluctant to eat it, the 'holiday' consists of everyone ju
 	Then again, its eyes might also just be going red. From tears. The tears it's very obviously shedding.
 	set {Stats.evil} += 50.0
 	set {Stats.bravery} += 10.0
+	[signal arg="end_act"]
+	[signal arg="update_stats"]
 	homunculus (neutral): It was okay. It wasn't THAT spicy.
 	narrator: Once again, it's saying this through its flowing tears.
 	narrator: Your Homunculus puts on a very brave and ineffective face while it departs with you, all while the perturbed crowd slowly disperses.

@@ -41,11 +41,11 @@ func resolve_growth():
 		print("End Indiff")
 		Dialogic.start("end_indifferent")
 		pass
-	elif (Dialogic.VAR.Stats.love >= 80 && Dialogic.VAR.Stats.smarts >= 80 && Dialogic.VAR.Stats.strength >= 80 \
-		&& Dialogic.VAR.Stats.speed >= 80 && Dialogic.VAR.Stats.bravery >= 80 && Dialogic.VAR.Stats.diligence >= 80 \
-		&& Dialogic.VAR.Stats.diligence >= 80 && Dialogic.VAR.Stats.medialit >= 80 && Dialogic.VAR.Stats.driving >= 80) :
+	elif (Dialogic.VAR.Stats.love >= 90 && Dialogic.VAR.Stats.smarts >= 90 && Dialogic.VAR.Stats.strength >= 90 \
+		&& Dialogic.VAR.Stats.speed >= 90 && Dialogic.VAR.Stats.bravery >= 90 && Dialogic.VAR.Stats.diligence >= 90 \
+		&& Dialogic.VAR.Stats.diligence >= 90 && Dialogic.VAR.Stats.medialit >= 90 && Dialogic.VAR.Stats.driving >= 90) :
 		# The Writer
-		Dialogic.start("end_writer")
+		Dialogic.start("End_Writer")
 		print("End Writer")
 		pass
 	elif (Dialogic.VAR.Stats.love < 30 && Dialogic.VAR.Stats.smarts >= 80 && Dialogic.VAR.Stats.strength < 30 \
@@ -134,6 +134,18 @@ func resolve_growth():
 		Dialogic.VAR.ending_scene = "End_Neglect"
 		Dialogic.start("end_neglect")
 		print("End Neglect")
+		pass
+	elif (Dialogic.VAR.Stats.medialit >= 80) && (Dialogic.VAR.Stats.smarts >= 80) :
+		# The Wizard
+		Dialogic.VAR.ending_scene = "End_Streamer"
+		Dialogic.start("end_streamer")
+		print("End Stream")
+		pass
+	elif (Dialogic.VAR.Stats.medialit >= 80) && (Dialogic.VAR.Stats.smarts < 80) :
+		# The Wizard
+		Dialogic.VAR.ending_scene = "End_FilmBuff"
+		Dialogic.start("end_filmbuff")
+		print("End Filmbuff")
 		pass
 	elif (Dialogic.VAR.Stats.love >= 30 && Dialogic.VAR.Stats.smarts >= 30 && Dialogic.VAR.Stats.strength >= 30 \
 		&& Dialogic.VAR.Stats.speed >= 30 && Dialogic.VAR.Stats.bravery >= 30 && Dialogic.VAR.Stats.diligence >= 30 \
@@ -273,6 +285,16 @@ func _on_dialogic_signal(argument:String):
 		await get_tree().create_timer(0.4).timeout
 		get_node("Background").get_node("%Background_EndingSprite").play("Background_HotDogs")
 		pass
+	elif argument == "springclean_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_SpringClean")
+		pass
+	elif argument == "filmfest_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_FilmFest")
+		pass
 	elif argument == "hograce_transition":
 		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
 		await get_tree().create_timer(0.4).timeout
@@ -316,6 +338,16 @@ func _on_dialogic_signal(argument:String):
 		Dialogic.VAR.Stats.speed += int(rng.randi_range(-1, 1))
 		Dialogic.VAR.Stats.bravery += int(rng.randi_range(-1, 1))
 		Dialogic.VAR.Stats.medialit += int(rng.randi_range(-1, 3))
+		$OuterUI/ActivityContainer.visible = true
+		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("FunTab")
+		pass
+	elif argument == "act_evilberry":
+		$OuterUI/ActivityContainer.visible = true
+		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("EvilBerry")
+		pass
+	elif argument == "act_cleaning":
+		$OuterUI/ActivityContainer.visible = true
+		$OuterUI/ActivityContainer/ActivityPlayer/ActivityAnimation.play("SpringCleaning")
 		pass
 	elif argument == "act_pc":
 		$OuterUI/ActivityContainer.visible = true

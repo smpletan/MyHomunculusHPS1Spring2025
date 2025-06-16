@@ -36,6 +36,7 @@ directories/dtl_directory={
 "end_ceo_normal": "res://Dialogic/Timelines/Endings/end_ceo_normal.dtl",
 "end_driver": "res://Dialogic/Timelines/Endings/end_driver.dtl",
 "end_error": "res://Dialogic/Timelines/Endings/end_error.dtl",
+"end_filmbuff": "res://Dialogic/Timelines/Endings/end_filmbuff.dtl",
 "end_gymbro": "res://Dialogic/Timelines/Endings/end_gymbro.dtl",
 "end_horse": "res://Dialogic/Timelines/Endings/end_horse.dtl",
 "end_hotdog": "res://Dialogic/Timelines/Endings/end_hotdog.dtl",

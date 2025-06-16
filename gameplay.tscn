@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://dq3wy1v6hucsf"]
+[gd_scene load_steps=121 format=3 uid="uid://dq3wy1v6hucsf"]
 
 [ext_resource type="Script" uid="uid://cs0dnsdmes72i" path="res://Scripts/gameplaymenu.gd" id="1_cbffv"]
 [ext_resource type="PackedScene" uid="uid://cb4gn3j86m8pk" path="res://scrollpattern.tscn" id="1_smepj"]
@@ -92,20 +92,32 @@
 [ext_resource type="Texture2D" uid="uid://b7gol30g01txq" path="res://Assets/Character Sprites/ActivitySprites/Inside/Cooking/cooking4.png" id="48_bts8w"]
 [ext_resource type="Texture2D" uid="uid://ifl1byoidhoc" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer4.png" id="49_6rvgx"]
 [ext_resource type="Texture2D" uid="uid://ck23rhnm51mgi" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Workout Bench/benchworkout0.png" id="49_i2yc5"]
+[ext_resource type="Texture2D" uid="uid://cwhjgu6dl4aei" path="res://Assets/Character Sprites/ActivitySprites/Outside/EvilBerry/evil_berry0.png" id="49_plard"]
 [ext_resource type="Texture2D" uid="uid://c325lnyi4564g" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Workout Bench/benchworkout1.png" id="50_odc00"]
+[ext_resource type="Texture2D" uid="uid://ye6ao4tyae8w" path="res://Assets/Character Sprites/ActivitySprites/Outside/EvilBerry/evil_berry1.png" id="50_r82ng"]
 [ext_resource type="Texture2D" uid="uid://8kuk84lh73x" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer5.png" id="50_vp3xm"]
 [ext_resource type="Texture2D" uid="uid://bhdb5nunjlwy5" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Workout Bench/benchworkout2.png" id="51_8kyq1"]
+[ext_resource type="Texture2D" uid="uid://cfm2mw8n4i1op" path="res://Assets/Character Sprites/ActivitySprites/Outside/EvilBerry/evil_berry2.png" id="51_mwgvf"]
 [ext_resource type="Texture2D" uid="uid://cftnyvstt0jjl" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer6.png" id="51_xim4l"]
+[ext_resource type="Texture2D" uid="uid://ce2rpr5y1mccp" path="res://Assets/Character Sprites/ActivitySprites/Outside/EvilBerry/evil_berry3.png" id="52_cyp4k"]
 [ext_resource type="Texture2D" uid="uid://b8y6smmxmtn70" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer7.png" id="52_d53d6"]
 [ext_resource type="Texture2D" uid="uid://c6dghagorx272" path="res://Assets/Character Sprites/ActivitySprites/Outside/Gym/Workout Bench/benchworkout3.png" id="52_pf2ql"]
 [ext_resource type="Texture2D" uid="uid://chbjqmt5v71xt" path="res://Assets/Icons/moneyicon.png" id="53_mg1hl"]
 [ext_resource type="Texture2D" uid="uid://papnlujo3njd" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer8.png" id="53_rfgm3"]
+[ext_resource type="Texture2D" uid="uid://ct5xftv25qsu8" path="res://Assets/Character Sprites/ActivitySprites/Outside/EvilBerry/evil_berry4.png" id="53_yb45o"]
 [ext_resource type="FontFile" uid="uid://dm34l6sobmtwx" path="res://Assets/Alkhemikal.ttf" id="54_7v788"]
 [ext_resource type="Texture2D" uid="uid://0bp54ehmf0we" path="res://Assets/Character Sprites/ActivitySprites/Outside/Sewers/sewer9.png" id="54_d8lje"]
+[ext_resource type="Texture2D" uid="uid://dek8x1kvnr7xb" path="res://Assets/Character Sprites/ActivitySprites/Inside/iPad/ipadbaby0.png" id="54_tpjd8"]
+[ext_resource type="Texture2D" uid="uid://t4jxwobenk41" path="res://Assets/Character Sprites/ActivitySprites/Inside/iPad/ipadbaby1.png" id="55_b3hmv"]
+[ext_resource type="Texture2D" uid="uid://cjkgpawidii43" path="res://Assets/Character Sprites/ActivitySprites/Inside/iPad/ipadbaby2.png" id="56_8jqkw"]
 [ext_resource type="Texture2D" uid="uid://brobymuv85nvn" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV1.png" id="90_6kffv"]
 [ext_resource type="Texture2D" uid="uid://dm3oasmdtaxwd" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV2.png" id="91_px57k"]
 [ext_resource type="Texture2D" uid="uid://cpxqxe043kf4c" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV3.png" id="92_7xnv0"]
 [ext_resource type="Texture2D" uid="uid://bhckfwv1cd280" path="res://Assets/Character Sprites/ActivitySprites/Inside/TV/watchingTVV4.png" id="93_s5eh5"]
+[ext_resource type="Texture2D" uid="uid://uhjv7frmr53e" path="res://Assets/Character Sprites/ActivitySprites/Outside/Cleaning/cleaning0.png" id="98_pcnb5"]
+[ext_resource type="Texture2D" uid="uid://d3qoa4e18xd1m" path="res://Assets/Character Sprites/ActivitySprites/Outside/Cleaning/cleaning1.png" id="99_uss77"]
+[ext_resource type="Texture2D" uid="uid://n0puqxh4ak4y" path="res://Assets/Character Sprites/ActivitySprites/Outside/Cleaning/cleaning2.png" id="100_32qq2"]
+[ext_resource type="Texture2D" uid="uid://by5rerc7456ay" path="res://Assets/Character Sprites/ActivitySprites/Outside/Cleaning/cleaning3.png" id="101_t73hb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7r3lg"]
 animations = [{
@@ -227,6 +239,40 @@ animations = [{
 }],
 "loop": true,
 "name": &"Cooking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.7,
+"texture": ExtResource("49_plard")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_r82ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_mwgvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_cyp4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_yb45o")
+}],
+"loop": true,
+"name": &"EvilBerry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("54_tpjd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_b3hmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_8jqkw")
+}],
+"loop": true,
+"name": &"FunTab",
 "speed": 5.0
 }, {
 "frames": [{
@@ -375,6 +421,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"Sewers",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98_pcnb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_uss77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_32qq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_t73hb")
+}],
+"loop": true,
+"name": &"SpringCleaning",
 "speed": 5.0
 }, {
 "frames": [{
@@ -583,7 +646,7 @@ offset_bottom = 197.0
 [node name="ActivityAnimation" type="AnimatedSprite2D" parent="OuterUI/ActivityContainer/ActivityPlayer"]
 position = Vector2(144, 97)
 sprite_frames = SubResource("SpriteFrames_7r3lg")
-animation = &"BeatUp"
+animation = &"FunTab"
 
 [node name="MoneyContainer" type="Control" parent="OuterUI"]
 layout_mode = 3

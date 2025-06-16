@@ -1,4 +1,4 @@
-[gd_scene load_steps=243 format=3 uid="uid://33t3dmdfbhtr"]
+[gd_scene load_steps=248 format=3 uid="uid://33t3dmdfbhtr"]
 
 [ext_resource type="PackedScene" uid="uid://bbawrs0q2au2o" path="res://BackGroundReal.tscn" id="1_ob6x7"]
 [ext_resource type="Shader" uid="uid://2eco5eiw0xf8" path="res://cutshader.gdshader" id="1_t27p2"]
@@ -102,10 +102,12 @@
 [ext_resource type="Texture2D" uid="uid://ciar53uc5wwxk" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS15.png" id="55_m0wq0"]
 [ext_resource type="Texture2D" uid="uid://dw4khblef0y7m" path="res://Assets/Character Sprites/EndingSprites/HomuncHorseSpeed.png" id="55_q3pey"]
 [ext_resource type="Texture2D" uid="uid://bsqw6xf68qrqi" path="res://Assets/SpriteFrames/SewerBackground2.png" id="56_6dpm1"]
+[ext_resource type="Texture2D" uid="uid://dvll6xe5ho6aq" path="res://Assets/SpriteFrames/filmfest.png" id="56_33kjk"]
 [ext_resource type="Texture2D" uid="uid://madecjykb6qi" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_003.png" id="56_me362"]
 [ext_resource type="Texture2D" uid="uid://b00wrrhq3evxf" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS16.png" id="56_xheao"]
 [ext_resource type="Texture2D" uid="uid://dxmvp0onch13t" path="res://Assets/SpriteFrames/hograce.png" id="56_xjlu5"]
 [ext_resource type="Texture2D" uid="uid://bxu3yg33vona6" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS17.png" id="57_8e30t"]
+[ext_resource type="Texture2D" uid="uid://ck7fgguj1ertd" path="res://Assets/SpriteFrames/GameDay.png" id="57_37squ"]
 [ext_resource type="Texture2D" uid="uid://d0txl6osqgxhe" path="res://Assets/SpriteFrames/hotdogs.png" id="57_j2geo"]
 [ext_resource type="Texture2D" uid="uid://pilbdk2df0j0" path="res://Assets/SpriteFrames/TVRenderBackground.png" id="57_w2bxo"]
 [ext_resource type="Texture2D" uid="uid://sta5mwdi6w64" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_004.png" id="57_wvxwo"]
@@ -136,6 +138,7 @@
 [ext_resource type="Texture2D" uid="uid://dmdfk370n8n6s" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS34.png" id="74_e5uip"]
 [ext_resource type="Texture2D" uid="uid://c8f4ffgwhr8lg" path="res://Assets/SpriteFrames/blankscreen.png" id="75_2ldft"]
 [ext_resource type="Texture2D" uid="uid://be1t8uu11dyx1" path="res://Assets/Character Sprites/EndingSprites/AwwwEnding2Maybe.png" id="75_8d57d"]
+[ext_resource type="Texture2D" uid="uid://dp7jgcg5lg3g7" path="res://Assets/SpriteFrames/Cleaning.png" id="75_lyo35"]
 [ext_resource type="Texture2D" uid="uid://cllxk8qf3xer7" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS35.png" id="75_op2vs"]
 [ext_resource type="Texture2D" uid="uid://bfvuo0fuh41y0" path="res://Assets/Character Sprites/EndingSprites/ButlerEnding.png" id="76_2ldft"]
 [ext_resource type="Texture2D" uid="uid://ce2otbe602k7m" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS36.png" id="76_fk258"]
@@ -158,6 +161,7 @@
 [ext_resource type="Texture2D" uid="uid://psoavbg1vrbn" path="res://Assets/Character Sprites/EndingSprites/MyAnimalEnding.png" id="85_7emi1"]
 [ext_resource type="Texture2D" uid="uid://cjn6yyap55bfo" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS46.png" id="86_6dpm1"]
 [ext_resource type="Texture2D" uid="uid://l5ru60o55mad" path="res://Assets/Character Sprites/EndingSprites/HomuncNeglectEnding2.png" id="86_33kjk"]
+[ext_resource type="Texture2D" uid="uid://clg8ecjo868mh" path="res://Assets/Character Sprites/EndingSprites/MovieBuffEnding.png" id="86_37squ"]
 [ext_resource type="Texture2D" uid="uid://yc4igkr7bga" path="res://Assets/Character Sprites/EndingSprites/NerdEnding.png" id="87_37squ"]
 [ext_resource type="Texture2D" uid="uid://0fu6thenxjcp" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS47.png" id="87_w2bxo"]
 [ext_resource type="Texture2D" uid="uid://bn2i12lml3eqs" path="res://Assets/Character Sprites/EndingSprites/streamer.png" id="88_lyo35"]
@@ -176,6 +180,7 @@
 [ext_resource type="Texture2D" uid="uid://yd6dnjd5tnno" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS56.png" id="96_spw5l"]
 [ext_resource type="Texture2D" uid="uid://bpeowy3ugig7n" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS57.png" id="97_71crj"]
 [ext_resource type="Texture2D" uid="uid://c8vy6m5ye2g" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS58.png" id="98_xjlu5"]
+[ext_resource type="Texture2D" uid="uid://pp1drw5q7q3j" path="res://Assets/Character Sprites/EndingSprites/EndWriter.png" id="99_e2uxs"]
 [ext_resource type="Texture2D" uid="uid://cq30yaxnhu0uo" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS59.png" id="99_j2geo"]
 [ext_resource type="Texture2D" uid="uid://cas2ll3sj5n6x" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS60.png" id="100_lneff"]
 [ext_resource type="Texture2D" uid="uid://btxkqv0087nv5" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS61.png" id="101_nx8ql"]
@@ -420,6 +425,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("56_33kjk")
+}],
+"loop": true,
+"name": &"Background_FilmFest",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_37squ")
+}],
+"loop": true,
+"name": &"Background_GameDay",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("53_o3kne")
 }],
 "loop": true,
@@ -516,6 +537,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("75_lyo35")
+}],
+"loop": true,
+"name": &"Background_SpringClean",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("57_w2bxo")
 }],
 "loop": true,
@@ -592,6 +621,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"End_Error",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_37squ")
+}],
+"loop": true,
+"name": &"End_FilmBuff",
 "speed": 5.0
 }, {
 "frames": [{
@@ -696,6 +733,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"End_Wizard",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("99_e2uxs")
+}],
+"loop": true,
+"name": &"End_Writer",
 "speed": 5.0
 }]
 
@@ -1537,7 +1582,7 @@ visible = false
 texture_filter = 1
 position = Vector2(375, 191)
 sprite_frames = SubResource("SpriteFrames_7auws")
-animation = &"End_CEO_Money"
+animation = &"Background_Sewer"
 
 [node name="FadeForeGroundThing" type="Sprite2D" parent="SubViewportContainer/SubViewport/Control"]
 position = Vector2(320, 200)
