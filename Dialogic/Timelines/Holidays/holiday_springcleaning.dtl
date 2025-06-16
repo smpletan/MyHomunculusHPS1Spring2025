@@ -1,3 +1,4 @@
 It's Spring Cleaning day. The season may not necessarily be spring, but each year the town of Hogsden picks an arbitrary day where everyone should clean up their houses.
 Things around your home could definitely be spruced up a bit, and enlisting your Homunculus's assistance in cleaning would help instill a sense of diligence.
 The state of your home might mean it won't enjoy this time-honored tradition, but who knows what you might have lying around that you can just pawn off?
+set {next_holiday} = ""

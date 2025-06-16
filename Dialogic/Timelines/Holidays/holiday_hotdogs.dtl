@@ -22,6 +22,7 @@ narrator: It'll grow stronger for being able to attempt the competition no matte
 		homunculus (stressed): I um. If it's okay with you, I don't wanna see any meat again for a bit. But you're still proud of me, right?
 		narrator: Pride or no pride notwithstanding, the two of you return to town square; you felt exhausted just watching the festival take place.
 		leave homunculus
+		set {next_holiday} = ""
 		jump cityvisit/initialQuestion
 	elif {hotdog_success} == 1.0:
 		Your Homunculus summons its willpower before the massive mountain of meat (and buns) and pushes to actually make some progress.
@@ -36,6 +37,7 @@ narrator: It'll grow stronger for being able to attempt the competition no matte
 		homunculus (happy): I was SO close! Did you see? I ALMOST won! That was awesome, I think! Are you proud of me?
 		narrator: Pride or no pride notwithstanding, the two of you return to town square; you felt exhausted just watching the festival take place.
 		leave homunculus
+		set {next_holiday} = ""
 		jump cityvisit/initialQuestion
 	else:
 		The power pulses through your Homunculus's synapses. The sense of raw hunger, the drive to succeed, and the desire to defeat... meat.
@@ -50,6 +52,8 @@ narrator: It'll grow stronger for being able to attempt the competition no matte
 		homunculus (happy): I DID IT! I won! I won BIG time! All the hot dogs - I beat them! You're SOOO proud of me, admit it!
 		narrator: Pride or no pride notwithstanding, the two of you return to town square; you felt exhausted just watching the festival take place.
 		leave homunculus
+		set {next_holiday} = ""
 		jump cityvisit/initialQuestion
 - No dogs, dog. [Leave]
+	set {next_holiday} = ""
 	jump cityvisit/initialQuestion

@@ -1,4 +1,9 @@
 if {dayNumber} >= 21.0:
+	It's the final day... the Growth has come for your Homunculus.
+	[signal arg="blank_transition"]
+	Before you are able to greet your Homunculus, a loud crash resounds from your Homunculus's lab room. The force of it knocks you over, sending your senses reeling.
+	When you finally manage to come to, you realize what you're looking at. You see now what you've wrought.
+	[signal arg="ending_sequence"]
 	[end_timeline]
 It's Day {dayNumber} of the month. You've got {daysLeft} days left this month until the Growth.
 if {next_holiday} == "hotdogs":
@@ -14,12 +19,11 @@ elif {dayNumber} == 3.0 || {dayNumber} == 7.0 || {dayNumber} == 14.0 || {dayNumb
 	elif {next_holiday} == "filmfest":
 		So comes the day of the Film Fest, where reputed film buffs roam the streets of Hogsden. Maybe you could take your Homunculus to see it.
 	elif {next_holiday} == "springcleaning":
-		Today is Spring Cleaning Day, somehow the only holiday where you're encouraged to stay in for the day.
+		Today is Spring Cleaning Day, an incredibly arbitrarily-selected holiday that you're still not sure about.
 set {currEnergy} = 3.0
 join homunculus right
 label HomunculusConvoStart
 homunculus (neutral): What do we wanna do today?
-- How are you doing?
 - Let's go into town.
 	homunculus (happy): Okay! You're sure? We can't come back until the end of the day.
 	- I'm sure. [Enter Town]
