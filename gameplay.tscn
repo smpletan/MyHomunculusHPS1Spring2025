@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://dq3wy1v6hucsf"]
+[gd_scene load_steps=123 format=3 uid="uid://dq3wy1v6hucsf"]
 
 [ext_resource type="Script" uid="uid://cs0dnsdmes72i" path="res://Scripts/gameplaymenu.gd" id="1_cbffv"]
 [ext_resource type="PackedScene" uid="uid://cb4gn3j86m8pk" path="res://scrollpattern.tscn" id="1_smepj"]
@@ -119,6 +119,7 @@
 [ext_resource type="Texture2D" uid="uid://d3qoa4e18xd1m" path="res://Assets/Character Sprites/ActivitySprites/Outside/Cleaning/cleaning1.png" id="99_uss77"]
 [ext_resource type="Texture2D" uid="uid://n0puqxh4ak4y" path="res://Assets/Character Sprites/ActivitySprites/Outside/Cleaning/cleaning2.png" id="100_32qq2"]
 [ext_resource type="Texture2D" uid="uid://by5rerc7456ay" path="res://Assets/Character Sprites/ActivitySprites/Outside/Cleaning/cleaning3.png" id="101_t73hb"]
+[ext_resource type="AudioStream" uid="uid://bxu0rjknnhfye" path="res://Assets/Audio/HomuncGameplayMain1.mp3" id="120_mwgvf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7r3lg"]
 animations = [{
@@ -703,5 +704,12 @@ offset_top = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_cbffv")
+
+[node name="MainMusicPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("120_mwgvf")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
