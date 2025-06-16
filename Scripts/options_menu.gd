@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+
 var Pause_Menu : bool = true
 
 func _ready() -> void:
@@ -20,23 +21,20 @@ func _input(event):
 
 func PauseOn()-> void:
 	$AnimationPlayer.play("Pause_ON")
-	$VBoxContainer/ResumeButton.disabled = false
-	$VBoxContainer/QuitButton.disabled = false
 	Engine.time_scale = 0
 	#MusicPlayer.set_stream_paused(true)
 	AudioServer.set_bus_effect_enabled(2, 0, true)
 	#get_node("Background").get_node("%OpeningStreamPlayer").stop(music_position)
 	Pause_Menu = false
-#	$VBoxContainer/ResumeButton.grab_focus()
+	$ResumeButton2.call_deferred("grab_focus")
 	print("PAUSE ON")
 	pass
 	
 func PauseOff()-> void:
 	$AnimationPlayer.play("Pause_OFF")
-	$VBoxContainer/ResumeButton.disabled = true
-	$VBoxContainer/QuitButton.disabled = true
 	AudioServer.set_bus_effect_enabled(2, 0, false)
-	#get_node("VBoxContainer").get_node("%StartButton").grab_focus()
+	#get_node("VBoxContainer").get_node("%StartButton").call_deferred("grab_focus")
+#	get_node("/root/VBoxContainer/StartButton").call_deferred("grab_focus")
 	Engine.time_scale = 1
 	#MusicPlayer.set_stream_paused(false)
 	#music_position = get_node("Background").get_node("%OpeningStreamPlayer").get_playback_position()
@@ -71,3 +69,10 @@ func _on_check_box_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_quit_button_2_pressed() -> void:
+	get_tree().quit()
+
+func _on_resume_button_2_pressed() -> void:
+	PauseOff()
