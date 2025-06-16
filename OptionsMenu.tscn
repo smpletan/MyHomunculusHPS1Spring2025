@@ -1,10 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4toaqjnmoacp"]
+[gd_scene load_steps=16 format=3 uid="uid://c4toaqjnmoacp"]
 
 [ext_resource type="Script" uid="uid://dd3k1fot6yo2w" path="res://Scripts/options_menu.gd" id="1_10bho"]
 [ext_resource type="Texture2D" uid="uid://dqp5yqb7qgmtm" path="res://Assets/OptionsMenu.png" id="1_qvdm5"]
 [ext_resource type="Texture2D" uid="uid://ba6l8d86f5cwd" path="res://Assets/GrabberStyleMain.png" id="2_10bho"]
 [ext_resource type="Texture2D" uid="uid://cfri537rbw5v4" path="res://Assets/GrabberStyleHighlighted.png" id="3_1gfi4"]
 [ext_resource type="Script" uid="uid://ba7hg3pn32573" path="res://Scripts/VolumeSlider.gd" id="4_wjedm"]
+[ext_resource type="FontFile" uid="uid://dm34l6sobmtwx" path="res://Assets/Alkhemikal.ttf" id="6_8wdl0"]
+[ext_resource type="StyleBox" uid="uid://dhd42imlithxu" path="res://Assets/Textures/UIBoxSelected.tres" id="7_8xgkk"]
+[ext_resource type="StyleBox" uid="uid://bmvaxt1hr6a4t" path="res://Assets/Textures/UIBox.tres" id="8_p7t7d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qvdm5"]
 
@@ -49,9 +52,11 @@ _data = {
 &"Pause_ON": SubResource("Animation_1gfi4")
 }
 
+[sub_resource type="Theme" id="Theme_n7dba"]
+Button/fonts/font = ExtResource("6_8wdl0")
+
 [node name="OptionsMenuCanvas" type="CanvasLayer"]
 layer = 64
-visible = false
 script = ExtResource("1_10bho")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -122,4 +127,33 @@ libraries = {
 }
 autoplay = "Pause_OFF"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = -32.0
+grow_vertical = 0
+theme = SubResource("Theme_n7dba")
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_styles/focus = ExtResource("7_8xgkk")
+theme_override_styles/hover = ExtResource("7_8xgkk")
+theme_override_styles/normal = ExtResource("8_p7t7d")
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_styles/focus = ExtResource("7_8xgkk")
+theme_override_styles/hover = ExtResource("7_8xgkk")
+theme_override_styles/normal = ExtResource("8_p7t7d")
+text = "Quit Game"
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://db7f048fntx2r"]
+[gd_scene load_steps=8 format=3 uid="uid://db7f048fntx2r"]
 
 [ext_resource type="Texture2D" uid="uid://dmtpnpwl0pn28" path="res://Assets/Backgrounds/mainmenu.png" id="1_d2nv2"]
 [ext_resource type="Script" uid="uid://c4s5dqbyll684" path="res://Scripts/mainmenu.gd" id="1_wgsso"]
+[ext_resource type="PackedScene" uid="uid://c4toaqjnmoacp" path="res://OptionsMenu.tscn" id="2_7uvds"]
 [ext_resource type="FontFile" uid="uid://dm34l6sobmtwx" path="res://Assets/Alkhemikal.ttf" id="2_wgsso"]
 [ext_resource type="StyleBox" uid="uid://dhd42imlithxu" path="res://Assets/Textures/UIBoxSelected.tres" id="4_3pujl"]
 [ext_resource type="StyleBox" uid="uid://bmvaxt1hr6a4t" path="res://Assets/Textures/UIBox.tres" id="4_igs2m"]
@@ -17,6 +18,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wgsso")
+
+[node name="OptionsMenuCanvas" parent="." instance=ExtResource("2_7uvds")]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -61,5 +65,5 @@ theme_override_styles/normal = ExtResource("4_igs2m")
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="OptionsMenuCanvas" method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
