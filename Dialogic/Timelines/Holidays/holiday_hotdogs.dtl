@@ -8,6 +8,11 @@ homunculus: Can I? Can you? Can we? Can us? Can we join in? I bet I can suuuuper
 narrator: While your Homunculus doesn't need to eat, you're not really sure how much of an upper threshold it can withstand. It's definitely a mental battle that taxes one's bravery.
 narrator: It'll grow stronger for being able to attempt the competition no matter how successful it is or isn't.
 - Yeah, alright. Let's do it. [+Love, +Strength, -20J]
+	if {cash} < 20.0:
+		Tragically, you did not have enough to participate in the Hot Dog Festival. With your morale wounded, you shamefully trudge back to town square.
+		[signal arg="city_transition"]
+		set {next_holiday} = ""
+		jump cityvisit/initialQuestion
 	homunculus (happy): Wish me luck!
 	[signal arg="chance_hotdog"]
 	leave homunculus

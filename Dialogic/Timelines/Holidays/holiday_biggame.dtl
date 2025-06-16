@@ -1,2 +1,31 @@
-<Empty Text Event>
-jump cityvisit/initialQuestion
+[signal arg="biggame_transition"]
+Today's the day of the Big Game, at the Big Hogsden Stadium for that Big Team that you...
+Alright, it's not hard to tell that you don't have much wherewithal when it comes to sports. The athleticism on display is nice, but it's never been your thing.
+The same can't be said for your Homunculus, who seems utterly rapt by the sights of the stadium, the roaring crowds, the verdant green fields, and the scran.
+join homunculus (happy) right [animation="Instant In" length="0.0"]
+homunculus (happy): Hey! Hey hey hey! We're going, right? We're gonna watch the Big Game?
+narrator: Unlike a few other events, attendance is actually free. It seems the local sports franchise (whatever sport that is) is just that desperate for new fans.
+- Fine, let's sports. [+Speed, +Strength, +Love, +Diligence]
+	leave homunculus [animation="Instant Out" length="0.0"]
+	narrator: It's not that you dislike sports, but you find it terribly difficult to focus on them. You can't even focus well enough for the sports themselves to coalesce into a particular sport you can recognize.
+	You take this time to reflect on the interests you did and didn't have growing up, while tucking into a meal known simply as 'Scran.'
+	You're pretty sure that the term 'scran' actually encompasses a lot of foods that stadiums purvey, but it's hard to identify what's sitting in front of you.
+	The peas are mushy, the fries - or chips - are undercooked, and the bun is stale... The free cost of admission starts to make more sense to you.
+	Your Homunculus, however, is as happy as a clam. It imitates referee whistles, tosses cards of varying colors around, and cheers for goals.
+	join homunculus (happy) right [animation="Instant In" length="0.0"]
+	homunculus (happy): Offsides! Penalty kicks! Free throw! Misconduct! High sticking! Travelling! Passed over the foul line!
+	leave homunculus [animation="Instant Out" length="0.0"]
+	narrator: It makes up for its lack of knowledge (not that you'd be able to fact check it) with raucous enthusiasm, and that enthusiasm seems to spur some growth in it.
+	The game doesn't last very long, and you find yourself with some spare time to kill after the stadium lets out.
+	set {currEnergy} -= 1.0
+	set {Stats.speed} += 4.0
+	set {Stats.strength} += 4.0
+	set {Stats.diligence} += 4.0
+	set {Stats.love} += 8.0
+	[signal arg="update_stats"]
+	[signal arg="city_transition"]
+	jump cityvisit/initialQuestion
+- No time for sports. [Leave]
+	leave homunculus [animation="Instant Out" length="0.0"]
+	[signal arg="city_transition"]
+	jump cityvisit/initialQuestion

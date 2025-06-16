@@ -31,6 +31,10 @@ homunculus (neutral): What do you wanna do together?
 	leave homunculus [animation="Instant Out" length="0.0"]
 	narrator: You head over to the Gym, prepared to break a sweat for reasonable prices at 20 Jingles for a training session.
 	- Homunculus, pump some iron. [+Strength, -20J]
+		if {cash} < 20.0:
+			You realize you don't actually have enough for this... it's probably best you head back out for now.
+			[signal arg="city_transition"]
+			jump initialQuestion
 		[signal arg="act_workout"]
 		set {cash} -= 20.0
 		[signal arg="update_stats"]
@@ -48,6 +52,10 @@ homunculus (neutral): What do you wanna do together?
 		[signal arg="city_transition"]
 		jump initialQuestion
 	- Homunculus, run some laps. [+Speed, -20J]
+		if {cash} < 20.0:
+			You realize you don't actually have enough for this... it's probably best you head back out for now.
+			[signal arg="city_transition"]
+			jump initialQuestion
 		[signal arg="act_running"]
 		set {cash} -= 20.0
 		[signal arg="update_stats"]
@@ -103,6 +111,10 @@ homunculus (neutral): What do you wanna do together?
 		set {currEnergy} -= 1.0
 		jump initialQuestion
 	- Ezzayz 4 Teenz [++Smarts, +Diligence, -10J]
+		if {cash} < 10.0:
+			You realize you don't actually have enough for this... it's probably best you head back out for now.
+			[signal arg="city_transition"]
+			jump initialQuestion
 		[signal arg="act_reading"]
 		set {cash} -= 10.0
 		[signal arg="update_stats"]
@@ -120,6 +132,10 @@ homunculus (neutral): What do you wanna do together?
 		[signal arg="city_transition"]
 		jump initialQuestion
 	- Big Theziz 4 Adultz & Bugz [+++Smarts, ++Diligence, -30J]
+		if {cash} < 30.0:
+			You realize you don't actually have enough for this... it's probably best you head back out for now.
+			[signal arg="city_transition"]
+			jump initialQuestion
 		set {currEnergy} -= 1.0
 		[signal arg="act_reading"]
 		set {cash} -= 30.0

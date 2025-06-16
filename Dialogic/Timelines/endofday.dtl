@@ -17,6 +17,5 @@ else:
 	narrator: Without another word, the Homunculus scuttles off to sleep.
 	leave homunculus [animation="Instant Out" length="0.0"]
 With the unbothered restfulness of a sinless baby, you lay your head to rest and await tomorrow's trials...
-set {dayNumber} += 1
-set {daysLeft} -= 1
+[signal arg="day_change"]
 jump dailyflow/

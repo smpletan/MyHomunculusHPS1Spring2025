@@ -177,6 +177,10 @@ func _on_dialogic_signal(argument:String):
 		get_node("Background").get_node("%OpeningAnimationPlayer").play("OpeningAnimation")
 	elif argument == "ending_sequence":
 		resolve_growth()
+	elif argument == "day_change" :
+		Dialogic.VAR.dayNumber += 1
+		Dialogic.VAR.daysLeft -= 1
+		pass
 	elif argument == "roll_holiday":
 		while Dialogic.VAR.next_holiday.is_empty() :
 			var roll = randi_range(0, 4)
@@ -295,6 +299,11 @@ func _on_dialogic_signal(argument:String):
 		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
 		await get_tree().create_timer(0.4).timeout
 		get_node("Background").get_node("%Background_EndingSprite").play("Background_FilmFest")
+		pass
+	elif argument == "biggame_transition":
+		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")
+		await get_tree().create_timer(0.4).timeout
+		get_node("Background").get_node("%Background_EndingSprite").play("Background_GameDay")
 		pass
 	elif argument == "hograce_transition":
 		get_node("Background").get_node("%EndSpriteFade").play("EndSpriteFade_IN")

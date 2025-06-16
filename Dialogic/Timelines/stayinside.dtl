@@ -11,23 +11,27 @@ if {currEnergy} <= 0.0:
 	jump endofday/
 join homunculus right [animation="Instant In" length="0.0"]
 homunculus (neutral): What do you wanna do here?
-#- Let's watch some TV.
-#	[signal arg="tv_transition"]
-#	Your TV isn't new, not in very good condition, nor has access to very many channels, but it IS still a TV.
-#	Your Homunculus is drawn to it. The operations and offerings the TV change erratically, and as a result might affect #your Homunculus's growth erratically.
-#	The nice thing is your cable bill's paid for the entire month, so having your Homunculus watch TV is basically free.
-#	- Alright, have fun watching stuff. [+???]
-#		[signal arg="act_tv"]
-#		set {currEnergy} -= 1.0
-#		jump initialQuestion
-#	- Actually, let's leave it be. [Leave]
-#		[signal arg="lab_transition"]
-#		jump initialQuestion
+# #- Let's watch some TV.
+# #	[signal arg="tv_transition"]
+# #	Your TV isn't new, not in very good condition, nor has access to very many channels, but it IS still a TV.
+# #	Your Homunculus is drawn to it. The operations and offerings the TV change erratically, and as a result might affect #your Homunculus's growth erratically.
+# #	The nice thing is your cable bill's paid for the entire month, so having your Homunculus watch TV is basically free.
+# #	- Alright, have fun watching stuff. [+???]
+# #		[signal arg="act_tv"]
+# #		set {currEnergy} -= 1.0
+# #		jump initialQuestion
+# #	- Actually, let's leave it be. [Leave]
+# #		[signal arg="lab_transition"]
+# #		jump initialQuestion
 - Let's whip up a meal.
 	[signal arg="kitchen_transition"]
 	You stop into your kitchen with your Homunculus. It doesn't need to eat, but you can work together on a meal to bolster its growth.
 	The ingredients aren't free, and the classier the meal the more your Homunculus has to gain from it.
 	- A Modest Meal [+???, -20J]
+		if {cash} < 10.0:
+			You realize you don't actually have enough for this... it's probably best you head back for now.
+			[signal arg="lab_transition"]
+			jump initialQuestion
 		set {currEnergy} -= 1.0
 		[signal arg="act_dinner"]
 		set {cash} -= 20.0
@@ -45,6 +49,10 @@ homunculus (neutral): What do you wanna do here?
 		[signal arg="lab_transition"]
 		jump initialQuestion
 	- A Pricier Meal [+???, -40J]
+		if {cash} < 40.0:
+			You realize you don't actually have enough for this... it's probably best you head back for now.
+			[signal arg="lab_transition"]
+			jump initialQuestion
 		set {currEnergy} -= 1.0
 		[signal arg="act_dinner"]
 		set {cash} -= 40.0
@@ -63,6 +71,10 @@ homunculus (neutral): What do you wanna do here?
 		[signal arg="lab_transition"]
 		jump initialQuestion
 	- A Luxurious Meal [+???, -80J]
+		if {cash} < 80.0:
+			You realize you don't actually have enough for this... it's probably best you head back for now.
+			[signal arg="lab_transition"]
+			jump initialQuestion
 		set {currEnergy} -= 1.0
 		[signal arg="act_dinner"]
 		set {cash} -= 80.0
@@ -91,6 +103,7 @@ homunculus (neutral): What do you wanna do here?
 	Said task will also be soul-crushingly monotonous, but the rigid consistency of the task will help your Homunculus gain a sense of diligence.
 	- Hit the keyboard, Homunculus. [-Love, +Diligence, +J]
 		[signal arg="act_pc"]
+		leave homunculus [animation="Instant Out" length="0.0"]
 		narrator: It's a breeze of a process, just having to fill in (weirdly anomalous) personal data that your Homunculus simultaneously does and doesn't have.
 		But it goes on and on and on.
 		narrator: Your Homunculus goes through some real drudgery, just filling forms and clicking buttons. Mind-numbing as it is, at least it doesn't have to do this forever.
@@ -112,6 +125,7 @@ homunculus (neutral): What do you wanna do here?
 		jump initialQuestion
 - Here, just take this FunTab.
 	[signal arg="ipad_transition"]
+	leave homunculus [animation="Instant Out" length="0.0"]
 	The invention of the GorLabs FunTab was a mixed blessing for civilization.
 	Full of easy entertainment, the FunTab distracts the mind and lets it wander on a tide of debatably worthwhile content for hours upon hours.
 	Convenient as it is, it's also brought rise to a generation of 'FunTab' kids and is not considered a viable alternative to entertaining your child.
@@ -121,6 +135,8 @@ homunculus (neutral): What do you wanna do here?
 		Your Homunculus is granted unrestricted access to the Internet - but mostly videos - through the yawning portal of the FunTab.
 		You do just about anything else in the background while it remains transfixed on the screen...
 		The exposure to a litany of different content has triggered volatile - if limited - change in your Homunculus's growth.
+		[signal arg="end_act"]
+		join homunculus right [animation="Instant In" length="0.0"]
 		homunculus (happy): That was fun. It also got really weird! It was fun and really weird. Sometimes scary, even? Maybe do that again. Or don't? I dunno!
 		narrator: You take the FunPad off of your Homunculus's nubs and put it away.
 		set {Stats.love} += 3.0

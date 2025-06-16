@@ -1,7 +1,36 @@
 leave homunculus [animation="Instant Out" length="0.0"]
 [signal arg="filmfest_transition"]
-Hogsden's local auditorium is holding a lengthy Film Festival today, and all film buffs in the region are morally obligated to attend.
+set {next_holiday} = ""
+Hogsden's biggest yard is holding a lengthy Film Festival today, and all film buffs in the region are morally obligated to attend.
 In order to participate, every prospective film buff needs to pitch in some Jingles to help fund and maintain the town's local videotape archive.
 Videotapes, or VHS Tapes, are of course the only viable form of media storage according to GorLabs Compliance Records, and no other format exists to store your favorite movies and videos.
-set {next_holiday} = ""
-jump cityvisit/initialQuestion
+Thankfully the fee isn't too high. Watching these popcorned classics might just help spur your Homunculus's knowledge in a bunch of random trivia... and media literacy.
+- Hey, let's watch some films. [+MediaLit, +Smarts, -40J]
+	if {cash} < 40.0:
+		Much to your chagrin, you didn't have the pocket Jingles to pay the pittance needed to fund this very esoteric film archive's maintenance costs.
+		Though you surely mourn for the film expertise you would have absorbed, it's best that you return to the town square now before the shame creeps in.
+		[signal arg="city_transition"]
+		jump cityvisit/initialQuestion
+	set {currEnergy} = 0
+	set {cash} -= 40.0
+	[signal arg="update_stats"]
+	Drawn in by promises of film trivia and movie knowledge expertise, you and your Homunculus pay up the entry fee before finding a decent seat.
+	You're certain that you've not heard of this film. Or that film. They're not even obscure in the way that decent movies can be hidden gems, they're just...
+	They're just VERY old. They're very old and not very good, flicks that have almost certainly been forgotten by time for good reason. Worth preserving, but not memorable.
+	After the fourth romantic comedy box office bomb from twenty years ago, you realize that the entire day has passed you by.
+	It occurs to you to actually turn and look at your Homunculus again, who has been sitting in rapt attention basically the entire time.
+	join homunculus right [animation="Instant In" length="0.0"]
+	homunculus (neutral): Wow... All of those movies were over 120 minutes long. Can you imagine amateur movie event organizers just carelessly showing off films of SHORTER length?
+	homunculus (neutral): It's a good thing we have film buffs to set the record straight. I have SO many ideas for how to index videotapes now, too! There's this system I have in mind based on the colors of the covers...
+	leave homunculus [animation="Fade Out" length="0.0"]
+	It occurs to you only now that it's not THAT often you experience the feeling of genuine concern for your Homunculus. It can bounce back from a lot, but...
+	Well, having a hobby isn't a bad thing, right?
+	set {Stats.love} += 3.0
+	set {Stats.medialit} += 20.0
+	set {Stats.smarts} += 2.0
+	[signal arg="update_stats"]
+	[signal arg="city_transition"]
+	Your Homunculus continues to spew decidedly confusing and overly specific takes about the movies it just watched as you return to town square.
+	jump cityvisit/initialQuestion
+- Let's just skip out today.
+	jump cityvisit/initialQuestion

@@ -15,7 +15,7 @@ homunculus: Look! Look at all the hogs! You'll let me join in, right?
 	Somehow, your Homunculus returns to you.
 	set {currEnergy} = 0
 	set {Stats.speed} += 8.0
-	set {Stats.bravery} += 8.0
+	set {Stats.bravery} += 16.0
 	set {Stats.love} += 2.0
 	[signal arg="update_stats"]
 	join homunculus (happy) right [animation="Fade In" length="0.0"]

@@ -1,4 +1,5 @@
 [signal arg="evilberry_transition"]
+leave homunculus [animation="Instant Out" length="0.0"]
 The citizens of the town have gathered around the Square today to inspect a single planter that grows a single crop.
 Yes, it's today. The day of the Evil Berry.
 Once a year the people of Hogsden collaborate in the germination of an evil seed that produces the singular Evil Berry, but everyone usually leaves it behind because they're too scared to eat it.
@@ -18,7 +19,9 @@ Since everyone is too reluctant to eat it, the 'holiday' consists of everyone ju
 	set {Stats.bravery} += 10.0
 	[signal arg="end_act"]
 	[signal arg="update_stats"]
+	join homunculus right [animation="Instant In" length="0.0"]
 	homunculus (neutral): It was okay. It wasn't THAT spicy.
+	leave homunculus [animation="Instant Out" length="0.0"]
 	narrator: Once again, it's saying this through its flowing tears.
 	narrator: Your Homunculus puts on a very brave and ineffective face while it departs with you, all while the perturbed crowd slowly disperses.
 	set {next_holiday} = ""
