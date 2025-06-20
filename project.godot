@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 TransitionScreen="*res://FadeScene_Animation.tscn"
 MusicPlayer="*res://Scripts/Music_player.gd"
+SfxPlayer="*res://SFX_player.tscn"
 
 [dialogic]
 

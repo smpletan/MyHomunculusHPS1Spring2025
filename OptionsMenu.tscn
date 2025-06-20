@@ -113,7 +113,7 @@ max_value = 1.0
 step = 0.001
 value = 0.5
 script = ExtResource("4_wjedm")
-bus_name = "Sound Effects"
+bus_name = "SoundEffects"
 
 [node name="SliderMusic" type="VSlider" parent="."]
 texture_filter = 1

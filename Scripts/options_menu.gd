@@ -22,7 +22,7 @@ func _input(event):
 func PauseOn()-> void:
 	$AnimationPlayer.play("Pause_ON")
 	Engine.time_scale = 0
-	#MusicPlayer.set_stream_paused(true)
+	SfxPlayer.set_stream_paused(true)
 	AudioServer.set_bus_effect_enabled(2, 0, true)
 	#get_node("Background").get_node("%OpeningStreamPlayer").stop(music_position)
 	Pause_Menu = false
@@ -36,7 +36,7 @@ func PauseOff()-> void:
 	#get_node("VBoxContainer").get_node("%StartButton").call_deferred("grab_focus")
 #	get_node("/root/VBoxContainer/StartButton").call_deferred("grab_focus")
 	Engine.time_scale = 1
-	#MusicPlayer.set_stream_paused(false)
+	SfxPlayer.set_stream_paused(false)
 	#music_position = get_node("Background").get_node("%OpeningStreamPlayer").get_playback_position()
 	Pause_Menu = true
 	print("PAUSE OFF")
@@ -54,15 +54,12 @@ func _on_resume_button_pressed() -> void:
 func _on_options_button_pressed() -> void:
 	PauseOn()
 
-
-
 #func _on_option_button_item_selected(index: int) -> void:
 	#match index:
 		#0: print("Fullscreen")
 		#	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 		#1: print("Windowed")
-			
-	
+
 
 func _on_check_box_toggled(toggled_on: bool) -> void:
 	if toggled_on:

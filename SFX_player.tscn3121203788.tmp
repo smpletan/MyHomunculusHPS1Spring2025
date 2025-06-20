@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://svcynap7wb70"]
+
+[ext_resource type="Script" uid="uid://dlk81ixuijiuu" path="res://Scripts/SFX_player.gd" id="1_vhurw"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+mix_target = 2
+bus = &"SoundEffects"
+script = ExtResource("1_vhurw")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

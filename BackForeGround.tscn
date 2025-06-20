@@ -5,9 +5,9 @@
 [ext_resource type="Shader" uid="uid://f3ln8uexn1hx" path="res://Assets/Shaders/DitherShader.gdshader" id="2_ob6x7"]
 [ext_resource type="Texture2D" uid="uid://c6dylmhgnhjwx" path="res://Assets/Backgrounds/shadermaskbg.png" id="2_rmw63"]
 [ext_resource type="Texture2D" uid="uid://bbagm1holthuq" path="res://Assets/Gradientthing.png" id="3_uuawh"]
-[ext_resource type="AudioStream" uid="uid://d12nkagllyjhh" path="res://Assets/Audio/HomuncOpening.mp3" id="4_0gtl1"]
+[ext_resource type="AudioStream" uid="uid://d12nkagllyjhh" path="res://Assets/Audio/SFX/HomuncOpening.mp3" id="4_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://bho6qqa0k2wf" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_001.png" id="4_jiaa2"]
-[ext_resource type="AudioStream" uid="uid://qcjaim481fti" path="res://Assets/Audio/HomunFadeBackgroundOpening.mp3" id="4_lioov"]
+[ext_resource type="AudioStream" uid="uid://qcjaim481fti" path="res://Assets/Audio/SFX/HomunFadeBackgroundOpening.mp3" id="4_lioov"]
 [ext_resource type="Texture2D" uid="uid://b24fsbhywuxul" path="res://Assets/SpriteFrames/FadePixels/FadePixes_00.png" id="4_qspmw"]
 [ext_resource type="Script" uid="uid://41xcnt5cngp4" path="res://opening_animation_player.gd" id="4_rmw63"]
 [ext_resource type="Texture2D" uid="uid://cvxvm02vaxe1v" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_002.png" id="5_dwupe"]
@@ -94,7 +94,7 @@
 [ext_resource type="Texture2D" uid="uid://dqe3uefsq7x3" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_001.png" id="54_015r6"]
 [ext_resource type="Texture2D" uid="uid://c6guvuwr6wxo4" path="res://Assets/SpriteFrames/KitchenRenderBackground2.png" id="54_55ecv"]
 [ext_resource type="Texture2D" uid="uid://6vb2yrgcuytb" path="res://Assets/SpriteFrames/HomuncCity.png" id="54_71crj"]
-[ext_resource type="Script" path="res://start_fade_animation_player.gd" id="54_e5uip"]
+[ext_resource type="Script" uid="uid://dj4hojpp0dpp4" path="res://start_fade_animation_player.gd" id="54_e5uip"]
 [ext_resource type="Texture2D" uid="uid://df375ju0hnva4" path="res://Assets/SpriteFrames/Opening/HomuncOpeningPIXELS14.png" id="54_pvrmy"]
 [ext_resource type="Texture2D" uid="uid://d1p52bg3tql0y" path="res://Assets/SpriteFrames/Ipad/HomuncAnimationIPAD_002.png" id="55_1e1bp"]
 [ext_resource type="Texture2D" uid="uid://davp7qdehd2jk" path="res://Assets/SpriteFrames/PCRenderBackground.png" id="55_1ovk6"]
@@ -1058,6 +1058,20 @@ tracks/5/keys = {
 "method": &"notify_property_list_changed"
 }]
 }
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("%OpeningAnimationPlayer/StartSFXNode")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"notify_property_list_changed"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_auput"]
 length = 0.001
@@ -1549,15 +1563,15 @@ render_target_update_mode = 4
 
 [node name="FadeStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
 stream = ExtResource("4_lioov")
-volume_db = -8.0
+volume_db = -80.0
 mix_target = 2
-bus = &"Sound Effects"
+bus = &"SoundEffects"
 
 [node name="OpeningStreamPlayer" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport"]
 stream = ExtResource("4_0gtl1")
-volume_db = -8.0
+volume_db = -80.0
 mix_target = 2
-bus = &"Sound Effects"
+bus = &"SoundEffects"
 
 [node name="Control" type="Control" parent="SubViewportContainer/SubViewport"]
 layout_mode = 3
@@ -1629,6 +1643,8 @@ script = ExtResource("4_rmw63")
 
 [node name="StartMusicNode" type="Node" parent="SubViewportContainer/SubViewport/OpeningAnimationPlayer"]
 
+[node name="StartSFXNode" type="Node" parent="SubViewportContainer/SubViewport/OpeningAnimationPlayer"]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport"]
 visible = false
 material = SubResource("ShaderMaterial_auput")
@@ -1650,3 +1666,4 @@ sprite_frames = SubResource("SpriteFrames_lioov")
 [connection signal="animation_finished" from="SubViewportContainer/SubViewport/OpeningAnimationPlayer" to="SubViewportContainer/SubViewport/OpeningAnimationPlayer" method="_on_animation_finished"]
 [connection signal="animation_started" from="SubViewportContainer/SubViewport/OpeningAnimationPlayer" to="SubViewportContainer/SubViewport/OpeningAnimationPlayer" method="_on_animation_started"]
 [connection signal="property_list_changed" from="SubViewportContainer/SubViewport/OpeningAnimationPlayer/StartMusicNode" to="SubViewportContainer/SubViewport/OpeningAnimationPlayer" method="_on_start_music_node_property_list_changed"]
+[connection signal="property_list_changed" from="SubViewportContainer/SubViewport/OpeningAnimationPlayer/StartSFXNode" to="SubViewportContainer/SubViewport/OpeningAnimationPlayer" method="_on_start_sfx_node_property_list_changed"]
