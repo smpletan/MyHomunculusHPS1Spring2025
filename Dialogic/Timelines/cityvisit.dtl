@@ -12,7 +12,7 @@ elif {next_holiday} == "biggame":
 elif {next_holiday} == "hograce":
 	jump holiday_hograce/
 elif {next_holiday} == "springcleaning":
-	jump holiday_hograce/
+	jump holiday_springcleaning/
 label initialQuestion
 [signal arg="city_transition"]
 if {next_holiday} != "hotdogs":

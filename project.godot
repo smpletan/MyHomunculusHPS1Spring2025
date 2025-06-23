@@ -13,8 +13,12 @@ config_version=5
 config/name="HPS1Spring"
 run/main_scene="uid://db7f048fntx2r"
 config/features=PackedStringArray("4.4", "Forward Plus")
+<<<<<<< Updated upstream
 boot_splash/image="uid://dmm75aw6xgttf"
 config/icon="res://icon.svg"
+=======
+config/icon="uid://d4irjho61go37"
+>>>>>>> Stashed changes
 
 [autoload]
 
@@ -136,9 +140,12 @@ glossary/glossary_files=["res://Dialogic/glossary.tres"]
 
 window/size/viewport_width=640
 window/size/viewport_height=400
+<<<<<<< Updated upstream
 window/size/mode=4
 window/size/initial_position_type=0
 window/size/borderless=true
+=======
+>>>>>>> Stashed changes
 window/stretch/mode="viewport"
 
 [editor_plugins]
