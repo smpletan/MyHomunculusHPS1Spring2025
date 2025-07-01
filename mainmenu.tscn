@@ -235,10 +235,11 @@ grow_vertical = 2
 script = ExtResource("1_wgsso")
 
 [node name="OptionsMenuCanvas" parent="." instance=ExtResource("2_7uvds")]
+visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_ttaj3")
-position = Vector2(320, 200)
+position = Vector2(320, 240)
 sprite_frames = SubResource("SpriteFrames_i53bc")
 autoplay = "default"
 frame_progress = 0.665217

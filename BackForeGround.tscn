@@ -8,51 +8,34 @@
 [ext_resource type="AudioStream" uid="uid://d12nkagllyjhh" path="res://Assets/Audio/SFX/HomuncOpening.mp3" id="4_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://bho6qqa0k2wf" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_001.png" id="4_jiaa2"]
 [ext_resource type="AudioStream" uid="uid://qcjaim481fti" path="res://Assets/Audio/SFX/HomunFadeBackgroundOpening.mp3" id="4_lioov"]
-[ext_resource type="Texture2D" uid="uid://b24fsbhywuxul" path="res://Assets/SpriteFrames/FadePixels/FadePixes_00.png" id="4_qspmw"]
 [ext_resource type="Script" uid="uid://41xcnt5cngp4" path="res://opening_animation_player.gd" id="4_rmw63"]
 [ext_resource type="Texture2D" uid="uid://cvxvm02vaxe1v" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_002.png" id="5_dwupe"]
-[ext_resource type="Texture2D" uid="uid://c1s0lxl8fv3xc" path="res://Assets/SpriteFrames/FadePixels/FadePixes_01.png" id="5_o0spv"]
-[ext_resource type="Texture2D" uid="uid://d3ruh45urge0p" path="res://Assets/SpriteFrames/FadePixels/FadePixes_02.png" id="6_kc3fg"]
 [ext_resource type="Texture2D" uid="uid://hwvtrfnxfnoa" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_003.png" id="6_now0s"]
-[ext_resource type="Texture2D" uid="uid://nq54x5b214cp" path="res://Assets/SpriteFrames/FadePixels/FadePixes_03.png" id="7_1lg36"]
 [ext_resource type="Texture2D" uid="uid://cufut53ed0atv" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_004.png" id="7_c0qf2"]
 [ext_resource type="Texture2D" uid="uid://dg6dp831l03bl" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_00.png" id="7_qewe2"]
 [ext_resource type="Texture2D" uid="uid://bd3c1cfl8mkam" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_005.png" id="8_hsbmg"]
-[ext_resource type="Texture2D" uid="uid://d2jv86lj1vj8s" path="res://Assets/SpriteFrames/FadePixels/FadePixes_04.png" id="8_uxje1"]
 [ext_resource type="Texture2D" uid="uid://cf7d41najvf63" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_01.png" id="8_x1qi1"]
 [ext_resource type="Texture2D" uid="uid://b7mgm4s3cnbkc" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_006.png" id="9_dudp7"]
 [ext_resource type="Texture2D" uid="uid://l2c48kl6fvxj" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_02.png" id="9_e5uip"]
-[ext_resource type="Texture2D" uid="uid://sqyj3dji0rbo" path="res://Assets/SpriteFrames/FadePixels/FadePixes_05.png" id="9_vcn31"]
 [ext_resource type="Texture2D" uid="uid://dtbahgosnmmpn" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_03.png" id="10_op2vs"]
 [ext_resource type="Texture2D" uid="uid://b2wn53lcqxo1t" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_007.png" id="10_v0tc3"]
-[ext_resource type="Texture2D" uid="uid://8dw6yr1jjjxv" path="res://Assets/SpriteFrames/FadePixels/FadePixes_06.png" id="10_xfleg"]
 [ext_resource type="Texture2D" uid="uid://04ojw45uy0ve" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_008.png" id="11_3f8v1"]
 [ext_resource type="Texture2D" uid="uid://ceda6rvkqf720" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_04.png" id="11_fk258"]
-[ext_resource type="Texture2D" uid="uid://dx7qc51trgbjm" path="res://Assets/SpriteFrames/FadePixels/FadePixes_07.png" id="11_wfwhh"]
 [ext_resource type="Texture2D" uid="uid://c8thhwcqw6amg" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_009.png" id="12_hxbx7"]
-[ext_resource type="Texture2D" uid="uid://cmm7j61i1u6r" path="res://Assets/SpriteFrames/FadePixels/FadePixes_08.png" id="12_kecmj"]
 [ext_resource type="Texture2D" uid="uid://cc28s5dntibmd" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_05.png" id="12_lioov"]
 [ext_resource type="Texture2D" uid="uid://j2oolbeuxpw6" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_06.png" id="13_0gtl1"]
 [ext_resource type="Texture2D" uid="uid://dtdgbgi4smwf6" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_010.png" id="13_6a6iq"]
-[ext_resource type="Texture2D" uid="uid://dkptnckwhpfsb" path="res://Assets/SpriteFrames/FadePixels/FadePixes_09.png" id="13_vitnx"]
 [ext_resource type="Texture2D" uid="uid://c5ph4hpstnlix" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_011.png" id="14_mymdb"]
-[ext_resource type="Texture2D" uid="uid://baow5earcu4m1" path="res://Assets/SpriteFrames/FadePixels/FadePixes_10.png" id="14_o4urt"]
 [ext_resource type="Texture2D" uid="uid://vanae01yxepr" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_07.png" id="14_q3pey"]
 [ext_resource type="Texture2D" uid="uid://3uwl6uh7mexq" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_08.png" id="15_7auws"]
 [ext_resource type="Texture2D" uid="uid://c8qwlgebhejhg" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_012.png" id="15_gk2kw"]
-[ext_resource type="Texture2D" uid="uid://nabrnb65dhsa" path="res://Assets/SpriteFrames/FadePixels/FadePixes_11.png" id="15_qirih"]
-[ext_resource type="Texture2D" uid="uid://bmwxyhxly3wd2" path="res://Assets/SpriteFrames/FadePixels/FadePixes_12.png" id="16_qewe2"]
 [ext_resource type="Texture2D" uid="uid://bion7ju7saxf1" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_09.png" id="16_xb8n1"]
 [ext_resource type="Texture2D" uid="uid://ff1n58w0br82" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_013.png" id="16_xya1t"]
 [ext_resource type="Texture2D" uid="uid://4s1f8u1frj00" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_014.png" id="17_5b32f"]
 [ext_resource type="Texture2D" uid="uid://wbxjmqw0aru5" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_10.png" id="17_dfkus"]
-[ext_resource type="Texture2D" uid="uid://8hp4nrffoqwb" path="res://Assets/SpriteFrames/FadePixels/FadePixes_13.png" id="17_x1qi1"]
-[ext_resource type="Texture2D" uid="uid://dr4jak27jidke" path="res://Assets/SpriteFrames/FadePixels/FadePixes_14.png" id="18_e5uip"]
 [ext_resource type="Texture2D" uid="uid://qbm71bken17h" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_015.png" id="18_libqq"]
 [ext_resource type="Texture2D" uid="uid://dv0t2txkghf7v" path="res://Assets/SpriteFrames/BackgroundLightsFade/BackgroundFADE_11.png" id="18_o3kne"]
 [ext_resource type="Texture2D" uid="uid://b4wuwm4ag05sg" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_016.png" id="19_1ddi1"]
-[ext_resource type="Texture2D" uid="uid://cw2mosk367mxx" path="res://Assets/SpriteFrames/FadePixels/FadePixes_15.png" id="19_op2vs"]
-[ext_resource type="Texture2D" uid="uid://culhgeo7ki5up" path="res://Assets/SpriteFrames/FadePixels/FadePixes_16.png" id="20_fk258"]
 [ext_resource type="Texture2D" uid="uid://dq55if7sctceg" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_017.png" id="20_nn5ed"]
 [ext_resource type="Texture2D" uid="uid://covo2warw4f6g" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_018.png" id="21_s6yah"]
 [ext_resource type="Texture2D" uid="uid://d1hyqamrqy22t" path="res://Assets/SpriteFrames/ForeGround/ForeGroundFinal_019.png" id="22_42mmh"]
@@ -1483,6 +1466,57 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qk58c"]
+load_path = "res://.godot/imported/FadePixes_00.png-b9b30baaf423f9af6d21c41be69d52a3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b352u"]
+load_path = "res://.godot/imported/FadePixes_01.png-5504332beefc8c510565552d368826ba.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2o1q"]
+load_path = "res://.godot/imported/FadePixes_02.png-bb0567639c3caf6e609222903f5d85ff.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n72i7"]
+load_path = "res://.godot/imported/FadePixes_03.png-ce5dd0dfa4d507691a1ed5e4abef2f99.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n1by2"]
+load_path = "res://.godot/imported/FadePixes_04.png-b79605a6da0fca8ff940dad2d30d1e7b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2brcp"]
+load_path = "res://.godot/imported/FadePixes_05.png-392f94a50137db88321dc352c57bd776.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5n06s"]
+load_path = "res://.godot/imported/FadePixes_06.png-605b3fc26975a356e45fcd7b66173431.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wr8sq"]
+load_path = "res://.godot/imported/FadePixes_07.png-7a4e0fcbd3f0b09417340c3605d0ca35.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8d57d"]
+load_path = "res://.godot/imported/FadePixes_08.png-3dc2dabb5bac6fd56095f4916d2e3eb9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2ldft"]
+load_path = "res://.godot/imported/FadePixes_09.png-53704462a5064f4bbf51ab3d51fbfee6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7ldn4"]
+load_path = "res://.godot/imported/FadePixes_10.png-0850a4abe491cff92ea5590e873e8df1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q8krs"]
+load_path = "res://.godot/imported/FadePixes_11.png-4e546300a483de9b4699305b551892e9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nue7i"]
+load_path = "res://.godot/imported/FadePixes_12.png-2d833c2e749b6e72fcdf73fa40c38e5c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5uxbe"]
+load_path = "res://.godot/imported/FadePixes_13.png-6f650daf0c485f476e3a1b29871b2a95.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h0eh8"]
+load_path = "res://.godot/imported/FadePixes_14.png-bee2870992574bb8391a78e7023c7f76.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7emi1"]
+load_path = "res://.godot/imported/FadePixes_15.png-634828db0be3da045a98946059df38f2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_33kjk"]
+load_path = "res://.godot/imported/FadePixes_16.png-efb9cf580982b5a7f4126a1bdaa11b67.ctex"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_lioov"]
 animations = [{
 "frames": [{
@@ -1490,55 +1524,55 @@ animations = [{
 "texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_qspmw")
+"texture": SubResource("CompressedTexture2D_qk58c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_o0spv")
+"texture": SubResource("CompressedTexture2D_b352u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_kc3fg")
+"texture": SubResource("CompressedTexture2D_m2o1q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_1lg36")
+"texture": SubResource("CompressedTexture2D_n72i7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_uxje1")
+"texture": SubResource("CompressedTexture2D_n1by2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_vcn31")
+"texture": SubResource("CompressedTexture2D_2brcp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_xfleg")
+"texture": SubResource("CompressedTexture2D_5n06s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_wfwhh")
+"texture": SubResource("CompressedTexture2D_wr8sq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_kecmj")
+"texture": SubResource("CompressedTexture2D_8d57d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_vitnx")
+"texture": SubResource("CompressedTexture2D_2ldft")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_o4urt")
+"texture": SubResource("CompressedTexture2D_7ldn4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_qirih")
+"texture": SubResource("CompressedTexture2D_q8krs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_qewe2")
+"texture": SubResource("CompressedTexture2D_nue7i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_x1qi1")
+"texture": SubResource("CompressedTexture2D_5uxbe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_e5uip")
+"texture": SubResource("CompressedTexture2D_h0eh8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_op2vs")
+"texture": SubResource("CompressedTexture2D_7emi1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_fk258")
+"texture": SubResource("CompressedTexture2D_33kjk")
 }],
 "loop": false,
 "name": &"default",

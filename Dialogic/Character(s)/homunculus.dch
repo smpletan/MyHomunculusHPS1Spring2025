@@ -13,7 +13,7 @@
 &"display_name": "My Homunculus",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(80, -40),
 &"portraits": {
 "": {
 "export_overrides": {
@@ -29,7 +29,7 @@
 "image": "\"res://Assets/Character Sprites/Homunculus/homunculus_happy.png\""
 },
 "mirror": false,
-"offset": Vector2(80, 0),
+"offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
@@ -38,7 +38,7 @@
 "image": "\"res://Assets/Character Sprites/Homunculus/homunculus_neutral.png\""
 },
 "mirror": false,
-"offset": Vector2(80, 0),
+"offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
@@ -47,7 +47,7 @@
 "image": "\"res://Assets/Character Sprites/Homunculus/homunculus_stressed.png\""
 },
 "mirror": false,
-"offset": Vector2(80, 0),
+"offset": Vector2(0, 0),
 "scale": 1.0,
 "scene": ""
 }

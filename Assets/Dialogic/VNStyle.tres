@@ -16,7 +16,7 @@ script = ExtResource("1_0xa28")
 overrides = {
 "global_bg_color": "Color(0, 0, 0, 1)",
 "global_font": "\"res://Assets/Alkhemikal.ttf\"",
-"global_font_size": "24.0"
+"global_font_size": "16.0"
 }
 
 [sub_resource type="Resource" id="Resource_0sdot"]
@@ -27,7 +27,9 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_jqoug"]
 script = ExtResource("1_0xa28")
 scene = ExtResource("3_k7kjc")
-overrides = {}
+overrides = {
+"portrait_size_mode": "0"
+}
 
 [sub_resource type="Resource" id="Resource_kp4vw"]
 script = ExtResource("1_0xa28")
@@ -41,9 +43,12 @@ overrides = {
 "box_animation_in": "0",
 "box_animation_out": "0",
 "box_color_custom": "Color(0.133333, 0.12549, 0.203922, 1)",
+"box_margin_bottom": "4.0",
 "box_panel": "\"res://Assets/Dialogic/VisualNovelTextbox/custom_visual_novel_textbox.tres\"",
-"box_size": "Vector2(500, 120)",
-"text_size": "24.0"
+"box_size": "Vector2(480, 86)",
+"name_label_box_offset": "Vector2(0, 2)",
+"name_label_custom_font_size": "28.0",
+"text_size": "16.0"
 }
 
 [sub_resource type="Resource" id="Resource_jy5mp"]
@@ -55,13 +60,16 @@ overrides = {}
 script = ExtResource("1_0xa28")
 scene = ExtResource("7_0xa28")
 overrides = {
-"boxes_v_separation": "2.0"
+"boxes_v_separation": "0.0",
+"font_size_custom": "20.0"
 }
 
 [sub_resource type="Resource" id="Resource_6irvc"]
 script = ExtResource("1_0xa28")
 scene = ExtResource("8_s62su")
-overrides = {}
+overrides = {
+"disabled": "true"
+}
 
 [sub_resource type="Resource" id="Resource_5ichk"]
 script = ExtResource("1_0xa28")
@@ -85,4 +93,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_0xa28")]([])
-metadata/_latest_layer = "17"
+metadata/_latest_layer = "13"
